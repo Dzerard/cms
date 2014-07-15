@@ -1,0 +1,267 @@
+    <?php echo $this->inlineScript()->prependFile($this->basePath() . '/js/three.walk.js') ?>  
+    <?php echo $this->inlineScript()->prependFile($this->basePath() . '/js/stats.min.js') ?>  
+    <?php echo $this->inlineScript()->prependFile($this->basePath() . '/js/three/examples/js/controls/OrbitControls.js') ?> 
+    <?php echo $this->inlineScript()->prependFile($this->basePath() . '/js/three/examples/js/controls/FirstPersonControls.js') ?> 
+    <?php echo $this->inlineScript()->prependFile($this->basePath() . '/js/three/examples/js/Detector.js') ?> 
+    <?php  echo $this->inlineScript()->prependFile($this->basePath() . '/js/three.js') ?> 
+    <?php // echo $this->inlineScript()->prependFile('https://rawgithub.com/mrdoob/three.js/master/build/three.js') ?> 
+
+
+<div id="container"></div>
+<script>
+  
+    $(document).ready(function(){      
+     
+     //przestrzen plus poruszanie teraz jeszcze interakcja z kilkaniem w boxy 
+     if( ! Detector.webgl ) Detector.addGetWebGLMessage();
+     
+     var settingsUrl = '<?php echo $this->url('ajax', array('action'=> 'design'),null) ?>';
+     var container, settings;
+     var camera, controls, scene, renderer;
+     var light, pointLight;
+     
+     var mesh;
+     var material_sphere1, material_sphere2;     
+     var sound1,sound2;
+     
+     var clock = new THREE.Clock();
+     
+     // funckcja dźwieku
+     var Sound = function ( sources, radius, volume ) {
+
+            var audio = document.createElement( 'audio' );
+
+            for ( var i = 0; i < sources.length; i ++ ) {
+
+                    var source = document.createElement( 'source' );
+                    source.src = sources[ i ];
+
+                    audio.appendChild( source );
+
+            }
+
+            this.position = new THREE.Vector3();
+
+            this.play = function () {
+
+                    audio.play();
+
+            };
+
+            this.update = function ( camera ) {
+                    
+                    
+                    var distance = this.position.distanceTo( camera.position );
+
+                    if ( distance <= radius ) {
+                            audio.play();
+                            audio.volume = volume * ( 1 - distance / radius );
+
+                    } else {
+
+                            audio.volume = 0;
+                            audio.pause();
+
+                    }
+
+            };
+
+    };
+    
+    //before render load settings !!
+    $.getJSON( settingsUrl, function(data) {
+        settings = data;
+    }).done(function() {
+            init();
+            animate(); 
+    });
+  
+     
+     function init() {
+   
+        container = document.getElementById('container');
+        camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 1, 10000 );
+        camera.position.set( 0, 25, 0 );
+        
+        controls = new THREE.FirstPersonControls( camera );
+
+        controls.movementSpeed = 100;
+        controls.lookSpeed = 0.05;
+        controls.noFly = true;
+        controls.lookVertical = false;
+      
+        
+        scene = new THREE.Scene();
+        
+        //mgła      
+        if(settings.fog.on > 0) {
+            scene.fog = new THREE.FogExp2 (settings.fog.color, settings.fog.blur); 
+        }
+        //
+
+        light  = new THREE.DirectionalLight(0xffffff);
+        light2 = new THREE.DirectionalLight(0xffffff);
+        
+        light.position.set(0,0.5,1).normalize(); // to check
+        light2.position.set(1.5,1,-10).normalize(); // to check
+        
+        scene.add(light);
+        scene.add(light2);
+        
+//        areaLight1 = new THREE.AreaLight( 0xffffff, 1 );
+//        areaLight1.position.set( 0.0001, 10.0001, -18.5001 );
+//        areaLight1.rotation.set( -0.74719, 0.0001, 0.0001 );
+//        areaLight1.width = 10;
+//        areaLight1.height = 1;
+
+//        scene.add( areaLight1 );
+        
+        var url = '<?php echo $this->url('ajax', array('action'=> 'getAllElements'),null) ?>';
+//        var loader = new THREE.JSONLoader();
+//        loader.load(url, function() {
+//            
+//            var oGeometry = new THREE.SphereGeometry(2220,22232,22216); 
+//            var material = new THREE.MeshLambertMaterial({color: 0x55B663});
+//            var mesh = new THREE.Mesh(oGeometry, material);
+//            mesh.position.set( 50, 30, 0 );
+//            mesh.scale.set( 1, 1, 1 );
+//            scene.add(mesh);
+//            
+//         });
+    
+        var oGeometry, oMaterial, oMesh;  //moze wyzej przeniesc ... 
+        
+        $.getJSON( url, function(data) {
+           
+            $.each(data.items, function( i, item) {
+                
+                var oItemSize     = item.elementSize;
+                var oItemPosition = item.elementPosition;
+                var oItemMaterial = item.elementMaterial;
+//                console.log(oItemPosition);
+
+                if(item.elementType === 'SphereGeometry') {
+                    oGeometry = new THREE.SphereGeometry(oItemSize[0],oItemSize[1],oItemSize[2]);
+                } if(item.elementType === 'CubeGeometry'){
+                    oGeometry = new THREE.CubeGeometry(oItemSize[0],oItemSize[1],oItemSize[2]); 
+                } if(item.elementType === 'other') {
+
+                    //w takim wypadku trzeba bedzie tworzyc model zaraz po zapisie w panelu admina 
+                    var url = "/ajax/getElementCode/"+item.offerId;                     
+                    $.getJSON( url, function(data) { 
+                        var loader = new THREE.JSONLoader();          
+                    
+                        loader.load('/js/models/model.js', function(geometry) {
+
+                           var material = new THREE.MeshLambertMaterial({color: 0x55B663});
+                           var mesh = new THREE.Mesh(geometry, material);
+                           scene.add(mesh);
+                        });
+                    
+                    }); //create model 
+                    
+                
+                }
+                //load konkretnego elementu
+       
+                oMaterial = new THREE.MeshLambertMaterial({color: oItemMaterial});
+               // oMaterial = new THREE.MeshNormalMaterial({wireframe:true});
+                oMesh     = new THREE.Mesh(oGeometry, oMaterial);
+//                
+                oMesh.position.set(oItemPosition[0],oItemPosition[1],oItemPosition[2]);
+                
+////                oMesh.scale.set( 1, 1, 1 );
+                scene.add(oMesh);
+            });  
+        });        
+        
+        // ------> elementy i textury
+        var sphere = new THREE.SphereGeometry(20,32,16); //tutaj beda boxy :P zaciagane JSONEM
+        
+        material_sphere1 = new THREE.MeshLambertMaterial( {color: 0xffaa00, shading: THREE.FlatShading} );
+        material_sphere2 = new THREE.MeshLambertMaterial( {color: 0xff2200, shading: THREE.FlatShading} );
+        
+        //sound spheres
+        var s = 1;
+        
+        var mesh1 = new THREE.Mesh( sphere, material_sphere1 );
+        mesh1.position.set( 50, 30, 0 );
+        mesh1.scale.set( s, s, s );
+        scene.add( mesh1 );      
+        
+        //sound1 = new Sound( ['files/music/Stromae_Papaoutai.mp3'], 275,1);
+      //  console.log(sound1);
+       // sound1.position.copy( mesh1.position );
+      //  sound1.play();
+        
+        //
+        
+        var mesh2 = new THREE.Mesh(sphere,material_sphere2);
+        mesh2.position.set(250,30,0);
+        mesh2.scale.set(s,s,s);
+        
+        
+        scene.add(mesh2);
+        
+        //sound2 = new Sound(['files/music/Hey_Brother.mp3'], 275,1);
+        //sound2.position.copy(mesh2.position);
+      //  sound2.play();
+        
+        //designPlane configured in admin
+        mesh = designPlane(settings.plane);        
+        scene.add(mesh);
+        
+        //renderer        
+        renderer = new THREE.WebGLRenderer({antialias: true});
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        
+        container.innerHTML = "";
+        container.appendChild(renderer.domElement); //canvas
+        
+        //listener
+        window.addEventListener('resize', onWindowResize, false);                      
+     }
+     
+     function onWindowResize() {
+        camera.aspect = window.innerWidth/window.innerHeight;
+        camera.updateProjectionMatrix();
+        
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        controls.handleResize();
+     }
+     
+     function animate() {
+         requestAnimationFrame(animate);
+         render();
+     }
+     
+     function render() {
+         var delta = clock.getDelta(); // check
+         var time = clock.getElapsedTime()*5; //check
+         
+         controls.update(delta);
+         
+         material_sphere1.color.setHSL(0.0, 0.3 + 0.7 * (1+ Math.cos(time)) /2, 0.5);
+         material_sphere2.color.setHSL(0.0, 0.3 + 0.7 * (1+ Math.cos(time)) /2, 0.5);
+         
+         renderer.render(scene,camera);
+//         sound1.update(camera);
+//         sound2.update(camera);
+     }
+     
+     //helper functions
+     function designPlane(planeSettings) {        
+        
+        console.log(planeSettings);
+        var material = new THREE.MeshLambertMaterial({color: 0x7f7566, wireframe:false, wireframeLinewidth:1});
+        var planeMesh = new THREE.Mesh(new THREE.PlaneGeometry(2000,2000,100,100), material); // to check 
+        
+        planeMesh.position.y = 0.1;
+        planeMesh.rotation.x = - Math.PI / 2;
+        
+        return planeMesh;
+     }
+     
+   }); 
+   
+    </script>

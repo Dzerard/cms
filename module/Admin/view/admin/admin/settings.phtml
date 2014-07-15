@@ -1,0 +1,316 @@
+<?php
+    $title = $this->translate('Ustawienia');
+    $this->headTitle($title);
+    $form = $this->form;
+    $form->setAttribute('action', $this->url('admin', array('action' => 'settings')));
+    $form->prepare();
+?>
+<h1><a href="<?php echo $this->url('admin', array('action'=> 'settings')) ?>" class="btn btn-default btn-lg"><i class="fa fa-wrench"></i>&ensp;<?php echo $title ?></a></h1>
+
+<hr />
+
+<?php 
+    //messages, alerts
+    echo $this->partial('partial/messages')
+?>
+
+<!--info-->
+<div class="row">
+  <div class="col-md-6">
+    <div class="panel panel-default">       
+        <div class="panel-heading">
+            <h3 class="panel-title">Podstawowe informacje <span class="pull-right"><i class="glyphicon glyphicon-chevron-up"></i></span></h3>
+        </div>   
+        <div class="panel-body" >
+            <address>
+              <strong><?php echo $info->infoName ?></strong><br />
+              <?php echo $info->infoStreet ?><br />
+               <?php echo $info->infoCity ?><br />
+              <abbr title="tel."><i class="glyphicon glyphicon-phone-alt"></i></abbr> <?php echo $info->infoPhone ?><br/>             
+            </address>
+            <address>                
+                <a href="mailto:#"><?php echo $info->infoEmail ?></a><br/>
+                fax: <?php echo $info->infoFax ?><br/>
+            </address>           
+            <p class="lastUpdate">ostatnia aktualizacja: <b><?php echo date('d.m.Y H:m',$info->infoUpdate) ?></b></p>
+            <a data-toggle="modal" href="#myModal" class="btn btn-primary"><i class="glyphicon glyphicon-edit"></i>&ensp;Edycja</a>
+        </div>
+    </div>   
+    <div class="panel panel-default">       
+        <div class="panel-heading">
+            <h3 class="panel-title">Tłumaczenia <span class="pull-right"><i class="glyphicon glyphicon-chevron-down"></i></span></h3>
+        </div>   
+        <div class="panel-body" style="display: none;">
+            <address>                
+                <strong>Dostępne języki:</strong><br />
+            </address>     
+            
+            <div class="well well-sm">
+                
+                <div class="btn-group">                  
+                    <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" data-toggle="tooltip" title="Pobierz pliki">
+                        <i class="glyphicon glyphicon-file"></i>&ensp; Polski &ensp;<span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="/language/pl.po" >Plik *.po</a></li>
+                      <li><a href="/language/pl.mo" >Plik *.mo</a></li>                     
+                    </ul>                    
+                </div>
+                
+                <div class="pull-right">                 
+                    <a data-toggle="modal" href="#myModalEditFile" class="btn btn-primary btn-sm editLangFile" id="pl" data-toggle="tooltip" title="edytuj/zmień plik tłumaczeń"><i class="glyphicon glyphicon-edit"></i></a>&ensp;
+                    <a data-toggle="modal" class="btn btn-danger btn-sm" id="Polskiego" rel="pl" data-toggle="tooltip" title="usuń plik" href="#myModalDelFile"><i class="glyphicon glyphicon-trash"></i></a>                    
+                </div>    
+            </div>
+            
+            <div class="well well-sm">
+                
+                <div class="btn-group">                  
+                    <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" data-toggle="tooltip" title="Pobierz pliki">
+                        <i class="glyphicon glyphicon-file"></i>&ensp; Niemiecki &ensp;<span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="/language/deu.po" >Plik *.po</a></li>
+                      <li><a href="/language/deu.mo" >Plik *.mo</a></li>                     
+                    </ul>                    
+                </div>                
+               
+                <div class="pull-right">
+                    <a data-toggle="modal" href="#myModalEditFile" class="btn btn-primary btn-sm editLangFile" id="deu" data-toggle="tooltip" title="edytuj/zmień plik tłumaczeń"><i class="glyphicon glyphicon-edit"></i></a>&ensp;
+                    <a data-toggle="modal" class="btn btn-danger btn-sm" id="Niemieckiego" rel="deu" data-toggle="tooltip" title="usuń plik" href="#myModalDelFile"><i class="glyphicon glyphicon-trash"></i></a>                    
+                </div>           
+            </div>
+            
+            <div class="well well-sm">
+                
+                <div class="btn-group">                  
+                    <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"  data-toggle="tooltip" title="Pobierz pliki">
+                        <i class="glyphicon glyphicon-file"></i>&ensp; Angielski &ensp;<span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="/language/eng.po" >Plik *.po</a></li>
+                      <li><a href="/language/eng.po" >Plik *.mo</a></li>                     
+                    </ul>                    
+                </div>                 
+              
+                <div class="pull-right">
+                    <a data-toggle="modal" href="#myModalEditFile" class="btn btn-primary btn-sm editLangFile" id="eng" data-toggle="tooltip" title="edytuj/zmień plik tłumaczeń"><i class="glyphicon glyphicon-edit"></i></a>&ensp;
+                    <a data-toggle="modal" class="btn btn-danger btn-sm" id="Angielskiego" rel="eng" data-toggle="tooltip" title="usuń plik" href="#myModalDelFile"><i class="glyphicon glyphicon-trash"></i></a>                    
+                </div>                             
+            </div>     
+            <div>    
+                <a class="btn btn-default btn-sm pull-right"   data-toggle="modal" data-toggle="tooltip" title="Instrukcja" href="#myModalInfo"><i class="glyphicon glyphicon-info-sign"></i></a>                    
+            </div>
+            <!--<p class="lastUpdate">ostatnia aktualizacja: <b><?php // echo date('d.m.Y H:m',$info->infoUpdate) ?></b></p>-->            
+            
+        </div>
+    </div>       
+    <div class="panel panel-default">       
+             <div class="panel-heading">
+                 <h3 class="panel-title">Inne ustawienia <span class="pull-right"><i class="glyphicon glyphicon-chevron-down"></i></span></h3>
+             </div> 
+            <div class="panel-body" style="display: none;">
+                <div class="well well-sm">
+                     <p>tutaj ustawienia wyświetalnia treści...</p>
+                </div>   
+            </div>
+    </div> 
+  </div>
+  <div class="col-md-6">
+    <div class="panel panel-default">       
+           <div class="panel-heading">
+               <h3 class="panel-title">Wyślij service e-mail <span class="pull-right"><i class="glyphicon glyphicon-chevron-down"></i></span></h3>
+           </div>   
+           <div class="panel-body" style="display:none;">
+               <form method="POST" action="<?php echo $this->url('admin', array('action' => 'serviceMail')) ?>" id="serviceForm">
+                <div class="form-group">
+                  <label for="emailTitle">Tytuł wiadomości</label>
+                  <input type="text" class="form-control" id="emailTitle" placeholder="wprowadź tytuł ..." required="" name="emailTitle">
+                </div>
+                <div class="form-group">
+                  <label for="emailDesc">Treść</label>
+                  <textarea class="form-control" rows="8" id="emailDesc" placeholder="w czym problem ? :)" required="" name="emailDesc"></textarea>                
+                </div>               
+                <button type="submit" class="btn btn-default" id="sendServiceMailButton" data-toggle="tooltip" title="" disabled><i class="glyphicon glyphicon-envelope"></i>&ensp;Wyślij</button>                 
+              </form>              
+               
+           </div>
+       </div>   
+  </div>
+</div>
+<!--/info-->
+
+
+
+<!-- Modal Adress -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+          <?php echo $this->form()->openTag($form->setAttribute('class', 'form-horizontal')); ?>  
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title">Edycja danych kontaktowych</h4>
+            </div>
+            <div class="modal-body">
+                <?php echo $this->formHidden($form->get('infoId'));?> 
+                
+                <div class="form-group">
+                    <label for="infoName" class="col-lg-4 control-label">Nazwa</label>
+                    <div class="col-lg-7">
+                       <?php echo $this->formRow($form->get('infoName')); ?>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="infoStreet" class="col-lg-4 control-label">Ulica</label>
+                    <div class="col-lg-7">
+                       <?php echo $this->formRow($form->get('infoStreet')); ?>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="infoCity" class="col-lg-4 control-label">Miato</label>
+                    <div class="col-lg-7">
+                       <?php echo $this->formRow($form->get('infoCity')); ?>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="infoPhone" class="col-lg-4 control-label">Tel.</label>
+                    <div class="col-lg-7">
+                       <?php echo $this->formRow($form->get('infoPhone')); ?>
+                    </div>
+                </div>            
+                
+                <div class="form-group">
+                    <label for="infoEmail" class="col-lg-4 control-label">Email</label>
+                    <div class="col-lg-7">
+                       <?php echo $this->formRow($form->get('infoEmail')); ?>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="infoFax" class="col-lg-4 control-label">Fax</label>
+                    <div class="col-lg-7">
+                       <?php echo $this->formRow($form->get('infoFax')); ?>
+                    </div>
+                </div>               
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Anuluj</button>
+               <?php echo $this->formSubmit($form->get('submitInfo')); ?>
+            </div>
+          <?php echo $this->form()->closeTag();?>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  
+  
+  
+<!-- Modal-->
+  <div class="modal fade" id="myModalDelFile" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+          
+          <form method="POST" action="<?php echo $this->url('admin', array('action' => 'settings')) ?>" name="resetLang">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title">Czy chesz usunąć plik tłumaczeń ?</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Zostanie przywrócony domyślny plik z tłumaczeniami dla języka <span id="delLanguage" class="label label-info"></span>
+                </p>                
+            </div>
+            <div class="modal-footer">
+              <input type="hidden" name="languageNameInput" value="" id="languageNameInput"/>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Anuluj</button>
+              <button class="btn btn-danger" type="sumit" name="defaultLang" value="save">Usuń</button>
+            </div>
+          </form>
+          
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  
+   
+<!-- Modal Edit-->
+  <div class="modal fade" id="myModalEditFile" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+          
+          <form method="POST" action="<?php echo $this->url('admin', array('action' => 'settings')) ?>" enctype="multipart/form-data" name="fileUploadLang">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title">Edycja plików tlumaczeń</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Dodaj pliki tłumaczeń które zostaną nadpisane:
+                </p> 
+                <input type="hidden" name="languageName" value="test" id="languageName"/>
+                <p>                 
+                    <span class="fileName">Plik *.po</span>                   
+                    <input type="file" name="transaltionFilePo" id="transaltionFilePo" data-toggle="tooltip" title="Dodaj plik *.po" required=""/>
+                </p>
+                <p>
+                    <span class="fileName">Plik *.mo</span>
+                    <input type="file" name="transaltionFileMo" id="transaltionFileMo" data-toggle="tooltip" title="Dodaj plik *.mo" required=""/>
+                </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Anuluj</button>
+              <button type="submit" class="btn btn-primary" name="saveFiles" value="save">Zapisz zmiany</button>
+            </div>
+          </form>
+          
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  
+   
+<!-- Modal-->
+  <div class="modal fade" id="myModalInfo" tabindex="-1" role="dialog" aria-labelledby="myModalInfo" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+          
+          <form>
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title">Informacje dotyczące tłumaczeń</h4>
+            </div>
+            <div class="modal-body">                    
+                <div class="alert alert-info">
+                    Do tłumaczeń wymagane jest zainstalowanie oprogramowania na komputerze.
+                </div>
+            
+                <p>
+                 Link do aplikacji &ensp;<a href="http://sourceforge.net/projects/poedit/files/latest/download?source=files" class="btn btn-default btn-xs"  data-toggle="tooltip"   title="Pobierz oprogramowanie" id="downloadFile">tutaj</a>
+                </p> 
+            
+                
+                <div class="panel panel-default">
+                    <div class="panel-body">                            
+                        <ul>
+                            <li>Wystarczy pobrać pliki dotyczące konkrentego języka</li>
+                            <li>Otworzyć je przy użyciu zainstalowanej aplikacji Poedit, link powyżej</li>
+                            <li>Po dodaniu translacji i zapisaniu plików na komputerze, pora na zapisanie ich na serwerze</li>
+                        </ul>
+                    </div>
+                </div>             
+            </div>
+            <div class="modal-footer">
+              <input type="hidden" name="languageNameInput" value="" id="languageNameInput"/>
+              <button type="button" class="btn btn-default" data-dismiss="modal">Anuluj</button>
+              <!--<button class="btn btn-danger" type="sumit" name="defaultLang" value="save">Usuń</button>-->
+            </div>
+          </form>
+          
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  
+  <script>
+      settingsActions();
+      triggerPanelHidding();    
+  </script>

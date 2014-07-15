@@ -1,0 +1,302 @@
+<?php
+$title = $this->translate('Przygotowania do wyjazdu');
+$this->headTitle($title);
+?>
+ <!-- Header Image -->
+        <div id="header-image-container">
+            <div id="header-image">
+                <img src="<?php echo $this->basePath('images/placeholders/2000x330.jpg') ?>" alt="" class="stretch-image" />
+            </div>
+        </div>
+
+        <div id="content-container" class="content-width">
+
+             <!-- Breadcrumbs -->
+            <?php
+            echo $this->navigation('navigation') 
+                      ->breadcrumbs()
+                      ->setMinDepth(0)
+                      ->setPartial('partial/breadcrumb.phtml');
+            ?>
+
+            <!-- Page Intro -->
+            <div id="intro" class="not-homepage row">
+                <div class="large-9 large-centered columns">
+                    <h1><strong><?php echo $this->translate('Przygotowania') ?></strong> <?php echo $this->translate('do wyjazdu') ?></h1>
+                </div>
+            </div>
+
+      
+            <div class="row">
+                <div class="large-12 columns for-nested">
+
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <h2 class="has-line"><?php echo $this->translate('Co zabrać za sobą?') ?> </h2>
+                            <ul>
+                                <li>
+                                    Dopełnij wszelkich formalności (sprawdź ważność dowodu osobistego lub w razie jego braku paszportu – jeśli wyjeżdżasz na ich podstawie, zgromadź inne konieczne do podjęcia pracy dokumenty np.: zaświadczenia potwierdzające Twoje kwalifikacje zawodowe).
+                                </li>
+                                <li>
+                                    Zostaw też adres, pod którym będziesz przebywać za granicą, numer telefonu, imię i nazwisko pracodawcy oraz nazwiska i adresy osób, z którymi wyjeżdżasz. Informuj bliskich o zmianach adresu i miejsca pracy.
+                                </li>
+                                
+                                <li>
+                                    Adres i numer telefonu najbliższego polskiego konsulatu w kraju do którego jedziesz. W razie jakichkolwiek kłopotów tam otrzymasz pomoc.<br />
+            Konsulat Generalny RP w Monachium, Röntgenstr. 5, 81679 München<br />
+            Tel.: (+49 89) 4186080, Kompetencja terytorialna: Baden-Württemberg, Bayern
+                                </li>
+                                
+                                <li>
+                                    Telefon komórkowy z aktywnym roamingiem lub telefon bez sim-locka, do którego będzie można kupić na miejscu kartę sim.
+                                </li>
+                                
+                                <li>
+                                    Pieniądze na „start” lub na dojazdy do pracy (sugerujemy 100 - 150 Euro).
+                                </li>
+                                
+                                <li>
+                                    Przed wyjazdem z Polski warto zabezpieczyć się na wypadek ewentualnej utraty pieniędzy podczas podróży i uzyskać potrzebne informacje. Wiele banków i biur podróży oferuje pomoc w takich sytuacjach.
+                                </li>
+                                
+                                <li>
+                                    Wygodne oraz dostosowane do pory roku ubrania i obuwie.
+                                </li>
+                                
+                                <li>
+                                   Zabierz ze sobą mapę miasta lub regionu, do którego się wybierasz. Posiadaczom samochodów polecany jest zakup GPSa, który w Niemczech jest  niezbędny.
+                                </li>                                
+                                
+                                <li>
+                                   Nie zapomnij spakować podstawowych artykułów higienicznych, które powinny się znaleźć w bagażu podręcznym.
+                                </li>                                
+                                
+                                <li>
+                                  Warto również zabrać ze sobą podstawowe lekarstwa.
+                                </li>
+                                
+                            </ul>
+                               
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <div class="row top-margin">
+                <div class="large-12 columns for-nested">
+
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <h2 class="has-line"><?php echo $this->translate('Po przybyciu na miejsce') ?> </h2>
+                            <ul>
+                                <li>
+                                    <h3 class="light">Meldunek</h3>
+                                    <p>
+                                        Każdy polski obywatel, który ma zamiar w Niemczech przebywać dłużej niż 7 dni, podlega obowiązkowemu obowiązkowi meldunkowemu we właściwym urzędzie miasta lub gminy (Uwaga: Jeśli ma umowę z niemieckim pracodawcą). W urzędzie miasta wystarczy podać tylko adres pod którym obecnie mieszkamy. Bez zameldowania nie jesteśmy w stanie załatwić niczego.
+                                    </p>
+                                </li>
+                                <li>
+                                    <h3 class="light">Konto bankowe</h3>
+                                    <p>
+                                        Wiele pracodawców wymaga założenia lokalnego konta bankowego. Warto pamiętać, iż przy założeniu konta należy wyrobić sobie również kartę bankową, aby móc bezpłatnie wypłacać pieniądze na terytorium Niemiec.
+                                    </p>
+                                </li>
+                                
+                                <li>
+                                    <h3 class="light">Lohnsteuerkarte (NIP)</h3>
+                                    <p>
+                                        Należy osobiście stawić się w Urzędzie Finansowym, wraz z ważnym dowodem  osobistym    lub paszportem, wypełnić formularz podając w nim stan cywilny, ilość dzieci oraz przynależność do kościoła.
+                                    </p>                                  
+                                </li>
+                                
+                                <li>
+                                    <h3 class="light">Abonament radiowo-telewizyjny</h3>
+                                    <p>
+                                        Krótko po zameldowaniu otrzymamy urzędowe pismo, w którym każdy zameldowany mieszkaniec powinien zadeklarować ilość i rodzaj odbiorników, z których korzysta.
+                                    </p>
+                                </li>
+                                
+                                <li>
+                                    <h3 class="light">Obowiązek segregacji śmieci</h3>
+                                    <p>
+                                        W Niemczech przywiązuje się dużą wagę do sortowania śmieci przede wszystkim z powodów ekologicznych, ponieważ posortowane śmieci zostają wtórnie przetworzone. Segregacja śmieci jest przeprowadzana nie tylko w domach mieszkalnych czy akademikach, ale również w innych publicznych miejscach takich jak dworzec czy lotnisko.
+                                    </p>
+                                    <p>
+                                        W związku z dużą ilością różnych kontenerów można się łatwo pogubić. Poniżej przedstawiamy Państwu pomocne objaśnienia.
+                                    </p>
+                                    <p>
+                                        <h4 class="light">Żółty pojemnik, żółty worek i inne</h4>
+Do żółtego pojemnika trafiają wszystkie opakowania oznaczone zielonym punktem. Są to na przykład puste puszki, plastikowe opakowania lub kartony po napojach (tertrapaki). Żółte worki otrzymuje się bezpłatnie w ratuszu lub kupuje się w supermarkecie.
+                                    </p>
+                                    <p>
+                                        <h4 class="light">Pojemnik na papier</h4>
+Do niebieskiego pojemnika wrzucane są gazety, czasopisma, prospekty, książki oraz opakowania z papieru i tektury lub kartony. W ostatnim czasie pojawia się coraz więcej punktów, w których skupowane są papier i tektura, a pieniądze otrzymuje się tam za każdy kilogram makulatury.
+
+                                    </p>
+                                    <p>
+                                        <h4 class="light">Odpady organiczne</h4>
+Do brązowego pojemnika wyrzuca się tylko i wyłącznie odpady organiczne, nadające się na kompost, czyli resztki jedzenia, owoców i warzyw, skorupki jajek, łupiny orzechów, filtry do kawy, torebki po herbacie, a także odpady ogrodowe takie jak liście i skoszona trawa. Ciecze, niedopałki oraz pieluchy nie należą do odpadów organicznych.
+                                    </p>
+                                    <p>
+                                        <h4 class="light">Kontener na szkło</h4>
+Szkło przeznaczone do recyklingu zbierane jest w kontenerach na szkło. W przypadku tych kontenerów rozróżnia się trzy kolory szkła: białe, zielone i brązowe. Należy przy tym pamiętać o dwóch rzeczach. Po pierwsze do kontenerów nie wrzuca się butelek wielokrotnego użytku względnie butelek z kaucją. Po drugie, przed wrzuceniem należy pamiętać o zdjęciu zakrętek ze słoików, gdyż te powinny trafić do żółtego pojemnika.
+                                    </p>
+                                    <p>
+                                        <h4 class="light">Butelki z kaucją/ wielokrotnego użytku</h4>
+Butelki wielokrotnego użytku rozpoznaje się między innymi po charakterystycznym znaku. Za butelki te zwracana jest kaucja. Butelki po piwie są na przykład ze szkła, ale są to jednocześnie butelki z kaucją i dlatego nie wrzuca się ich do kontenera na szkło przeznaczone do recykling. Często w okolicach hipermarketów lub większych sklepów zlokalizowane są punkty, w których można wymienić zgromadzone butelki na gotówkę.
+                                    </p>
+                                    <p>
+                                        <h4 class="light">Pozostałe odpady</h4>
+Do czarnego pojemnika na odpady nienadające się do powtórnego przetworzenia trafiają odpady niezawierające szkodliwych substancji, ani części składowych nadających się do powtórnego przetworzenia. Do tej kategorii zaliczają się popiół, worki z odkurzaczy, niedopałki, resztki gumowe, artykuły higieniczne, pieluchy, skóra prawdziwa oraz sztuczna.
+                                    </p>
+                                    <p>
+                                        <h4 class="light">Akumulatory i baterie</h4>
+Odpady zawierające substancje szkodliwe muszą być zbierane oddzielnie, tak jak na przykład baterie i akumulatory, które zawierają substancje trujące i zbierane są w tych małych pudełkach. Takie pudełka można otrzymać w sklepach i supermarketach i tam też można je oddać, gdy są pełne, aby mogły zostać zutylizowane w prawidłowy .
+                                    </p>
+                                    
+                                </li>
+                                
+                                <li>
+                                    <h3 class="light">Prawo jazdy w Niemczech</h3>
+                                    <p>
+                                        Polskie prawo jazdy należy w okresie do sześciu miesięcy pobytu za granicą wymienić na odpowiedni dokument niemiecki.
+                                    </p>
+                                    <p>
+Każda osoba zameldowana w Niemczech dłużej niż rok, ma obowiązek przerejestrować swój samochód. Wiąże się to z kosztami oclenia samochodu oraz opłaceniem podatku KFZ. Dlatego dużo korzystniej jest kupić samochód w Niemczech, indywidualnie bądź, na spółkę z innymi osobami. Jest to szczególnie opłacalne, gdyż z początkiem 2005 roku możliwe jest odliczanie kosztów podróży nawet przez osoby, podróżujące wspólnie jednym samochodem.<br />
+Aby zarejestrować samochód, należy udać się do niemieckiej firmy ubezpieczeniowej po numer EVB (Versicherungsbestaetigungsnummer), który jest potwierdzeniem, że firma będzie chciała ubezpieczyć samochód po zarejestrowaniu go. Od polskich firm ubezpieczeniowych należy zabrać zaświadczenia o przebiegu naszych ubezpieczeń za ostatnie 10 lat. Jest możliwość przeniesienia polskich zniżek do Niemiec, zarówno przy ubezpieczeniu OC (Haftpflicht) jak i Autocasco (Vollkasko). Następnie należy udać się na przegląd TÜV. Przegląd ważny jest 2 lata. Jeśli auto nigdy wcześniej nie było zarejestrowane w Niemczech, trzeba ubiegać się o dokument COC (Certificate of Conformity). W tym celu należy się udać do dealera, (koszt takiego dokumentu ok. 220 Euro). Następnie należy się udać do TÜV po ekwiwalent oryginalnego dokumentu COC (koszt ok. 60 Euro). Posiadając wszystkie dokumenty (EVB, TÜV, COC) można podejść do urzędu komunikacji (Zulassungsstelle). Tu należy przedstawić polski dowód rejestracyjny (tłumaczenia nie są wymagane), który trzeba oddać, natomiast polskie tablice można zostawić sobie na pamiątkę. Niemieckie tablice wyrabiane są na miejscu.
+Przy rejestracji samochodu wypełniamy formularz dla urzędu skarbowego, oczywiście należy podać numer konta bankowego, z którego co roku będzie ściągany podatek drogowy.
+
+                                    </p>
+                                    
+                                        <h4 class="light">Wysokość podatku drogowego w Niemczech zależy od dwóch czynników:</h4>
+                                     <p>   
+- klasy zanieczyszczeń pojazdu oraz<br />
+- pojemności silnika pojazdu.<br />
+Im większa emisja spalin oraz im większa pojemnność silnika naszego pojazdu, tym większą opłatę należy uiścić za podatek drogowy. Oba te czynniki są niezależne, tak więc opcja posiadania auta o dużej pojemności silnika i o dużych wartościach emisji spalin może okazać się szczególnie kosztowna. Pod względem podatkowym ze względu na zanieczyszczenia droższe jest przykładowo także użytkowanie pojazdów z silnikami dieslowskimi w porównaniu do samochodów z silnikami benzynowymi.
+
+                                    </p>
+                                    
+                                    <p>Z niemieckim dowodem rejestracyjnym wracamy do naszego agenta ubezpieczeniowego w celu podpisania umowy ubezpieczeniowej.
+Następnie należy wyrejestrować samochód w Polsce. Na stronie polskiego wydziału komunikacji jest do pobrania wniosek o wyrejestrowanie samochodu, do tego symboliczna opłata skarbowa. Wniosek można wysłać pocztą, nie trzeba więc stawiać się osobiście w polskim urzędzie.
+</p>
+                                    
+                                </li>
+                                
+                                <li>
+                                    <h3 class="light">Klasy podatkowe w Niemczech</h3>
+                                    <p>
+                                    W Niemczech wyodrębnionych zostało 6 grup podatkowych odnoszących się do pracowników nazywanych Steuerklasse:
+                                    </p>
+                                    <p>
+- Klasa I - do tej grupy należą: panny, kawalerowie, osoby rozwiedzione i owdowiałe, jeżeli nie klasyfikują się do klasy II i III (czyli, jeżeli przez cały rok podatkowy byli rozwiedzeni lub owdowiali i nie posiadają na utrzymaniu małoletnich dzieci),
+                                    </p>
+                                    <p>
+- Klasa II, osoby stanu wolnego samotnie wychowujące dzieci poprzez które uznaje się: pannę, kawalera, osobę rozwiedzioną, wdowę oraz wdowca, w gospodarstwie których zameldowane jest co najmniej 1 małoletnie dziecko, za które otrzymuje kwotę pomniejszenia podatku na dziecko oraz zasiłek opiekuńczy lub rodzinne (Kindergeld). Dla pracowników owdowiałych przynależność do tej grupy podatkowej następuje tylko wtedy, gdy nie byli w klasie III,
+                                    </p>
+                                    <p>
+- Klasa III - pracownicy zamężni lub żonaci jak i również osoby owdowiałe w trakcie roku kalendarzowego, w którym nastąpił zgon małżonka,
+                                    </p>
+                                    <p>
+                                    - Klasa IV - małżonkowie, jeżeli oboje uzyskują dochody z pracy,
+                                    </p>
+                                    <p>
+- Klasa V - gdy jedno z małżonków w trakcie roku kalendarzowego przynależało do klasy III,
+                                    </p>
+                                    <p>
+- Klasa VI - do tej klasy zakwalifikowani są pracownicy, którzy jednocześnie pobierają wynagrodzenie z kilku źródeł zatrudnienia.
+                                    </p>
+                                </li>
+                                
+                                <li>
+                                    <h3 class="light">Zwrot podatku</h3> 
+                                    <p>
+                                        Jeżeli pracowałeś legalnie za granicą to na pewno potrącano Ci z wynagrodzenia zaliczki na podatek. Ponieważ w w większości przypadków zaliczki są pobierane w zawyżonej kwocie, najprawdopodobniej przysługuje Ci zwrot nadpłaconego podatku. To jak wysoki zwrot podatku otrzymasz od fiskusa zależy od rozliczenia rocznego, które trzeba do niego wysłać.
+                                    </p>
+                                    <p>
+                                        Ponieważ przepisy podatkowe są bardzo skomplikowane i odmienne w każdym kraju, najlepiej rozliczyć zwrot podatku z pomocą profesjonalnej firmy.
+                                    </p>
+                                    <p>
+O zwrot podatku za pracę w Niemczech może ubiegać się każdy kto, legalnie pracował w Niemczech. Wystarczy, że pracodawca odprowadzał zaliczkę na podatek dochodowy,
+
+                                    </p>
+                                    <ul>
+                                        <li>O zwrot podatku z Niemiec możesz ubiegać się do 5 lat wstecz</li>
+                                        <li>O zwrot nadpłaconego podatku za pracę w Niemczech możesz ubiegać się przez cały rok</li>
+                                    </ul>
+
+                                </li>                                
+                                
+                                <li>
+                                    <h3 class="light">Zasiłek na dziecko (Kindergeld)</h3> 
+                                    <p>
+                                        Aby dostać zasiłek na dziecko należy:
+                                    </p>
+                                    <p>
+- udokumentować, że jedno z rodziców pracuje w Niemczech, <br />
+- udokumentować, że dziecko przebywa w Niemczech/Polsce (wystarczy kopia zameldowania), <br />
+- przesłać kopię umowy najmu mieszkania w Niemczech,<br />
+- przesłać akt urodzenia dziecka i akt małżeństwa (w Polsce w USC można dostać wielojęzyczne akty urodzenia, więc nie jest potrzebne tłumaczenie)<br />
+- udać się do odpowiedniego urzędu po zaświadczenie, że jesteśmy obywatelami UE
+(tzw. Freizügigkeitsbescheinigung)<br />
+- udać się do odpowiedniego urzędu w Polsce, który wystawi zaświadczenie, że rodzice pobierają /lub NIE pobierają/jakiekolwiek świadczenia na dzieci.
+
+                                    </p>  
+                                    <p>
+                                        Kindergeld przysługuje osobie spełniającej jeden z powyższych warunków na dzieci:<br />
+- zamieszkałe w jednym z krajów Unii Europejskiej (w tym Polski),<br />
+- które nie ukończyły 18 lat, lub<br />
+- ukończyły 18 lat ale nie ukończyły 27 roku życia i pobierają naukę.
+                                    </p>
+                                    <p>
+UWAGA: Kindergeld nie przysługuje pracownikom sezonowym oraz pracownikom na kontrakcie z polskich firm odesłanych na czasowy pobyt na terenie Niemiec czy  Austrii.
+Na pierwsze, drugie i trzecie dziecko 184,- Euro miesięcznie, od czwartego dziecka 195,- Euro pomniejszone o kwoty zasiłku rodzinnego na dzieci wypłacanego w Polsce.
+
+                                    </p>
+                                  
+                                </li>                                
+                                
+                                <li>
+                                    <h3 class="light">Niemieckie świadczenia emerytalne</h3> 
+                                  <p>
+                                      Każda osoba pracująca w Niemczech dłużej niż 10 lat ma prawo do uzyskania renty niemieckiej.
+                                  </p>
+                                </li>
+                                
+                                <li>
+                                    <h3 class="light">Wniosek o rentę może być złożony przez osobę w wieku:</h3> 
+                                    <ul>
+                                        <li> kobieta - 60 lat</li>
+                                        <li>mężczyzna - 65 lat</li>
+                                    </ul>
+                                    
+                                  <p>
+W Niemczech świadczenia emerytalne wynoszą 64 % przeciętnego wynagrodzenia netto przy przepracowanych 45 latach. Aby otrzymać jakąkolwiek emeryturę trzeba przepracować co najmniej 10 lat.
+
+                                  </p>
+                                </li>
+                                
+                                <li>
+                                    <h3 class="light">Jeśli zostałeś oszukany, zgubiłeś dokumenty, nie masz gdzie mieszkać:</h3> 
+                                  <p>
+                                      - powiadom miejscową policję<br />
+- zgłoś się do najbliższego konsulatu RP<br />
+- poszukaj organizacji pozarządowych bądź kościelnych, które mogą Ci pomóc w razie potrzeby,<br />
+- powiadom najbliższych, dzięki udostępnieniu usługi Poland Direct poprzez Komunikację  Polską istnienie możliwość wykonania połączenia na koszt odbiorcy. Opłata za usługę obliczana jest w polskich złotych według obowiązujących polskich stawek, a następnie doliczana do miesięcznego rachunku abonenta. Korzystanie z usługi  jest proste i bardzo wygodne. Telefonistka mówi po polsku.
+
+                                  </p>
+                                  <p>
+                                      <strong>Numer dla terotorium Niemiec: Niemcy - 0 800 080 1048</strong>
+                                  </p>
+                                </li>
+                                
+                            </ul>
+                               
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+        <!-- End id="content-container" -->

@@ -1,0 +1,160 @@
+<?php if(isset($paginator))   :?> 
+<?php
+$title = 'Aktualności';
+$this->headTitle($title);
+?>
+
+<?php //echo $this->partial('partial/bread') ?>
+
+<div class="row">
+    <div class="col-md-11">
+        <h1><a href="<?php echo $this->url('admin', array('action'=> 'news')) ?>" class="btn btn-default btn-lg"><i class="glyphicon glyphicon-list-alt"></i>&ensp;<?php echo $this->translate('Aktualności') ?></a> - lista newsów</h1>
+    </div>
+    <div class="col-md-1">
+         <a href='<?php echo $this->url('admin', array('action' => 'addNews'));?>' style="margin-top:30px"  class="btn btn-primary pull-right"><?php echo $this->translate('Dodaj news'); ?></a>        
+    </div>
+</div>
+
+<?php if(count($paginator)) :?>
+<table class="table table-striped">
+<tr>
+    <th>ID</th>
+    <th>Tytuł wiadomości</th>       
+    <th>Data dodania</th>
+    <th>Akcje</th>
+</tr>
+
+<?php foreach ($paginator as $p) : ?>
+
+<tr>
+    <td><?php echo $this->escapeHtml($p->newsId);?></td>
+    <td> <a href="<?php echo $this->url('admin',
+            array('action'=>'news', 'id' => $p->newsId));?>"> <?php echo $this->escapeHtml($p->newsTitlePl);?> </a></td>
+ 
+    <td class="span1"><?php echo  date('d-m-Y G:i',$this->escapeHtml($p->newsInsert));?></td>    
+    <td class="span2">
+        <a href="<?php echo $this->url('admin',
+            array('action'=>'news', 'id' => $p->newsId));?>" title="podgląd"><i class="glyphicon glyphicon-picture"></i></a>
+        <a href="<?php echo $this->url('admin',
+            array('action'=>'delNews', 'id' => $p->newsId));?>" title="usuń"><i class="glyphicon glyphicon-trash"></i></a>
+    </td>
+</tr>
+<?php endforeach; ?>
+
+</table>
+<?php
+ echo $this->paginationControl(
+     
+     $this->paginator,
+     // the scrolling style
+     'sliding',
+     // the partial to use to render the control
+     array('partial/paginator.phtml', 'Admin'),
+     // the route to link to when a user clicks a control link
+     array(
+         'route' => 'admin',
+         'action' => 'news'
+     )
+ );
+?>
+
+    <?php else : ?>
+
+<div class="well" style="margin-top:20px;">
+    <p>
+       <strong> Brak newsów ... </strong>
+    </p>
+</div>
+
+<?php endif; ?>
+
+<?php  elseif (isset($form)) :?>
+<?php
+$title = 'Aktualności - treść wiadmości';
+$this->headTitle($title);
+?>
+<style>
+    
+    .form-group .form-control { min-width: 400px;   }
+    .form-group span {  display: block;  }
+    .form-group textarea {  min-width: 400px;   }
+    .form-group ul {list-style: none; margin: 0; padding: 0; color: #ff0000; font-size: 10px;}
+    .my-images {width: 320px; }
+    .btn-del {display: block; margin: 5px 100px;}
+</style>
+
+<h1><a href="<?php echo $this->url('admin', array('action'=> 'news')) ?>" class="btn btn-default btn-lg"><i class="glyphicon glyphicon-list-alt"></i>&ensp;<?php echo $this->translate('Aktualności') ?></a> - treść newsa</h1>
+
+<hr />
+
+<?php
+$form = $this->form;
+$form->setAttribute('action', $this->url('admin', array('action' => 'news',  'id' => $this->id)));
+$form->prepare();
+?>
+
+
+     <?php echo $this->form()->openTag($form->setAttribute('class', 'form-horizontal')); ?>    
+     <?php echo $this->formHidden($form->get('newsId'));?>        
+
+        <div class="form-group">
+             <label for="newsTitlePl" class="col-lg-3 control-label">Tytuł wiadomości</label>
+             <div class="col-lg-9">
+                <?php echo $this->formRow($form->get('newsTitlePl')); ?>
+             </div>
+        </div>
+        <div class="form-group">
+             <label for="newsTitleDe" class="col-lg-3 control-label">Tytuł wiadomości - (niemiecki)</label>
+             <div class="col-lg-9">
+                <?php echo $this->formRow($form->get('newsTitleDe')); ?>
+             </div>
+        </div>
+        <div class="form-group">
+             <label for="newsMessagePl" class="col-lg-3 control-label">Treść wiadomości</label>
+             <div class="col-lg-9" style="position: relative;">
+                <?php echo $this->formRow($form->get('newsMessagePl')); ?>
+             </div>
+        </div>
+        <div class="form-group">
+             <label for="newsMessageDe" class="col-lg-3 control-label">Treść wiadomości - (niemiecki)</label>
+             <div class="col-lg-9">
+                <?php echo $this->formRow($form->get('newsMessageDe')); ?>
+             </div>
+        </div>
+        <div class="form-group">
+             <label for="newsPicture" class="col-lg-3 control-label">Dodatkowe zdjęcie</label>
+             <div class="col-lg-9">
+               
+                  <?php if ($news->newsPicture) { ?>
+                     <input type="hidden" value="<?php echo $news->newsPicture ?>" name="newsPicture" />
+                    <img src="<?php echo $this->basePath('upload/news/'.$news->newsPicture) ?>" alt="<?php echo $news->newsPicture; ?>" class="img-thumbnail my-images"/>
+                    <button class="btn btn-default btn-del" name='del-picture' value='yes'><i class="glyphicon glyphicon-trash"></i>&ensp;usuń zdjęcie</button>
+                  <?php } else {?>                  
+                    <?php echo $this->formRow($form->get('newsPicture')); ?>
+                  <?php } ?>
+             </div>
+        </div>      
+        <div class="well">
+                <div class="form-group" id="action-buttons">
+                     <div class="col-lg-offset-2 col-lg-1">
+                        <a href="<?php echo $this->url('admin', array('action' => 'news')) ?>" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i>&ensp;Powrót </a>
+                     </div>
+                     <div class="col-lg-1">
+                        <?php echo $this->formSubmit($form->get('submit')); ?>
+                     </div>
+                </div>
+        </div>
+        <?php echo $this->form()->closeTag();?>
+        
+<?php endif; ?>
+
+<script>
+        tinyMCE.init({
+                // General options
+                language : 'pl',
+                mode : "textareas",
+                height: 250
+                //width : 700
+
+        });
+</script>

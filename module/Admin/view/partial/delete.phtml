@@ -1,0 +1,21 @@
+<?php
+    $title = $this->translate('Usuń');
+    $this->headTitle($title);
+    $url = $this->url('admin', array('action' => $this->action ,'id' => $this->id,));
+?>
+<h1><a href="<?php echo $this->url('admin', array('action'=> $this->back)) ?>" class="btn btn-default btn-lg"><i class="fa fa-<?php echo $this->icon; ?>"></i>&ensp;<?php echo $this->translate($this->name) ?></a> - <?php echo $this->translate('usuń') ?> </h1>
+<hr />
+
+<div class="well">
+    <p>
+        <?php echo $this->translate('Czy chcesz usunąć firmę:') ?><span class="info-del">'<?php echo $this->escapeHtml($this->title); ?>'</span> ?
+    </p>
+</div>
+
+<form action="<?php echo $url; ?>" method="post">
+<div>
+    <input type="hidden" name="id" value="<?php echo (int) $this->viewContentId; ?>" />
+    <button name="del" value="Powrót" class="btn btn-default"/><i class="glyphicon glyphicon-chevron-left"></i>&ensp;<?php echo $this->translate('Powrót') ?></button>
+    <input type="submit" name="del" value="Usuń" class="btn btn-danger"/>
+</div>
+</form>

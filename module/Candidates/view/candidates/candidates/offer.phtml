@@ -1,0 +1,307 @@
+<?php
+$title = $this->translate('Oferty pracy');
+$this->headTitle($title);
+?>
+ <!-- Header Image -->
+        <div id="header-image-container">
+            <div id="header-image">
+                <img src="<?php echo $this->basePath('images/placeholders/2000x330.jpg') ?>" alt="" class="stretch-image" />
+            </div>
+        </div>
+
+        <div id="content-container" class="content-width">
+
+            <!-- Breadcrumbs -->
+            <?php
+                if(isset($paginator)) {
+                    echo $this->navigation('navigation') 
+                          //->partial('partial/breadcrumb_active.phtml',array ('offer' => true))
+                          ->breadcrumbs()
+                          ->setMinDepth(0)
+                          ->setPartial('partial/breadcrumb.phtml')             
+                          ->render();
+                }
+                else {
+
+                    echo $this->navigation('navigation') 
+                          ->breadcrumbs()
+                          ->setMinDepth(0)
+                          ->setPartial('partial/breadcrumb_active.phtml')             
+                          ->render();              
+                }
+            ?>
+           
+            
+            <?php if(isset($paginator)) :?>              
+                <!-- popularne oferty pracy -->
+                <?php //echo $this->partial('layout/popular') ?>
+                <?php echo $this->partial('layout/categories') ?>
+                <!-- popularne oferty pracy-->
+            
+            
+<!--             Page Intro 
+            <div id="intro" class="not-homepage row">
+                <div class="large-9 large-centered columns">
+                    <h1>Lista ogłoszeń</h1>
+                </div>
+            </div>-->
+
+            <!-- Blog List -->
+            <div class="grey-bg row">
+                <div class="large-12 columns for-nested">
+                    <?php if((count($paginator)) == 0) : ?>
+                    <div class="blog-item row">
+                        <div class="large-12 columns height-255" style="min-height: 200px;">
+                            <h3 class="blog-title light">
+                                <?php echo $this->translate('Brak ofert spełniających wymagania, lub ogłoszenie którego szukasz już nie istnieje ...')?>
+                            </h3>
+                            <a href="<?php echo $this->url('candidates', array('action' => 'offer'));?>" class="flat button" style="margin-top: 20px;"><i class="icon-angle-left"></i>&ensp;wróć do listy ofert</a>
+                            
+                        </div>                       
+                    </div>
+                    
+                    <?php endif; ?>
+                    <?php foreach ($paginator as $p) : ?>
+                    
+                    <div class="blog-item row">
+                        <div class="large-12 columns height-255">
+                            <div class="blog-meta">
+                                <span class="date"><?php echo  date('d-m-Y',$this->escapeHtml($p->offerInsert));?></span>
+                                <ul class="author-comments">
+                                    <li>
+                                        <i class="icon-user"></i><a href="#"><?php echo $this->escapeHtml($p->offerCity);?></a>
+                                    </li>
+                                    <li>
+                                        <i class="icon-home"></i><a href="#"><?php echo $this->escapeHtml($p->offerCompany);?></a>
+                                    </li>
+                                    <li>
+                                        <img src="<?php echo ($p->offerCountry == 'pl' ? $this->basePath('images/placeholders/poland.png') : $this->basePath('images/placeholders/germany.png') ) ?>" alt="<?php echo $this->escapeHtml($p->offerCountry) ?>" />
+                                    </li>
+                                </ul>
+                            </div>
+                            <hr />
+                            <h2 class="blog-title"><a href="<?php echo $this->url('candidates', array('action' => 'offer', 'id' => $p->offerId));?>"><?php echo $this->escapeHtml($p->offerTitle);?></a></h2>
+                            <p class="excerpt">
+                                <?php echo $this->escapeHtml($p->offerDesc);?>                                
+                            </p>
+                            <a class="readmore-link" href="<?php echo $this->url('candidates',array('action' => 'offer', 'id' => $p->offerId));?>">Więcej</a>
+                        </div>                        
+                    </div>
+                    
+                    <?php  endforeach; ?>              
+
+                    <div class="row">
+                        
+                        <?php
+                         echo $this->paginationControl(
+
+                             $this->paginator,
+                             // the scrolling style
+                             'sliding',
+                             // the partial to use to render the control
+                             array('partial/paginator_offer.phtml', 'Offer'),
+                             // the route to link to when a user clicks a control link
+                             array(
+                                 'route'  => 'candidates',  
+                                 'action' => 'offer'
+                             )
+                         );
+                        ?>
+     
+                    </div>
+
+                </div>
+                
+                
+            </div>
+            
+            <?php endif; ?>
+
+            <?php if(isset($offer)) : ?>
+            
+           <!-- Page Intro -->
+            <div id="intro" class="not-homepage row">
+                <div class="large-9 large-centered columns">
+                    <h1>Opis <strong>Stanowiska</strong></h1>
+                </div>
+            </div>
+                 
+            <!-- Portfolio Info -->
+            <div class="row">
+                <div class="large-12 columns no-padding">
+                    <div id="portfolio-item-images">
+                        <!-- IMAGES -->
+                        <?php foreach($images as $k=>$v) :?>
+                        <div>
+                            <a href="<?php echo $this->basePath($v) ?>" class="image-box" title="<?php echo $categories[$offer->offerCategory] ?>" rel="portfolio-image-group"><img src="<?php echo $this->basePath($v) ?>" alt="" /></a>
+                        </div>                        
+                        <?php endforeach;?>   
+                        <!-- /IMAGES -->
+                    </div>
+                    <div id="portfolio-item-images-controller">
+                        <a href="#" id="portfolio-item-images-prev"><i class="icon-angle-left"></i></a>
+                        <a href="#" id="portfolio-item-images-next"><i class="icon-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div id="portfolio-item-info-wrapper" class="row">
+                <div id="portfolio-item-info" class="large-3 columns no-padding">
+                    <ul id="portfolio-item-meta">
+                        <li>
+                            <i class="icon-user"></i><strong>Stanowisko</strong>
+                            <p>
+                                 <?php echo $this->escapeHtml($offer->offerType);?> 
+                            </p>
+                        </li>
+                        <li>
+                            <i class="icon-flag"></i><strong>Kraj</strong>
+                            <p>
+                                <?php echo $this->escapeHtml($offer->offerCountry);?>
+                            </p>
+                        </li>
+                        <li>
+                            <i class="icon-home"></i><strong>Adres (Miasto)</strong>
+                            <p>
+                                 <?php echo $this->escapeHtml($offer->offerCity);?>
+                            </p>
+                        </li>
+                        <li>
+                            <i class="icon-calendar"></i><strong>Data dodania</strong>
+                            <p>
+                                <?php echo  date('d-m-Y',$this->escapeHtml($offer->offerInsert));?>
+                            </p>
+                        </li>
+                        <li>
+                            <i class="icon-user"></i><strong>Pracodawca</strong>
+                            <p>
+                                <?php echo $this->escapeHtml($offer->offerCompany);?>
+                            </p>
+                        </li>
+                        <li>
+                            <i class="icon-cog"></i><strong>Nr ref.</strong>
+                            <p>
+                                <?php echo $this->escapeHtml($offer->offerNumber);?>
+                            </p>
+                        </li>
+                        <li>
+                            <i class="icon-tags"></i><strong>Kategoria</strong>
+                            <ul id="portfolio-item-categories">
+                                <li>
+                                    <a href="<?php echo $this->url('candidates',array('action' => 'offer', 'category' => $offer->offerCategory)); ?>"><?php echo $this->escapeHtml($categories[$offer->offerCategory]);?></a>
+                                </li>   
+                                
+                            </ul>
+                        </li>
+                        <li>
+                            <i class="icon-globe"></i><strong>Strona www</strong>
+                            <p>
+                                <a href="<?php echo $this->escapeHtml($offer->offerWebPage);?>" target="_blank"a><?php echo $this->escapeHtml($offer->offerWebPage);?></a>
+                            </p>
+                        </li>
+                        <li>
+                            <i class="icon-envelope"></i><strong>Kontakt</strong>
+                            <p>
+                                <a href="mailto:<?php echo $this->escapeHtml($offer->offerWebPage);?>"><?php echo $this->escapeHtml($offer->offerEmail);?></a>
+                            </p>
+                        </li>
+                        <li>
+                            <i class="icon-phone"></i><strong>Telefon</strong>
+                            <p>
+                                 <a href="#"><?php echo $this->escapeHtml($offer->offerPhone);?></a>
+                            </p>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="large-9 columns">
+                    <h3 class="light">Tytuł:</h3>
+                    <p>
+                        <?php echo $this->escapeHtml($offer->offerTitle);?>
+                    </p>
+                    <h3 class="light">Opis stanowiska:</h3>
+                    <p>
+                        <?php echo $this->escapeHtml($offer->offerDesc);?>
+                    </p>
+                    <h3 class="light">Wymagania:</h3>
+                    <p>
+                        <?php echo $this->escapeHtml($offer->offerRequire);?>
+                    </p>
+                    <h3 class="light">Dodatkowe informacje:</h3>
+                    <p>
+                       <?php echo $this->escapeHtml($offer->offerExtraInfo);?>
+                    </p>
+                    
+                   <a href="<?php echo $this->url('candidates',array('action' => 'offer')) ?>" class="flat button" style="margin-top: 100px;"><i class="icon-angle-left"></i>&ensp;wróć do listy ofert</a>
+                </div>
+            </div>
+            
+            <?php endif; ?>
+            
+            <div class="row top-margin">
+                <div class="large-12 columns for-nested">
+
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <h2 class="has-line"><?php echo $this->translate('Powiadomienia mailowe') ?> </h2>
+                                <p>Chcesz być na bieżąco z najnowszymi ofertami pracy? Włącz powiadomienia mailowe! 
+Na Twój adres e-mail będziemy wysyłać aktualne ogłoszenia.
+
+                            <form id="contact-form" method="post" class="validate notification-form" enctype="multipart/form-data" >                          
+                                <div class="row">
+                                    <div class="large-5 columns less-padding">
+                                        <label for="notificationEmail">Email</label>
+                                        <input class="validate[required,custom[email]]" type="text" name="notificationEmail" />
+                                    </div>
+                             
+                                    <div class="large-5 columns less-padding">
+                                        <label for="notificationNote">Preferowane stanowisko</label>
+                                        <textarea class="validate[required]" name="notificationNote" style="height: 120px;"></textarea>
+                                    </div>
+                                </div>
+                                 <div class="row">
+                                    <div class="large-5 columns less-padding">  
+                                         <label for="notificationCountry">Preferowany kraj</label>
+                                        
+                                        <label class="inline-label"><input type="radio"  class="validate[required] radio" name="notificationCountry" value="pl">&ensp;Polska</label>
+                                        <label class="inline-label"><input type="radio"  class="validate[required] radio" name="notificationCountry" value="de">&ensp;Niemcy</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="large-12 columns less-padding">                                     
+                                        <div data-alert="" class="info box" style="background:none; border-color: #999999; color: #444;">
+                                            <p>
+                                                <?php echo $this->translate('*Niniejszym oświadczam, że zgodnie z art. 23 ust. 1 pkt 1 ustawy z dnia 29 sierpnia 1997 r. o ochronie danych osobowych (Dz.U. z 2002 r. Nr 101, poz. 926) wyrażam zgodę na przetwarzanie wyżej wymienionych moich danych osobowych przez Winckler Personal w celach marketingowo/sprzedażowych.') ?>
+                                            </p>
+                                            <a href="#" class="close">×</a>
+                                        </div>                                 
+                                        
+                                        <label class="inline-label"><input class="validate[required] checkbox" type="checkbox" name="contactAccept" value="yes"/>&emsp;<strong>Akceptuje</strong></label>                                          
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="row">
+                                    <div class="large-5 columns less-padding">
+                                        <input type="submit" class="flat button" value="<?php echo $this->translate('Wyślij') ?>" />
+                                    </div>
+                                </div>
+                            </form>
+                            <div id="success" class="success box">
+                                <?php echo $this->translate('Dziękujemy za przesłanie wiadomości. Od dziś będziemy na bieżąco informować Państwa o nowych ofertach pracy.') ?>                                
+                            </div>
+                            <div id="error" class="error box">
+                                <?php echo $this->translate('Coś poszło nie tak ... Prosimy skontaktować się za pomocą email lub telfonicznie. Przepraszamy za problem.') ?>                               
+                            </div>
+                            
+                       
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            
+            
+        </div>
+        <!-- End id="content-container" -->

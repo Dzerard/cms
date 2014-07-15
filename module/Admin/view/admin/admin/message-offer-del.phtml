@@ -1,0 +1,23 @@
+<?php
+    $title = $this->translate('usuń wiadomość');
+    $this->headTitle($title);
+    $url = $this->url('admin', array('action' => 'message-offer-del','id' => $this->id));
+?>
+<h1><a href="<?php echo $this->url('admin', array('action' => 'message-offer-del', 'id'=> $message->messageId)) ?>" class="btn btn-default btn-lg"><i class="fa fa-envelope"></i>&ensp;<?php echo $this->translate('Wiadomości') ?></a> - <?php echo $this->escapeHtml($title); ?></h1>
+<hr />
+
+<div class="well">
+    <p>
+        <?php echo $this->translate('Czy chcesz usunąć wiadomość od: ') ?><span class="info-del">'<?php echo $this->escapeHtml($message->messageName).' ('.$this->escapeHtml($message->messageEmail).')'; ?>'</span> ?
+    </p>
+</div>
+
+<form action="<?php echo $url; ?>" method="post">
+    <div>
+        <input type="hidden" name="id" value="<?php echo (int) $message->messageId; ?>" />
+        <input type="hidden" name="offerID" value="<?php echo (int) $companyID; ?>" />
+        <a href="<?php echo $this->url('admin', array('action' => 'message-offer', 'id'=> $companyID)) ?>" class="btn btn-default"/><i class="fa fa-angle-left"></i>&ensp;<?php echo $this->translate('Powrót') ?></a>
+        <input type="submit" name="del" value="<?php echo $this->translate('Usuń') ?>" class="btn btn-danger"/>
+    </div>
+</form>
+

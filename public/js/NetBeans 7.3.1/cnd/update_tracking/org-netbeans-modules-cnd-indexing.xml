@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.cnd.indexing">
+    <module_version install_time="1370463286300" last="true" origin="installer" specification_version="1.2.2">
+        <file crc="3722384464" name="config/Modules/org-netbeans-modules-cnd-indexing.xml"/>
+        <file crc="1771170660" name="modules/locale/org-netbeans-modules-cnd-indexing_ja.jar"/>
+        <file crc="1493170575" name="modules/locale/org-netbeans-modules-cnd-indexing_pt_BR.jar"/>
+        <file crc="4084279209" name="modules/locale/org-netbeans-modules-cnd-indexing_ru.jar"/>
+        <file crc="799177381" name="modules/locale/org-netbeans-modules-cnd-indexing_zh_CN.jar"/>
+        <file crc="1582501853" name="modules/org-netbeans-modules-cnd-indexing.jar"/>
+    </module_version>
+</module>

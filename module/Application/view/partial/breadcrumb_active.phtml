@@ -1,0 +1,39 @@
+<!-- Breadcrumbs -->
+            <div class="row">
+                <div id="breadcrumbs-wrapper" class="large-12 columns for-nested">
+                    <span><?php echo $this->translate('Jesteś tutaj:') ?></span>
+                    
+                    <ul class="breadcrumbs">
+                         <li>                            
+                            <a href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Strona główna') ?></a>
+                        </li>
+                         <?php
+                        // iterate through the pages
+                         
+                         
+                        foreach ($this->pages as $key => $page):
+                            ?>
+                           
+                                <?php
+                                // if this isn't the last page, add a link and the separator
+                                if ($key < count($this->pages) - 1):
+                                    ?>
+                                    <li><a href="<?php echo $page->getHref(); ?>"><?php echo $this->translate($page->getLabel()); ?></a>
+                                   
+                                <?php
+                                // otherwise, just output the name
+                                else:
+                                ?>
+                                     <li><a href="<?php echo $page->getHref(); ?>"><?php echo $this->translate($page->getLabel()); ?></a>
+                                <?php endif; ?>
+                            </li>
+                            <?php endforeach; ?>                            
+                            
+                            <li class="current">
+                                <a href="#"><?php echo $this->translate('Opis stanowiska') ?></a>
+                            </li>
+                            
+                    </ul>
+
+                </div>
+            </div>

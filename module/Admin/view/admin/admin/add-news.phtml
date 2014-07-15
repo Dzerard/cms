@@ -1,0 +1,48 @@
+<?php
+// module/Album/view/news/news/add.phtml:
+
+$title = $this->translate('Dodawanie nowej wiadomości');
+$this->headTitle($title);
+
+$form = $this->form;
+$form->setAttribute('action', $this->url('admin', array('action' => 'addNews')));
+$form->prepare();
+
+?>
+<h1><a href="<?php echo $this->url('admin', array('action'=> 'news')) ?>" class="btn btn-default btn-lg"><i class="glyphicon glyphicon-list-alt"></i>&ensp;<?php echo $this->translate('Aktualności') ?></a> - dodawanie nowej wiadomości</h1>
+
+<hr />
+        <?php echo $this->form()->openTag($form->setAttribute('class', 'form-horizontal')); ?>       
+        <?php echo $this->formHidden($form->get('newsId'));?>        
+
+        <div class="form-group">
+             <label for="newsTitlePl" class="col-lg-3 control-label">Tytuł wiadomości</label>
+             <div class="col-lg-9">
+                <?php echo $this->formRow($form->get('newsTitlePl')); ?>
+             </div>
+        </div>
+     
+        <div class="form-group">
+             <label for="newsMessagePl" class="col-lg-3 control-label">Treść wiadomości</label>
+             <div class="col-lg-9">
+                <?php echo $this->formRow($form->get('newsMessagePl')); ?>
+             </div>
+        </div>
+   
+        <div class="form-group">
+             <label for="newsPicture" class="col-lg-3 control-label">Dodatkowe zdjęcie</label>
+             <div class="col-lg-9">
+                <?php echo $this->formRow($form->get('newsPicture')); ?>
+             </div>
+        </div>      
+        <div class="well">
+                <div class="form-group" id="action-buttons">
+                     <div class="col-lg-offset-2 col-lg-1">
+                        <a href="<?php echo $this->url('admin', array('action' => 'news')) ?>" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i>&ensp;Powrót </a>
+                     </div>
+                     <div class="col-lg-1">
+                        <?php echo $this->formSubmit($form->get('submit')); ?>
+                     </div>
+                </div>
+        </div>
+        <?php echo $this->form()->closeTag();?>

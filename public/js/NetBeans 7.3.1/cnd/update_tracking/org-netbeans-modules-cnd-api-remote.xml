@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.cnd.api.remote/1">
+    <module_version install_time="1370464622149" last="true" origin="installer" specification_version="1.16.3.1">
+        <file crc="3966025235" name="config/Modules/org-netbeans-modules-cnd-api-remote.xml"/>
+        <file crc="1400953466" name="modules/locale/org-netbeans-modules-cnd-api-remote_ja.jar"/>
+        <file crc="674817540" name="modules/locale/org-netbeans-modules-cnd-api-remote_pt_BR.jar"/>
+        <file crc="1241426174" name="modules/locale/org-netbeans-modules-cnd-api-remote_ru.jar"/>
+        <file crc="3415112538" name="modules/locale/org-netbeans-modules-cnd-api-remote_zh_CN.jar"/>
+        <file crc="1468045172" name="modules/org-netbeans-modules-cnd-api-remote.jar"/>
+    </module_version>
+</module>

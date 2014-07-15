@@ -1,0 +1,81 @@
+<?php
+$title = $this->translate('Media o nas');
+$this->headTitle($title);
+?>
+<!-- Header Image -->
+        <div id="header-image-container">
+            <div id="header-image">
+                <img src="<?php echo $this->basePath('images/placeholders/2000x330.jpg') ?>" alt="" class="stretch-image" />
+            </div>
+        </div>
+
+        <div id="content-container" class="content-width">
+
+            <!-- Breadcrumbs -->
+            <?php
+            echo $this->navigation('navigation') 
+                      ->breadcrumbs()
+                      ->setMinDepth(0)
+                      ->setPartial('partial/breadcrumb.phtml');
+            ?>
+
+            <!-- Page Intro -->
+            <div id="intro" class="not-homepage row">
+                <div class="large-9 large-centered columns">
+                    <h1><strong><?php echo $this->translate('Media o nas') ?></strong></h1>
+                </div>
+            </div>          
+
+              <div class="row no-bg">
+                <div class="large-12 columns no-padding">
+                    
+                    <div class="testimonial-wrapper">
+                        <div class="testimonial-inner">
+                            <div class="testimonial-list">
+                                
+                                <div>
+                                    <a  href="http://praca.wp.pl/title,U-sasiadow-za-kolkiem,wid,14767986,wiadomosc-zagranica.html?ticaid=1115f5">
+                                    <blockquote>
+                                        <p>
+                                            U sąsiadów za kółkiem, artykuł o pracy za granicą. 
+                                            
+                                        </p>    
+                                        
+                                        <cite>&ensp;<a href="http://www.pracaizycie.pl"><img src="<?php echo $this->basePath('images/pzg_logo.png') ?>" alt="" style="float:none;"/></a></cite>                                    
+                                            
+                                        
+                                    </blockquote>
+                                    </a>
+                                    <a href="http://praca.wp.pl/title,U-sasiadow-za-kolkiem,wid,14767986,wiadomosc-zagranica.html?ticaid=1115f5"><img src="<?php echo $this->basePath('images/media_1.jpg') ?>" alt=""  /></a>
+                                </div>
+                                
+                                <div>
+                                    <a  href="http://www.pracaizycie.pl/artykuly/praca-za-granica/sezon-na-emigracje/">
+                                    <blockquote>
+                                        <p>
+                                            Liczba polskich emigrantów znów rośnie – alarmuje Główny Urząd Statystyczny. „Nie tyle rośnie, ile po prostu nie maleje” ... 
+                                            
+                                        </p>                                        
+                                                                           
+                                        <cite>&ensp;<a href="http://www.pracaizycie.pl"><img src="<?php echo $this->basePath('images/pzg_logo.png') ?>" alt="" style="float:none;"/></a></cite>                                       
+                                        
+                                    </blockquote>
+                                    </a>
+                                    <a href="http://www.pracaizycie.pl/artykuly/praca-za-granica/sezon-na-emigracje/"><img src="<?php echo $this->basePath('images/media_2.jpg') ?>" alt="" /></a>
+                                </div>
+
+                            </div>
+                            <div class="testimonial-angle"></div>
+                            <div class="testimonial-corner"></div>
+                            <div class="testimonial-corner-mirror"></div>
+                        </div>
+                        <div class="testimonial-bullets"></div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            
+
+        </div>
+        <!-- End id="content-container" -->

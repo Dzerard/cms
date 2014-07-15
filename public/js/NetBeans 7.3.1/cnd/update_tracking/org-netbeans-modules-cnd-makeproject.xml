@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.cnd.makeproject/2">
+    <module_version install_time="1370464640455" last="true" origin="installer" specification_version="2.26.3.1">
+        <file crc="2423180349" name="config/Modules/org-netbeans-modules-cnd-makeproject.xml"/>
+        <file crc="1968822990" name="modules/locale/org-netbeans-modules-cnd-makeproject_ja.jar"/>
+        <file crc="3107561081" name="modules/locale/org-netbeans-modules-cnd-makeproject_pt_BR.jar"/>
+        <file crc="3937058848" name="modules/locale/org-netbeans-modules-cnd-makeproject_ru.jar"/>
+        <file crc="665599218" name="modules/locale/org-netbeans-modules-cnd-makeproject_zh_CN.jar"/>
+        <file crc="3082052405" name="modules/org-netbeans-modules-cnd-makeproject.jar"/>
+    </module_version>
+</module>

@@ -1,0 +1,142 @@
+<?php
+    $title = $this->translate('Dodawanie nowej firmy');
+    $this->headTitle($title);
+    $form = $this->form;
+    $form->setAttribute('action', $this->url('admin', array('action' => 'addOffer')));
+    $form->prepare();
+?>
+<h1><a href="<?php echo $this->url('admin', array('action'=> 'offer')) ?>" class="btn btn-default btn-lg"><i class="fa fa-users"></i>&ensp;<?php echo $this->translate('Firmy') ?></a> - dodawanie</h1>
+<hr />
+
+    <?php echo $this->form()->openTag($form->setAttribute('class', 'form-horizontal')); ?>       
+    <?php echo $this->formHidden($form->get('offerId'));?>     
+    <div class="edit-company">  
+        <div class="form-group">
+             <label for="offerTitle" class="col-lg-2 control-label"><?php echo $this->translate('Nazwa firmy') ?></label>
+             <div class="col-lg-10">
+                <?php echo $this->formRow($form->get('offerTitle')); ?>
+             </div>
+        </div>
+        <div class="form-group">
+             <label for="offerDesc" class="col-lg-2 control-label"><?php echo $this->translate('Opis firmy') ?></label>
+             <div class="col-lg-10">
+                <?php echo $this->formRow($form->get('offerDesc')); ?>
+             </div>
+        </div>
+        <div class="form-group">
+             <label for="offerExtraInfo" class="col-lg-2 control-label"><?php echo $this->translate('Dodatkowe informacje') ?></label>
+             <div class="col-lg-10">
+                <?php echo $this->formRow($form->get('offerExtraInfo')); ?>
+             </div>
+        </div>
+        <div class="form-group">
+             <label for="offerCountry" class="col-lg-2 control-label"><?php echo $this->translate('Kraj') ?></label>
+             <div class="col-lg-5">
+                <?php echo $this->formRow($form->get('offerCountry')); ?>
+             </div>
+        </div>
+         <div class="form-group">
+             <label for="offerType" class="col-lg-2 control-label"><?php echo $this->translate('Slogan') ?></label>
+             <div class="col-lg-5">
+                <?php echo $this->formRow($form->get('offerType')); ?>
+             </div>
+        </div>
+              
+        <div class="form-group">
+             <label for="offerCity" class="col-lg-2 control-label"><?php echo $this->translate('Adres') ?></label>
+             <div class="col-lg-5">
+                <?php echo $this->formRow($form->get('offerCity')); ?>
+             </div>
+        </div>
+        <div class="form-group">
+             <label for="offerStreet" class="col-lg-2 control-label"><?php echo $this->translate('Ulica i numer bud./miesz.') ?></label>
+             <div class="col-lg-5">
+                <?php echo $this->formRow($form->get('offerStreet')); ?>
+             </div>
+        </div>       
+        <div class="form-group">
+             <label for="offerCategory" class="col-lg-2 control-label"><?php echo $this->translate('Kategoria') ?></label>
+             <div class="col-lg-5">
+                <?php echo $this->formRow($form->get('offerCategory')); ?>
+             </div>
+        </div>
+        <div class="form-group">
+             <label for="offerWebPage" class="col-lg-2 control-label"><?php echo $this->translate('Strona www') ?></label>
+             <div class="col-lg-5">
+                <?php echo $this->formRow($form->get('offerWebPage')); ?>
+             </div>
+        </div>
+        <div class="form-group">
+             <label for="offerEmail" class="col-lg-2 control-label"><?php echo $this->translate('Email') ?></label>
+             <div class="col-lg-5">
+                <?php echo $this->formRow($form->get('offerEmail')); ?>
+             </div>
+        </div>
+        <div class="form-group">
+             <label for="offerPhone" class="col-lg-2 control-label"><?php echo $this->translate('Telefon') ?></label>
+             <div class="col-lg-5">
+                <?php echo $this->formRow($form->get('offerPhone')); ?>
+             </div>
+        </div>
+        <div class="form-group">
+             <label for="offerVisible" class="col-lg-2 control-label"><?php echo $this->translate('Widoczność') ?></label>
+             <div class="col-lg-5">
+                 <?php echo $this->formRow($form->get('offerVisible')); ?>     
+             
+             </div>
+        </div>
+        <div class="form-group">
+             <label for="offerVideo" class="col-lg-2 control-label"><?php echo $this->translate('Link do wideo') ?></label>
+             <div class="col-lg-5">
+                 <?php echo $this->formRow($form->get('offerVideo')); ?>     
+             
+             </div>
+        </div>
+        
+<!--        <div class="form-group form-group-social">
+             <label for="offerSocial" class="col-lg-2 control-label"><?php echo $this->translate('Portale') ?></label>
+             <div class="col-lg-5">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-facebook"></i></span>
+                    <input type="text" class="form-control" placeholder="facebook" value="" name="offerSocial[facebook]">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-twitter"></i></span>
+                    <input type="text" class="form-control" placeholder="twitter" value="" name="offerSocial[twitter]">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-linkedin"></i></span>
+                    <input type="text" class="form-control" placeholder="linkedin" value="" name="offerSocial[linkedin]">
+                </div>
+             
+             </div>
+        </div>-->
+
+        <div class="form-group">
+             <label for="offerImage" class="col-lg-2 control-label"><?php echo $this->translate('Pliki') ?></label>
+             <div class="col-lg-10">
+                <?php echo $this->formRow($form->get('offerImage')); ?>
+             </div>
+        </div>
+
+        <div class="well">
+                <div class="form-group" id="action-buttons">
+                     <div class="col-lg-offset-1 col-lg-1">
+                        <a href="<?php echo $this->url('admin', array('action' => 'offer')) ?>" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i>&ensp;<?php echo $this->translate('Powrót') ?></a>
+                     </div>
+                     <div class="col-lg-1">
+                        <?php echo $this->formSubmit($form->get('submit')); ?>
+                     </div>
+                </div>
+        </div>
+        <?php echo $this->form()->closeTag();?>
+    </div>
+
+
+<script>
+$(document).ready(function() {
+
+	fireFancybox();
+        fireTinyMCE();
+});
+</script>

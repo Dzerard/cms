@@ -1,0 +1,55 @@
+<?php
+$title = $this->translate('Mapa strony');
+$this->headTitle($title);
+?>
+<!-- Header Image -->
+        <div id="header-image-container">
+            <div id="header-image">
+                <img src="<?php echo $this->basePath('images/placeholders/2000x330.jpg') ?>" alt="" class="stretch-image" />
+            </div>
+        </div>
+
+        <div id="content-container" class="content-width">
+
+            <!-- Breadcrumbs -->
+            <div class="row">
+                <div id="breadcrumbs-wrapper" class="large-12 columns for-nested">
+                    <span><?php echo $this->translate('Jesteś tutaj:') ?></span>
+                    <ul class="breadcrumbs">
+                        <li>
+                            <a href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Home') ?></a>
+                        </li>
+                        <li class="current">
+                            <a href="#"><?php echo $this->translate('Mapa strony') ?></a>
+                        </li>                                
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Page Intro -->
+            <div id="intro" class="not-homepage row">
+                <div class="large-9 large-centered columns">
+                    <h1><?php echo $this->translate('Mapa strony') ?></h1>
+                </div>
+            </div>          
+
+            <div class="row">
+                <div class="large-12 columns for-nested">
+
+                    <div class="row">
+                          <?php
+
+                            echo $this->navigation('navigation')->menu();
+                            
+                          ?>
+                           <?php  //echo $this->navigation('navigation')->sitemap()->setFormatOutput(true); ?> 
+                        </div>
+                    </div>
+
+                </div>
+            </div>    
+            
+           
+               
+        </div>
+        <!-- End id="content-container" -->

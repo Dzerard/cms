@@ -1,0 +1,32 @@
+<?php
+    
+    $this->layout('layout/admin_login'); 
+    $title = $this->translate('Logowanie');
+    $this->headTitle($title);
+
+    $form = $this->form;
+    $form->setAttribute('action', $this->url('admin', array( 'action' => 'authenticate')));
+    $form->prepare(); 
+?>
+
+<?php
+if ($this->messages){
+    echo '<div class="alert alert-warning alert-dismissable">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>';
+    foreach($this->messages as $message)
+    {
+        echo '<p>'.$message.'</p>';
+    }
+    echo '</div>';
+}
+?>
+    <?php echo $this->form()->openTag($form->setAttribute('class', 'form-signin')); ?>        
+        <h2 class="form-signin-heading"><?php echo $this->translate($title) ?></h2>
+        <?php echo $this->formRow($form->get('userName')); ?>        
+        <?php echo $this->formRow($form->get('userPassword')); ?>       
+        <label class="checkbox">
+               <?php echo $this->formRow($form->get('rememberme')); ?> <?php echo $this->translate('Zapamiętaj mnie') ?>          
+        </label>
+        <?php echo $this->formSubmit($form->get('submit')); ?>        
+    <?php echo $this->form()->closeTag();?>
+    

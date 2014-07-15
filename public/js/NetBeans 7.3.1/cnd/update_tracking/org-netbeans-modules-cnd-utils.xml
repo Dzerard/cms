@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.cnd.utils">
+    <module_version install_time="1370463554753" last="true" origin="installer" specification_version="1.26.3.1">
+        <file crc="3909104173" name="config/Modules/org-netbeans-modules-cnd-utils.xml"/>
+        <file crc="1147807962" name="modules/locale/org-netbeans-modules-cnd-utils_ja.jar"/>
+        <file crc="3418740175" name="modules/locale/org-netbeans-modules-cnd-utils_pt_BR.jar"/>
+        <file crc="241619189" name="modules/locale/org-netbeans-modules-cnd-utils_ru.jar"/>
+        <file crc="2489320702" name="modules/locale/org-netbeans-modules-cnd-utils_zh_CN.jar"/>
+        <file crc="1845124102" name="modules/org-netbeans-modules-cnd-utils.jar"/>
+    </module_version>
+</module>

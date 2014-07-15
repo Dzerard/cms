@@ -1,0 +1,98 @@
+<?php if(isset($paginator))   :?> 
+<?php
+    $title = $this->translate('Wiadomości kontaktowe');
+    $this->headTitle($title);
+?>
+
+<h1><a href="<?php echo $this->url('admin', array('action' => 'contact')) ?>" class="btn btn-default btn-lg"><i class="fa fa-envelope-o"></i>&ensp;<?php echo $this->translate('Wiadomości') ?></a> - formularz kontaktowy</h1>
+
+<hr/>
+
+<?php if(count($paginator)) :?>
+    <table class="table table-striped">
+    <tr>
+        <th><?php echo $this->translate('ID') ?></th>
+        <th><?php echo $this->translate('Imię i Nazwisko') ?></th>    
+        <th><?php echo $this->translate('Email') ?></th>        
+        <th><?php echo $this->translate('Data dodania') ?></th>
+        <th><?php echo $this->translate('Akcje') ?></th>
+    </tr>
+
+    <?php foreach ($paginator as $p) : ?>
+        <tr>
+            <td><?php echo $this->escapeHtml($p->contactId);?></td>
+            <td> <a href="<?php echo $this->url('admin',
+                    array('action'=>'contact', 'id' => $p->contactId));?>" rel="tooltip" data-placement="right" title="<?php echo $this->translate('podgląd') ?>"> <?php echo $this->escapeHtml($p->contactName);?> </a></td>
+            <td><?php echo $this->escapeHtml($p->contactEmail);?></td>           
+            <td class="span1"><?php echo  date('d-m-Y G:i',$this->escapeHtml($p->contactInsert));?></td>    
+            <td class="span2">
+                <a href="<?php echo $this->url('admin',
+                    array('action'=>'contact', 'id' => $p->contactId));?>" rel="tooltip" title="<?php echo $this->translate('podgląd') ?>"><i class="fa fa-picture-o"></i></a>
+                <a href="<?php echo $this->url('admin',
+                    array('action'=>'delContact', 'id' => $p->contactId));?>" rel="tooltip" title="<?php echo $this->translate('usuń') ?>"><i class="fa fa-trash-o"></i></a>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+
+    </table>
+    <?php
+     echo $this->paginationControl(
+
+         $this->paginator,
+         // the scrolling style
+         'sliding',
+         // the partial to use to render the control
+         array('partial/paginator.phtml', 'Admin'),
+         // the route to link to when a user clicks a control link
+         array(
+             'route' => 'admin',
+             'action' => 'contact'
+         )
+     );
+    ?>
+
+    <?php else : ?>
+
+<div class="well">
+    <p>
+       <strong><?php echo $this->translate('Brak wiadomości :)') ?></strong>
+    </p>
+</div>
+
+<?php endif; ?>
+
+<?php  elseif (isset($contact)) :?>
+    <?php
+        $title = $this->translate('Treść wiadmości');
+        $this->headTitle($title);
+    ?>
+
+    <h1><a href="<?php echo $this->url('admin', array('action' => 'contact')) ?>" class="btn btn-default btn-lg"><i class="glyphicon glyphicon-envelope"></i>&ensp;<?php echo $this->translate('Wiadomości') ?></a> - treść wiadomości</h1></h1>
+
+    <hr />
+
+    <table class="table table-striped">
+        <tr>
+            <td><?php echo $this->translate('ID') ?>: </td> <td><?php echo $contact->contactId ?></td>
+        </tr>
+        <tr>
+            <td><?php echo $this->translate('Imię i Nazwisko') ?>: </td>   <td><?php echo $contact->contactName ?></td> 
+        </tr>
+        <tr>
+            <td><?php echo $this->translate('Email') ?>: </td><td><?php echo $contact->contactEmail ?></td>
+        </tr>
+        <tr>
+            <td><?php echo $this->translate('Treść wiadomości') ?>: </td><td><?php echo $contact->contactMessage ?></td>
+        </tr>
+        <tr>
+            <td><?php echo $this->translate('Data dodania') ?>: </td><td><?php echo  date('d-m-Y G:i',$this->escapeHtml($contact->contactInsert));?></td>
+        </tr>
+    </table>
+
+    <div class="form-group">
+        <a href="<?php echo $this->url('admin',array('action'=>'contact')) ?>" class="btn btn-default"><i class="fa fa-angle-left"></i>&ensp;<?php echo $this->translate('Powrót') ?> </a>    
+    </div>
+
+<?php endif; ?>
+
+

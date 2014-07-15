@@ -1,0 +1,1352 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: pl-en\n"
+"POT-Creation-Date: 2014-06-26 14:28+0100\n"
+"PO-Revision-Date: 2014-06-26 14:29+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: translate\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: C:\\tyrion\\mgr\\module\n"
+
+#: C:\tyrion\mgr\module/About/view/about/about/career.phtml:2
+msgid "Kariera"
+msgstr "Carierowicz"
+
+#: C:\tyrion\mgr\module/About/view/about/about/career.phtml:28
+msgid "Kariera w"
+msgstr ""
+
+#: C:\tyrion\mgr\module/About/view/about/about/career.phtml:39
+msgid "Poszukujemy specjalistów"
+msgstr ""
+
+#: C:\tyrion\mgr\module/About/view/about/about/index.phtml:2
+msgid "O nas"
+msgstr "About"
+
+#: C:\tyrion\mgr\module/About/view/about/about/index.phtml:25
+msgid "Informacje o"
+msgstr ""
+
+#: C:\tyrion\mgr\module/About/view/about/about/index.phtml:25
+msgid "Winckler Personal"
+msgstr "Wiki Leaks"
+
+#: C:\tyrion\mgr\module/About/view/about/about/index.phtml:34
+msgid "O Firmie"
+msgstr "About us"
+
+#: C:\tyrion\mgr\module/About/view/about/about/index.phtml:39
+msgid "Nasza Misja"
+msgstr ""
+
+#: C:\tyrion\mgr\module/About/view/about/about/media.phtml:2
+#: C:\tyrion\mgr\module/About/view/about/about/media.phtml:25
+msgid "Media o nas"
+msgstr "Media about us"
+
+#: C:\tyrion\mgr\module/About/view/about/about/team.phtml:2
+#: C:\tyrion\mgr\module/About/view/about/about/team.phtml:29
+msgid "Nasz zespół"
+msgstr "Our team"
+
+#: C:\tyrion\mgr\module/About/view/about/about/team.phtml:36
+msgid "Dlaczego my ?"
+msgstr "Why Us ?"
+
+#: C:\tyrion\mgr\module/About/view/about/about/team.phtml:80
+msgid "pobierz certyfikat"
+msgstr "download certificate"
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/about.phtml:3
+msgid "O projekcie"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/about.phtml:13
+msgid "Wykonanie"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/add-news.phtml:4
+msgid "Dodawanie nowej wiadomości"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/add-news.phtml:12
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/news.phtml:11
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/news.phtml:86
+#: C:\tyrion\mgr\module/News/view/news/news/index.phtml:2
+#: C:\tyrion\mgr\module/News/view/news/news/index.phtml:24
+#: C:\tyrion\mgr\module/News/view/news/news/index.phtml:28
+#: C:\tyrion\mgr\module/News/view/news/news/index.phtml:42
+msgid "Aktualności"
+msgstr "News"
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/add-offer.phtml:2
+msgid "Dodawanie nowej firmy"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/add-offer.phtml:8
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:8
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:131
+#: C:\tyrion\mgr\module/Application/view/layout/admin.phtml:62
+#, fuzzy
+msgid "Firmy"
+msgstr "About us"
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/add-offer.phtml:15
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:35
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:55
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:146
+#: C:\tyrion\mgr\module/Admin/view/admin/ajax/default.phtml:77
+msgid "Nazwa firmy"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/add-offer.phtml:21
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:152
+#: C:\tyrion\mgr\module/Admin/view/admin/ajax/default.phtml:82
+msgid "Opis firmy"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/add-offer.phtml:27
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:158
+#: C:\tyrion\mgr\module/Admin/view/admin/ajax/default.phtml:87
+msgid "Dodatkowe informacje"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/add-offer.phtml:33
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:170
+msgid "Kraj"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/add-offer.phtml:39
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:56
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:176
+msgid "Slogan"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/add-offer.phtml:46
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:183
+msgid "Adres"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/add-offer.phtml:52
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:189
+msgid "Ulica i numer bud./miesz."
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/add-offer.phtml:58
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:164
+msgid "Kategoria"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/add-offer.phtml:64
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:195
+#, fuzzy
+msgid "Strona www"
+msgstr "Home"
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/add-offer.phtml:70
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/contact.phtml:16
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/contact.phtml:82
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/message-offer-show.phtml:18
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/message-offer.phtml:26
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/message-offer.phtml:92
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:201
+msgid "Email"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/add-offer.phtml:76
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:207
+msgid "Telefon"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/add-offer.phtml:82
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:58
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:223
+msgid "Widoczność"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/add-offer.phtml:89
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:231
+msgid "Link do wideo"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/add-offer.phtml:97
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:238
+msgid "Portale"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/add-offer.phtml:116
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/file.phtml:3
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/file.phtml:83
+#: C:\tyrion\mgr\module/Admin/view/admin/ajax/default.phtml:100
+msgid "Pliki"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/add-offer.phtml:125
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/contact.phtml:93
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/del-contact.phtml:20
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/del-news.phtml:19
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/del-notification.phtml:19
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/edit-offer.phtml:129
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/message-offer-del.phtml:19
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/message-offer-show.phtml:29
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/message-offer.phtml:103
+#: C:\tyrion\mgr\module/Admin/view/partial/delete.phtml:18
+#: C:\tyrion\mgr\module/Application/view/error/404.phtml:149
+msgid "Powrót"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/contact.phtml:3
+#, fuzzy
+msgid "Wiadomości kontaktowe"
+msgstr "News"
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/contact.phtml:7
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/contact.phtml:70
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/del-contact.phtml:8
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/del-news.phtml:7
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/message-offer-del.phtml:6
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/message-offer-show.phtml:6
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/message-offer.phtml:3
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/message-offer.phtml:12
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/message-offer.phtml:80
+msgid "Wiadomości"
+msgstr "News"
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/contact.phtml:14
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/contact.phtml:76
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/message-offer-show.phtml:12
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/message-offer.phtml:24
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/message-offer.phtml:86
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:54
+msgid "ID"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/contact.phtml:15
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/contact.phtml:79
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/message-offer-show.phtml:15
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/message-offer.phtml:25
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/message-offer.phtml:89
+msgid "Imię i Nazwisko"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/contact.phtml:17
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/contact.phtml:88
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/message-offer-show.phtml:24
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/message-offer.phtml:27
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/message-offer.phtml:98
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:38
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:57
+msgid "Data dodania"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/contact.phtml:18
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/message-offer.phtml:28
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:59
+msgid "Akcje"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/contact.phtml:25
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/contact.phtml:30
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/message-offer.phtml:35
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/message-offer.phtml:40
+msgid "podgląd"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/contact.phtml:32
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/file.phtml:69
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/file.phtml:105
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/message-offer.phtml:42
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:79
+#: C:\tyrion\mgr\module/Admin/view/partial/delete.phtml:6
+msgid "usuń"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/contact.phtml:58
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/message-offer.phtml:68
+#, fuzzy
+msgid "Brak wiadomości :)"
+msgstr "News"
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/contact.phtml:66
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/message-offer-show.phtml:2
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/message-offer.phtml:76
+#, fuzzy
+msgid "Treść wiadmości"
+msgstr "News"
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/contact.phtml:85
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/message-offer-show.phtml:21
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/message-offer.phtml:95
+#, fuzzy
+msgid "Treść wiadomości"
+msgstr "News"
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/del-contact.phtml:4
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/message-offer-del.phtml:2
+msgid "usuń wiadomość"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/del-contact.phtml:13
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/message-offer-del.phtml:11
+msgid "Czy chcesz usunąć wiadomość od: "
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/del-contact.phtml:21
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/del-news.phtml:20
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/del-notification.phtml:20
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/message-offer-del.phtml:20
+#: C:\tyrion\mgr\module/Admin/view/partial/delete.phtml:2
+msgid "Usuń"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/del-news.phtml:3
+msgid "usuń news"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/del-news.phtml:12
+msgid "Czy chcesz usunąć newsa: "
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/del-notification.phtml:2
+msgid "usuń e-mail z newslettera"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/del-notification.phtml:7
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/notification.phtml:9
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/notification.phtml:81
+msgid "Newsletter"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/del-notification.phtml:12
+msgid "Czy chcesz usunąć e-mail: "
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/edit-offer.phtml:5
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/edit-offer.phtml:29
+msgid "Wizualizacja"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/edit-offer.phtml:26
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/file.phtml:10
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/message-offer.phtml:9
+msgid "Powrót do listy"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/edit-offer.phtml:30
+#, fuzzy
+msgid "firmy"
+msgstr "About us"
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/edit-offer.phtml:43
+#, fuzzy
+msgid "Loaklizacja stanowiska"
+msgstr "Job description"
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/edit-offer.phtml:72
+msgid "Sposób prezentacji"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/edit-offer.phtml:80
+msgid "Plik"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/edit-offer.phtml:88
+msgid "Wymiary elementu"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/edit-offer.phtml:102
+msgid "Skalowanie elementu"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/edit-offer.phtml:116
+msgid "Kolor materiału"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/edit-offer.phtml:135
+msgid "ładowanie..."
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/edit-offer.phtml:135
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/view.phtml:190
+msgid "Podgląd"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/file.phtml:14
+msgid "należace do"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/file.phtml:24
+#, fuzzy
+msgid "Dodaj pliki"
+msgstr "Add offer"
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/file.phtml:44
+#, fuzzy
+msgid "Dostępne pliki"
+msgstr "languages"
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/file.phtml:47
+msgid "Zdjęcia"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/file.phtml:64
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/file.phtml:99
+msgid "nazwa pliku"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/file.phtml:70
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/file.phtml:106
+msgid "zapisz"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/file.phtml:80
+msgid "Brak zdjęć"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/file.phtml:115
+msgid "Brak plików"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/index.phtml:2
+#, fuzzy
+msgid "Witaj w panelu administracyjnym"
+msgstr "Admin panel"
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/login.phtml:4
+msgid "Logowanie"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/login.phtml:28
+msgid "Zapamiętaj mnie"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/message-offer.phtml:13
+msgid "otrzymane przez"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/news.phtml:14
+msgid "Dodaj news"
+msgstr "Add news"
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:3
+msgid "Firmy/Klienci"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:11
+#, fuzzy
+msgid "Dodaj firmę"
+msgstr "Add offer"
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:26
+#, fuzzy
+msgid "wpisz szukane słowo"
+msgstr "Enter search term ..."
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:29
+#: C:\tyrion\mgr\module/Application/view/error/404.phtml:141
+msgid "Szukaj"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:36
+msgid "Opis"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:75
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:216
+msgid "wizualizacja"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:77
+msgid "edycja informacji"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:82
+msgid "pozostałe akcje"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:87
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:217
+#, fuzzy
+msgid "wiadomości"
+msgstr "News"
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:89
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:218
+msgid "pliki"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:116
+msgid "Brak firm/klientów ..."
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:124
+msgid "Firmy - edycja"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:213
+msgid "Skocz do"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:216
+msgid "przejdź do wizualiacji"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:217
+#, fuzzy
+msgid "przejdź do wiadomości"
+msgstr "News"
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:218
+msgid "przejdź do plików"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/offer.phtml:256
+msgid "Logo"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/settings.phtml:2
+#: C:\tyrion\mgr\module/Application/view/layout/admin.phtml:56
+msgid "Ustawienia"
+msgstr "Settings"
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/view.phtml:5
+msgid "Wizualizacja przestrzeni"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/view.phtml:21
+msgid "Wyświetlanie"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/view.phtml:26
+msgid "Ogólne"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/view.phtml:27
+msgid "Podłoże"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/view.phtml:28
+msgid "Światła"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/view.phtml:29
+msgid "Kamery"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/view.phtml:36
+msgid "Mgła"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/view.phtml:49
+msgid "stopień rozmycia"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/view.phtml:58
+msgid "Wymiary"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/view.phtml:69
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/view.phtml:119
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/view.phtml:155
+msgid "Kolor"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/view.phtml:79
+msgid "Widok siatki"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/view.phtml:96
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/view.phtml:133
+msgid "Typ światła"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/view.phtml:99
+msgid "Otoczenia"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/view.phtml:100
+msgid "Kierunkowe"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/view.phtml:101
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/view.phtml:137
+msgid "Punktowe"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/view.phtml:106
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/view.phtml:142
+msgid "Współrzędne"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/view.phtml:115
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/view.phtml:151
+msgid "usuń światło"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/view.phtml:136
+msgid "Globalne"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/view.phtml:166
+msgid "dodaj światło"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/view.phtml:176
+msgid "wkrótce aktualizacja ... "
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/admin/view.phtml:193
+#, fuzzy
+msgid "Ustawienia domyślne"
+msgstr "Settings"
+
+#: C:\tyrion\mgr\module/Admin/view/admin/ajax/default.phtml:16
+msgid "Informacje o firmie"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/ajax/default.phtml:25
+#: C:\tyrion\mgr\module/Admin/view/admin/ajax/default.phtml:47
+#, fuzzy
+msgid "O firmie"
+msgstr "About us"
+
+#: C:\tyrion\mgr\module/Admin/view/admin/ajax/default.phtml:26
+msgid "Pobierz pliki"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/ajax/default.phtml:27
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/offer.phtml:2
+#: C:\tyrion\mgr\module/Candidates/view/partial/popular_offers_partial.phtml:4
+msgid "Oferty pracy"
+msgstr "Job offers"
+
+#: C:\tyrion\mgr\module/Admin/view/admin/ajax/default.phtml:28
+#: C:\tyrion\mgr\module/Admin/view/admin/ajax/default.phtml:133
+#: C:\tyrion\mgr\module/Admin/view/admin/ajax/default.phtml:178
+#: C:\tyrion\mgr\module/Application/view/layout/layout.phtml:112
+#: C:\tyrion\mgr\module/Contact/view/contact/contact/index.phtml:2
+#: C:\tyrion\mgr\module/Contact/view/contact/contact/index.phtml:27
+msgid "Kontakt"
+msgstr "Contact"
+
+#: C:\tyrion\mgr\module/Admin/view/admin/ajax/default.phtml:31
+#: C:\tyrion\mgr\module/Application/view/partial/modal_index.phtml:6
+#: C:\tyrion\mgr\module/Application/view/partial/modal_index.phtml:41
+#: C:\tyrion\mgr\module/Application/view/partial/modal_index.phtml:175
+msgid "Zamknij"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/ajax/default.phtml:65
+msgid "Link do strony domowej"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/ajax/default.phtml:113
+msgid "Kliknij aby pobrać"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/ajax/default.phtml:120
+msgid "Brak plików ..."
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/ajax/default.phtml:149
+#: C:\tyrion\mgr\module/Application/view/layout/layout.phtml:112
+msgid "Wyślij wiadomość"
+msgstr "Send message"
+
+#: C:\tyrion\mgr\module/Admin/view/admin/ajax/default.phtml:154
+#: C:\tyrion\mgr\module/Application/view/partial/modal_index.phtml:14
+msgid "Imię"
+msgstr "Name"
+
+#: C:\tyrion\mgr\module/Admin/view/admin/ajax/default.phtml:158
+#, fuzzy
+msgid "e-mail"
+msgstr "write e-mail"
+
+#: C:\tyrion\mgr\module/Admin/view/admin/ajax/default.phtml:162
+msgid "Temat"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/ajax/default.phtml:168
+#: C:\tyrion\mgr\module/Application/view/partial/modal_index.phtml:22
+msgid "Wiadomość"
+msgstr "Message"
+
+#: C:\tyrion\mgr\module/Admin/view/admin/ajax/default.phtml:179
+msgid "W najbliższym czasie będziemy na targach pracy we Wrocławiu :)"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/admin/ajax/default.phtml:181
+msgid "Nasze profile społecznościowe"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/error/404.phtml:1
+msgid "Błąd 404 !"
+msgstr "404 Error"
+
+#: C:\tyrion\mgr\module/Admin/view/error/404.phtml:2
+msgid "Strona nie została odnaleziona ... "
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/error/index.phtml:1
+#: C:\tyrion\mgr\module/Application/view/error/index.phtml:1
+msgid "An error occurred"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/error/index.phtml:8
+#: C:\tyrion\mgr\module/Application/view/error/404.phtml:75
+#: C:\tyrion\mgr\module/Application/view/error/index.phtml:8
+msgid "Additional information"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/error/index.phtml:11
+#: C:\tyrion\mgr\module/Admin/view/error/index.phtml:35
+#: C:\tyrion\mgr\module/Application/view/error/404.phtml:78
+#: C:\tyrion\mgr\module/Application/view/error/404.phtml:102
+#: C:\tyrion\mgr\module/Application/view/error/index.phtml:11
+#: C:\tyrion\mgr\module/Application/view/error/index.phtml:35
+msgid "File"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/error/index.phtml:15
+#: C:\tyrion\mgr\module/Admin/view/error/index.phtml:39
+#: C:\tyrion\mgr\module/Application/view/error/404.phtml:82
+#: C:\tyrion\mgr\module/Application/view/error/404.phtml:106
+#: C:\tyrion\mgr\module/Application/view/error/index.phtml:15
+#: C:\tyrion\mgr\module/Application/view/error/index.phtml:39
+msgid "Message"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/error/index.phtml:19
+#: C:\tyrion\mgr\module/Admin/view/error/index.phtml:43
+#: C:\tyrion\mgr\module/Application/view/error/404.phtml:86
+#: C:\tyrion\mgr\module/Application/view/error/404.phtml:110
+#: C:\tyrion\mgr\module/Application/view/error/index.phtml:19
+#: C:\tyrion\mgr\module/Application/view/error/index.phtml:43
+msgid "Stack trace"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/error/index.phtml:29
+#: C:\tyrion\mgr\module/Application/view/error/404.phtml:96
+#: C:\tyrion\mgr\module/Application/view/error/index.phtml:29
+msgid "Previous exceptions"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/error/index.phtml:58
+#: C:\tyrion\mgr\module/Application/view/error/index.phtml:58
+msgid "No Exception available"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Admin/view/layout/admin_login.phtml:6
+#: C:\tyrion\mgr\module/Application/view/layout/admin.phtml:6
+#: C:\tyrion\mgr\module/Application/view/layout/admin.phtml:86
+#: C:\tyrion\mgr\module/Application/view/layout/layout.phtml:80
+msgid "Panel administracyjny"
+msgstr "Admin panel"
+
+#: C:\tyrion\mgr\module/Admin/view/partial/delete.phtml:11
+msgid "Czy chcesz usunąć firmę:"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Application/view/application/index/index.phtml:2
+msgid "Mapka"
+msgstr "Show Map"
+
+#: C:\tyrion\mgr\module/Application/view/application/index/index.phtml:5
+msgid "Statystki"
+msgstr "Stats"
+
+#: C:\tyrion\mgr\module/Application/view/application/index/index.phtml:9
+msgid "Ukryj"
+msgstr "Hide"
+
+#: C:\tyrion\mgr\module/Application/view/error/404.phtml:10
+msgid "Strona nie istnieje ... "
+msgstr "Page doesn't exist"
+
+#: C:\tyrion\mgr\module/Application/view/error/404.phtml:12
+msgid "Strona nie została znaleziona"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Application/view/error/404.phtml:22
+msgid "404 Page Not Found"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Application/view/error/404.phtml:32
+msgid "The requested controller was unable to dispatch the request."
+msgstr ""
+
+#: C:\tyrion\mgr\module/Application/view/error/404.phtml:35
+msgid ""
+"The requested controller could not be mapped to an existing controller class."
+msgstr ""
+
+#: C:\tyrion\mgr\module/Application/view/error/404.phtml:38
+msgid "The requested controller was not dispatchable."
+msgstr ""
+
+#: C:\tyrion\mgr\module/Application/view/error/404.phtml:41
+msgid "The requested URL could not be matched by routing."
+msgstr ""
+
+#: C:\tyrion\mgr\module/Application/view/error/404.phtml:44
+msgid "We cannot determine at this time why a 404 was generated."
+msgstr ""
+
+#: C:\tyrion\mgr\module/Application/view/error/404.phtml:56
+msgid "Controller"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Application/view/error/404.phtml:63
+#, php-format
+msgid "resolves to %s"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Application/view/error/404.phtml:150
+#: C:\tyrion\mgr\module/Application/view/partial/breadcrumb.phtml:5
+#: C:\tyrion\mgr\module/Application/view/partial/breadcrumb_active.phtml:8
+#: C:\tyrion\mgr\module/News/view/news/news/index.phtml:20
+msgid "Strona główna"
+msgstr "Home"
+
+#: C:\tyrion\mgr\module/Application/view/layout/admin.phtml:59
+#: C:\tyrion\mgr\module/Contact/view/contact/contact/index.phtml:103
+msgid "Formularz kontaktowy"
+msgstr "Contact Form"
+
+#: C:\tyrion\mgr\module/Application/view/layout/admin.phtml:63
+msgid "Przestrzeń"
+msgstr "Space"
+
+#: C:\tyrion\mgr\module/Application/view/layout/admin.phtml:64
+msgid "O Projekcie"
+msgstr "About "
+
+#: C:\tyrion\mgr\module/Application/view/layout/layout.phtml:5
+msgid "V-Walk "
+msgstr ""
+
+#: C:\tyrion\mgr\module/Application/view/layout/layout.phtml:78
+msgid "Zrzut ekranu"
+msgstr "Take snapshot"
+
+#: C:\tyrion\mgr\module/Application/view/layout/layout.phtml:79
+#: C:\tyrion\mgr\module/Application/view/partial/modal_index.phtml:44
+msgid "Instrukcja"
+msgstr "Instruction"
+
+#: C:\tyrion\mgr\module/Application/view/layout/layout.phtml:82
+msgid "Ukryj menu"
+msgstr "Hide menu"
+
+#: C:\tyrion\mgr\module/Application/view/layout/layout.phtml:89
+msgid "dostępne języki"
+msgstr "languages"
+
+#: C:\tyrion\mgr\module/Application/view/layout/layout.phtml:90
+msgid "Polski"
+msgstr "Polish"
+
+#: C:\tyrion\mgr\module/Application/view/layout/layout.phtml:91
+msgid "Angielski"
+msgstr "English"
+
+#: C:\tyrion\mgr\module/Application/view/layout/layout.phtml:103
+msgid "Pokaż menu"
+msgstr "Show menu"
+
+#: C:\tyrion\mgr\module/Application/view/layout/layout.phtml:111
+msgid "Kraków"
+msgstr "Cracow"
+
+#: C:\tyrion\mgr\module/Application/view/partial/breadcrumb_active.phtml:4
+#: C:\tyrion\mgr\module/News/view/news/news/index.phtml:17
+#: C:\tyrion\mgr\module/Search/view/search/search/index.phtml:17
+#: C:\tyrion\mgr\module/Search/view/search/search/sitemap.phtml:17
+msgid "Jesteś tutaj:"
+msgstr "You are here:"
+
+#: C:\tyrion\mgr\module/Application/view/partial/breadcrumb_active.phtml:33
+msgid "Opis stanowiska"
+msgstr "Job description"
+
+#: C:\tyrion\mgr\module/Application/view/partial/modal_index.phtml:8
+msgid "Wypełnij formularz"
+msgstr "Fill form"
+
+#: C:\tyrion\mgr\module/Application/view/partial/modal_index.phtml:15
+msgid "Podaj Imię/Nick"
+msgstr "Write Your name"
+
+#: C:\tyrion\mgr\module/Application/view/partial/modal_index.phtml:18
+msgid "E-mail"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Application/view/partial/modal_index.phtml:19
+msgid "Wpisz e-mail"
+msgstr "write e-mail"
+
+#: C:\tyrion\mgr\module/Application/view/partial/modal_index.phtml:29
+msgid "Anuluj"
+msgstr "Cancel"
+
+#: C:\tyrion\mgr\module/Application/view/partial/modal_index.phtml:30
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/index.phtml:146
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/offer.phtml:285
+#: C:\tyrion\mgr\module/Contact/view/contact/contact/index.phtml:157
+#: C:\tyrion\mgr\module/Staff/view/staff/staff/personel.phtml:116
+msgid "Wyślij"
+msgstr "Send"
+
+#: C:\tyrion\mgr\module/Application/view/partial/modal_index.phtml:50
+msgid "Podstawowe informacje"
+msgstr "Basic information"
+
+#: C:\tyrion\mgr\module/Application/view/partial/modal_index.phtml:53
+msgid ""
+"Wirtualny targ - to aplikacja, która wykorzystuje możliwości silnika WebGL"
+"(Three.js). Zbudowana jest w oparciu o Framework Zend 2.2 Więcej informacji "
+"w pliku PDF z instrukcją użytownika."
+msgstr ""
+
+#: C:\tyrion\mgr\module/Application/view/partial/modal_index.phtml:60
+msgid "Sterowanie"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Application/view/partial/modal_index.phtml:110
+#, fuzzy
+msgid "poruszanie w lewo"
+msgstr "Movement"
+
+#: C:\tyrion\mgr\module/Application/view/partial/modal_index.phtml:114
+#, fuzzy
+msgid "poruszanie w prawo"
+msgstr "Movement"
+
+#: C:\tyrion\mgr\module/Application/view/partial/modal_index.phtml:126
+msgid "lewy przycisk myszki"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Application/view/partial/modal_index.phtml:131
+msgid "kliknięcie na obiekt powołuje wyświetlanie informacji w nim zawartym."
+msgstr ""
+
+#: C:\tyrion\mgr\module/Application/view/partial/modal_index.phtml:134
+msgid "przytrzymanie przycisku jest równoznaczne z przyciskiem"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Application/view/partial/modal_index.phtml:134
+msgid "oraz"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Application/view/partial/modal_index.phtml:135
+msgid " i odpowiada za poruszanie do przodu"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Application/view/partial/modal_index.phtml:154
+msgid "OK"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/apply.phtml:2
+msgid "Wybór właściwej firmy"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/apply.phtml:25
+msgid "Wybór"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/apply.phtml:25
+msgid " właściwej firmy"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/apply.phtml:36
+msgid "Odpowiedni wybór leży w twoich rękach"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/departure.phtml:2
+msgid "Przygotowania do wyjazdu"
+msgstr "Preparations for Departure"
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/departure.phtml:25
+msgid "Przygotowania"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/departure.phtml:25
+msgid "do wyjazdu"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/departure.phtml:35
+msgid "Co zabrać za sobą?"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/departure.phtml:91
+msgid "Po przybyciu na miejsce"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/index.phtml:2
+msgid "Kandydaci"
+msgstr "Candidates"
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/index.phtml:25
+msgid "Twoja kariera jest w rękach Wincklera! "
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/index.phtml:34
+msgid "Towarzyszymy Ci w Twojej karierze tak długo, jak tego potrzebujesz"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/index.phtml:35
+msgid ""
+"Pomożemy Ci w poszukiwaniu pracy i zajmiemy się profesjonalną promocją "
+"Twojej kandydatury, a także zorganizujemy spotkanie z potencjalnym "
+"pracodawcą."
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/index.phtml:36
+msgid "Szukaj ofert pracy z WINCKLER PERSONAL ! "
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/index.phtml:39
+msgid "Chcesz spełniać się zawodowo?"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/index.phtml:44
+msgid "Szukasz nowych wyzwań?"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/index.phtml:49
+msgid "Zgłoś się do nas!"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/index.phtml:53
+msgid ""
+"Winckler Personal to rzetelna Agencja Zatrudniania świadcząca profesjonalne "
+"usługi w zakresie legalnego zatrudniania opiekunek na terenie Niemiec. W "
+"codziennej pracy towarzyszy nam idea społecznej odpowiedzialności. Dzięki "
+"temu możemy świadczyć dla naszych kontrahentów usługi na najwyższym poziomie."
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/index.phtml:57
+msgid ""
+"Dzięki starannie opracowanym procedurom, każdy może legalnie i bezpiecznie "
+"wyjechać za pośrednictwem Agecnji Pracy Winckler Personal do UE w celach "
+"zarobkowych oraz podjąć się pracy na terenie kraju.\n"
+"Z przyjemnością przejmiemy proces poszukiwania pracy spełniającej Twoje "
+"oczekiwania oraz zarekomendujemy Twoją kandydaturę potencjalnym pracodawcom. "
+"Dzięki naszej współpracy z firmami różnych rozmiarów z wszystkich branż "
+"pomożemy zwiększyć Twoje szanse na znalezienie nowej pracy."
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/index.phtml:65
+msgid "Umów się na rozmowę kwalifikacyjną już dziś !"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/index.phtml:91
+#: C:\tyrion\mgr\module/Staff/view/staff/staff/personel.phtml:66
+msgid "Formularz Kontaktowy"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/index.phtml:135
+msgid ""
+"*Niniejszym oświadczam, że zgodnie z art. 23 ust. 1 pkt 1 ustawy z dnia 29 "
+"sierpnia 1997 r. o ochronie danych osobowych (Dz.U. z 2002 r. Nr 101, poz. "
+"926) wyrażam zgodę na przetwarzanie wyżej wymienionych moich danych "
+"osobowych przez Winckler Personal w celach marketingowo/sprzedażowych oraz "
+"dla potrzeb obecnego oraz przyszłych procesów rekrutacyjnych. Informacje, "
+"które podałem/podałam w moim formularzu zgłoszeniowym są kompletne i zgodne "
+"ze stanem faktycznym."
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/index.phtml:151
+#: C:\tyrion\mgr\module/Contact/view/contact/contact/index.phtml:162
+msgid "Dziekujemy za wiadomość, wkrótce na nią odpowiemy."
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/index.phtml:154
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/offer.phtml:293
+#: C:\tyrion\mgr\module/Contact/view/contact/contact/index.phtml:165
+#: C:\tyrion\mgr\module/Staff/view/staff/staff/personel.phtml:124
+msgid ""
+"Coś poszło nie tak ... Prosimy skontaktować się za pomocą email lub "
+"telfonicznie. Przepraszamy za problem."
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/index.phtml:169
+msgid "SZANOWNI PAŃSTWO !"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/index.phtml:172
+msgid ""
+"Nie pobieramy od kandydatów żadnych opłat (rozumiane są przez to opłaty za "
+"przejazd za granicę, przygotowanie dokumentów, pośrednictwo, bądź dodatkowe "
+"procedury)."
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/index.phtml:177
+msgid ""
+"W publikowanych przez nas ofertach pracy zawsze podajemy dokładne dane "
+"kontaktowe:\n"
+"adres pocztowy, adres e-mail, numer telefonu, ponadto numer certyfikatu "
+"wydanego przez Marszałka Województwa Małopolskiego. Aktualne oferty pracy "
+"znajdą Państwo na naszej stronie internetowej.\n"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/index.phtml:184
+msgid ""
+"Wszelkie rekrutacje w Agencji Pośrednictwa WINCKLER PERSONAL są "
+"przeprowadzane wyłącznie w siedzibie naszej firmy przez wewnętrznych "
+"konsultantów.\n"
+"W zakresie rekrutacji kandydatów nie współpracujemy z żadnymi firmami "
+"zewnętrznymi lub osobami prywatnymi.\n"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/offer.phtml:56
+msgid ""
+"Brak ofert spełniających wymagania, lub ogłoszenie którego szukasz już nie "
+"istnieje ..."
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/offer.phtml:245
+msgid "Powiadomienia mailowe"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/offer.phtml:274
+msgid ""
+"*Niniejszym oświadczam, że zgodnie z art. 23 ust. 1 pkt 1 ustawy z dnia 29 "
+"sierpnia 1997 r. o ochronie danych osobowych (Dz.U. z 2002 r. Nr 101, poz. "
+"926) wyrażam zgodę na przetwarzanie wyżej wymienionych moich danych "
+"osobowych przez Winckler Personal w celach marketingowo/sprzedażowych."
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/offer.phtml:290
+msgid ""
+"Dziękujemy za przesłanie wiadomości. Od dziś będziemy na bieżąco informować "
+"Państwa o nowych ofertach pracy."
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/recommend.phtml:2
+msgid "Poleć znajomego"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/recommend.phtml:25
+msgid "Poleć"
+msgstr "Refer"
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/recommend.phtml:25
+msgid " znajomego"
+msgstr "friend"
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/recommend.phtml:35
+msgid "U nas opłaca się rekomendować znajomych lub bliskich!"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/recommend.phtml:38
+msgid ""
+"Osoby zainteresowane współpracą z Agencją Zatrudnienia Winckler Personal w "
+"charakterze opiekuna/opiekunki osób starszych prosimy o kontakt w celu "
+"przeprowadzenia rozmowy telefonicznej, podczas której weryfikujemy znajomość "
+"języka niemieckiego, następnie ustalamy termin spotkania na rozmowę "
+"kwalifikacyjną w naszym biurze w celu omówienia wszelkich szczegółów "
+"dotyczących ewentualnej wspólpracy."
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/recommend.phtml:43
+msgid ""
+"Za każdą poleconą osobę otrzymasz od nas gotówkę! Warto polecać!\n"
+"Jeśli polecisz nam osobę, która zostanie zatrudniona u naszego kontrahenta i "
+"przepracuje 3 miesiące, otrzymasz od nas bon o wartości 200,00 zł, który "
+"będziesz mógł zrealizować według własnego uznania."
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/reference.phtml:2
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/reference.phtml:25
+msgid "Referencje"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/candidates/candidates/reference.phtml:36
+msgid "Wasze opinie"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/partial/offer_category.phtml:4
+msgid "Lista ogłoszeń"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/partial/offer_category.phtml:15
+#: C:\tyrion\mgr\module/Candidates/view/partial/popular_offers_partial.phtml:15
+msgid "Wybierz kategorię:"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/partial/offer_category.phtml:17
+msgid "Możesz wybrać kategorię, dzięki czemu zawęzisz obszar poszukiwań :)"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Candidates/view/partial/popular_offers_partial.phtml:4
+msgid "Popularne"
+msgstr "Popular"
+
+#: C:\tyrion\mgr\module/Candidates/view/partial/popular_offers_partial.phtml:17
+msgid "Znajdź to czego szukasz :)"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Contact/view/contact/contact/index.phtml:50
+msgid "Dane kontaktowe"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Contact/view/contact/contact/index.phtml:86
+msgid "Godziny otwarcia"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Contact/view/contact/contact/index.phtml:106
+msgid "Zostaw swoje dane, oddzwonimy !"
+msgstr ""
+
+#: C:\tyrion\mgr\module/News/view/news/news/index.phtml:31
+msgid "Podgląd wiadomości"
+msgstr ""
+
+#: C:\tyrion\mgr\module/News/view/news/news/index.phtml:93
+msgid "Treść wiadomosci"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Search/view/search/search/index.phtml:2
+#: C:\tyrion\mgr\module/Search/view/search/search/index.phtml:32
+msgid "Wyniki wyszukiwania"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Search/view/search/search/index.phtml:20
+#: C:\tyrion\mgr\module/Search/view/search/search/sitemap.phtml:20
+msgid "Home"
+msgstr "Home"
+
+#: C:\tyrion\mgr\module/Search/view/search/search/index.phtml:23
+msgid "Wyszukiwarka"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Search/view/search/search/sitemap.phtml:2
+#: C:\tyrion\mgr\module/Search/view/search/search/sitemap.phtml:23
+#: C:\tyrion\mgr\module/Search/view/search/search/sitemap.phtml:32
+msgid "Mapa strony"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Staff/view/staff/staff/index.phtml:2
+#: C:\tyrion\mgr\module/Staff/view/staff/staff/oldCare.phtml:2
+#: C:\tyrion\mgr\module/Staff/view/staff/staff/personel.phtml:2
+#: C:\tyrion\mgr\module/Staff/view/staff/staff/personel.phtml:25
+msgid "Personel medyczny"
+msgstr "Medical stuff"
+
+#: C:\tyrion\mgr\module/Staff/view/staff/staff/index.phtml:28
+#: C:\tyrion\mgr\module/Staff/view/staff/staff/oldCare.phtml:28
+msgid "Praca za granicą"
+msgstr "Job abroad"
+
+#: C:\tyrion\mgr\module/Staff/view/staff/staff/index.phtml:39
+#: C:\tyrion\mgr\module/Staff/view/staff/staff/oldCare.phtml:39
+msgid "W naszej bazie znajdą Państwo:"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Staff/view/staff/staff/index.phtml:73
+#: C:\tyrion\mgr\module/Staff/view/staff/staff/oldCare.phtml:73
+msgid "Rekrutujemy personel medyczny do:"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Staff/view/staff/staff/index.phtml:76
+#: C:\tyrion\mgr\module/Staff/view/staff/staff/oldCare.phtml:76
+msgid "Klinik"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Staff/view/staff/staff/index.phtml:79
+#: C:\tyrion\mgr\module/Staff/view/staff/staff/oldCare.phtml:79
+msgid "Klinik prywatnych"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Staff/view/staff/staff/index.phtml:82
+#: C:\tyrion\mgr\module/Staff/view/staff/staff/oldCare.phtml:82
+msgid "Szpitali"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Staff/view/staff/staff/index.phtml:85
+#: C:\tyrion\mgr\module/Staff/view/staff/staff/oldCare.phtml:85
+msgid "Placówek świadczących usługi pielęgniarskie"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Staff/view/staff/staff/index.phtml:88
+#: C:\tyrion\mgr\module/Staff/view/staff/staff/oldCare.phtml:88
+msgid "Domów seniora, zakładów opiekuńczych dla osób starszych i upośledzonych"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Staff/view/staff/staff/index.phtml:91
+#: C:\tyrion\mgr\module/Staff/view/staff/staff/oldCare.phtml:91
+msgid "Innych placówek medycznych"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Staff/view/staff/staff/personel.phtml:31
+msgid "Wykwalifikowana kadra"
+msgstr ""
+
+#: C:\tyrion\mgr\module/Staff/view/staff/staff/personel.phtml:105
+msgid ""
+"  *Niniejszym oświadczam, że zgodnie z art. 23 ust. 1 pkt 1 ustawy z dnia 29 "
+"sierpnia 1997 r. o ochronie danych osobowych (Dz.U. z 2002 r. Nr 101, poz. "
+"926) wyrażam zgodę na przetwarzanie wyżej wymienionych moich danych "
+"osobowych przez Winckler Personal w celach marketingowo/sprzedażowych."
+msgstr ""
+
+#: C:\tyrion\mgr\module/Staff/view/staff/staff/personel.phtml:121
+msgid ""
+"Niezwłocznie kontaktujemy się z Państwem w celu sprecyzowania szczegółów "
+"zlecenia oraz omówienia profilu kompetencyjnego kandydata."
+msgstr ""
+
+#, fuzzy
+#~ msgid "Nazwa stanowiska"
+#~ msgstr "Job description"
+
+#~ msgid "Od początku"
+#~ msgstr "Restart"
+
+#~ msgid "Dodatkowe klawisze"
+#~ msgstr "Extra keys"
+
+#~ msgid "Opieka"
+#~ msgstr "Care"
+
+#~ msgid "Pracodawcy"
+#~ msgstr "Employers"
+
+#~ msgid "Ważne: Strona wykorzystuje pliki cookies."
+#~ msgstr "Important"
+
+#~ msgid "Opieka os. starszych"
+#~ msgstr "Care old people"
+
+#~ msgid "Zaufanie potwierdzone certyfikatami."
+#~ msgstr "Trust me i'm engeener"
+
+#~ msgid "Napisz do nas"
+#~ msgstr "Write to Us"
+
+#~ msgid "Praca w Niemczech"
+#~ msgstr "Work in Germany"
+
+#~ msgid "Oferta"
+#~ msgstr "Offer"
+
+#~ msgid "Zapytania i koszty"
+#~ msgstr "Inquiry and costs"
+
+#~ msgid "3 kroki do wyjazdu"
+#~ msgstr "3 steps to go"
+
+#~ msgid "Praca Tymczasowa"
+#~ msgstr "Temporary work"
+
+#~ msgid "Praca tymczasowa"
+#~ msgstr "Temporary work"

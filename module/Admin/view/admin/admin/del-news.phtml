@@ -1,0 +1,23 @@
+<?php
+// module/Album/view/album/album/delete.phtml:
+    $title = $this->translate('usuń news');
+    $this->headTitle($title);
+    $url = $this->url('admin', array('action' => 'delNews', 'id'     => $this->id));
+?>
+<h1><a href="<?php echo $this->url('admin', array('action' => 'news')) ?>" class="btn btn-default btn-lg"><i class="glyphicon glyphicon-list-alt"></i>&ensp;<?php echo $this->translate('Wiadomości') ?></a> - <?php echo $this->escapeHtml($title); ?></h1>
+<hr />
+
+<div class="well">
+    <p>
+        <?php echo $this->translate('Czy chcesz usunąć newsa: ') ?><span class="info-del">'<?php echo $this->escapeHtml($news->newsTitlePl); ?>'</span> ?
+    </p>
+</div>
+
+<form action="<?php echo $url; ?>" method="post">
+<div>
+    <input type="hidden" name="id" value="<?php echo (int) $news->newsId; ?>" />
+    <button name="del" value="Powrót" class="btn btn-default"/><i class="glyphicon glyphicon-chevron-left"></i>&ensp; <?php echo $this->translate('Powrót') ?></button>
+    <input type="submit" name="del" value=" <?php echo $this->translate('Usuń') ?>" class="btn btn-danger"/>
+</div>
+</form>
+

@@ -1,0 +1,1322 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: pl-en\n"
+"POT-Creation-Date: 2013-10-22 22:53+0100\n"
+"PO-Revision-Date: 2013-11-07 18:29+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: translate\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: C:\\tyrion\\winckler\\module\n"
+
+#: C:\tyrion\winckler\module/About/view/about/about/career.phtml:2
+msgid "Kariera"
+msgstr "Carierowicz"
+
+#: C:\tyrion\winckler\module/About/view/about/about/career.phtml:28
+msgid "Kariera w"
+msgstr ""
+
+#: C:\tyrion\winckler\module/About/view/about/about/career.phtml:39
+msgid "Poszukujemy specjalistów"
+msgstr ""
+
+#: C:\tyrion\winckler\module/About/view/about/about/index.phtml:2
+msgid "O nas"
+msgstr "About"
+
+#: C:\tyrion\winckler\module/About/view/about/about/index.phtml:25
+msgid "Informacje o"
+msgstr ""
+
+#: C:\tyrion\winckler\module/About/view/about/about/index.phtml:25
+msgid "Winckler Personal"
+msgstr "Wiki Leaks"
+
+#: C:\tyrion\winckler\module/About/view/about/about/index.phtml:34
+msgid "O Firmie"
+msgstr "About us"
+
+#: C:\tyrion\winckler\module/About/view/about/about/index.phtml:39
+msgid "Nasza Misja"
+msgstr ""
+
+#: C:\tyrion\winckler\module/About/view/about/about/media.phtml:2
+#: C:\tyrion\winckler\module/About/view/about/about/media.phtml:25
+msgid "Media o nas"
+msgstr "Media about us"
+
+#: C:\tyrion\winckler\module/About/view/about/about/team.phtml:2
+#: C:\tyrion\winckler\module/About/view/about/about/team.phtml:29
+msgid "Nasz zespół"
+msgstr "Our team"
+
+#: C:\tyrion\winckler\module/About/view/about/about/team.phtml:36
+msgid "Dlaczego my ?"
+msgstr "Why Us ?"
+
+#: C:\tyrion\winckler\module/About/view/about/about/team.phtml:80
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:38
+msgid "pobierz certyfikat"
+msgstr "download certificate"
+
+#: C:\tyrion\winckler\module/Admin/view/admin/admin/add-news.phtml:7
+#: C:\tyrion\winckler\module/Admin/view/admin/admin/news.phtml:18
+#: C:\tyrion\winckler\module/Admin/view/admin/admin/news.phtml:92
+#: C:\tyrion\winckler\module/Application/view/application/index/index.phtml:114
+#: C:\tyrion\winckler\module/Application/view/layout/admin.phtml:76
+#: C:\tyrion\winckler\module/News/view/news/news/index.phtml:2
+#: C:\tyrion\winckler\module/News/view/news/news/index.phtml:24
+#: C:\tyrion\winckler\module/News/view/news/news/index.phtml:28
+#: C:\tyrion\winckler\module/News/view/news/news/index.phtml:42
+msgid "Aktualności"
+msgstr "News"
+
+#: C:\tyrion\winckler\module/Admin/view/admin/admin/add-offer.phtml:7
+#: C:\tyrion\winckler\module/Admin/view/admin/admin/offer.phtml:15
+#: C:\tyrion\winckler\module/Admin/view/admin/admin/offer.phtml:94
+#: C:\tyrion\winckler\module/Application/view/layout/admin.phtml:77
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/offer.phtml:2
+#: C:\tyrion\winckler\module/Candidates/view/partial/popular_offers_partial.phtml:4
+msgid "Oferty pracy"
+msgstr "Job offers"
+
+#: C:\tyrion\winckler\module/Admin/view/admin/admin/candidates.phtml:13
+#: C:\tyrion\winckler\module/Admin/view/admin/admin/candidates.phtml:89
+#: C:\tyrion\winckler\module/Application/view/layout/admin.phtml:60
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/index.phtml:2
+msgid "Kandydaci"
+msgstr "Candidates"
+
+#: C:\tyrion\winckler\module/Admin/view/admin/admin/care.phtml:91
+#: C:\tyrion\winckler\module/Care/view/care/care/index.phtml:25
+msgid "Opieka"
+msgstr "Care"
+
+#: C:\tyrion\winckler\module/Admin/view/admin/admin/client.phtml:13
+#: C:\tyrion\winckler\module/Admin/view/admin/admin/client.phtml:89
+#: C:\tyrion\winckler\module/Application/view/layout/admin.phtml:59
+#: C:\tyrion\winckler\module/Client/view/client/client/index.phtml:2
+msgid "Pracodawcy"
+msgstr "Employers"
+
+#: C:\tyrion\winckler\module/Admin/view/admin/admin/contact.phtml:12
+#: C:\tyrion\winckler\module/Admin/view/admin/admin/contact.phtml:86
+#: C:\tyrion\winckler\module/Application/view/layout/admin.phtml:58
+msgid "Wiadomości"
+msgstr "News"
+
+#: C:\tyrion\winckler\module/Admin/view/admin/admin/news.phtml:21
+msgid "Dodaj news"
+msgstr "Add news"
+
+#: C:\tyrion\winckler\module/Admin/view/admin/admin/notification.phtml:16
+#: C:\tyrion\winckler\module/Admin/view/admin/admin/notification.phtml:89
+#: C:\tyrion\winckler\module/Application/view/layout/admin.phtml:75
+msgid "Newsletter"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Admin/view/admin/admin/offer.phtml:18
+msgid "Dodaj ofertę"
+msgstr "Add offer"
+
+#: C:\tyrion\winckler\module/Admin/view/admin/admin/personel.phtml:13
+#: C:\tyrion\winckler\module/Admin/view/admin/admin/personel.phtml:89
+#: C:\tyrion\winckler\module/Application/view/layout/admin.phtml:70
+#: C:\tyrion\winckler\module/Care/view/care/care/personel.phtml:2
+#: C:\tyrion\winckler\module/Care/view/care/care/personel.phtml:25
+#: C:\tyrion\winckler\module/Staff/view/staff/staff/index.phtml:2
+#: C:\tyrion\winckler\module/Staff/view/staff/staff/oldCare.phtml:2
+#: C:\tyrion\winckler\module/Staff/view/staff/staff/personel.phtml:2
+#: C:\tyrion\winckler\module/Staff/view/staff/staff/personel.phtml:25
+msgid "Personel medyczny"
+msgstr "Medical stuff"
+
+#: C:\tyrion\winckler\module/Admin/view/error/404.phtml:1
+msgid "Błąd 404 !"
+msgstr "404 Error"
+
+#: C:\tyrion\winckler\module/Admin/view/error/404.phtml:2
+msgid "Strona nie została odnaleziona ... "
+msgstr ""
+
+#: C:\tyrion\winckler\module/Admin/view/error/index.phtml:1
+#: C:\tyrion\winckler\module/Application/view/error/index.phtml:1
+msgid "An error occurred"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Admin/view/error/index.phtml:8
+#: C:\tyrion\winckler\module/Application/view/error/404.phtml:81
+#: C:\tyrion\winckler\module/Application/view/error/index.phtml:8
+msgid "Additional information"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Admin/view/error/index.phtml:11
+#: C:\tyrion\winckler\module/Admin/view/error/index.phtml:35
+#: C:\tyrion\winckler\module/Application/view/error/404.phtml:84
+#: C:\tyrion\winckler\module/Application/view/error/404.phtml:108
+#: C:\tyrion\winckler\module/Application/view/error/index.phtml:11
+#: C:\tyrion\winckler\module/Application/view/error/index.phtml:35
+msgid "File"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Admin/view/error/index.phtml:15
+#: C:\tyrion\winckler\module/Admin/view/error/index.phtml:39
+#: C:\tyrion\winckler\module/Application/view/error/404.phtml:88
+#: C:\tyrion\winckler\module/Application/view/error/404.phtml:112
+#: C:\tyrion\winckler\module/Application/view/error/index.phtml:15
+#: C:\tyrion\winckler\module/Application/view/error/index.phtml:39
+msgid "Message"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Admin/view/error/index.phtml:19
+#: C:\tyrion\winckler\module/Admin/view/error/index.phtml:43
+#: C:\tyrion\winckler\module/Application/view/error/404.phtml:92
+#: C:\tyrion\winckler\module/Application/view/error/404.phtml:116
+#: C:\tyrion\winckler\module/Application/view/error/index.phtml:19
+#: C:\tyrion\winckler\module/Application/view/error/index.phtml:43
+msgid "Stack trace"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Admin/view/error/index.phtml:29
+#: C:\tyrion\winckler\module/Application/view/error/404.phtml:102
+#: C:\tyrion\winckler\module/Application/view/error/index.phtml:29
+msgid "Previous exceptions"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Admin/view/error/index.phtml:58
+#: C:\tyrion\winckler\module/Application/view/error/404.phtml:131
+#: C:\tyrion\winckler\module/Application/view/error/index.phtml:58
+msgid "No Exception available"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Application/view/application/index/index.phtml:38
+msgid "U nas liczą się Ludzie. Dzięki nim budujemy przyszłość"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Application/view/application/index/index.phtml:52
+msgid ""
+"Winckler Personal jest dynamicznie rozwijającą się Agencją Pośrednictwa "
+"Pracy, profesjonalnym dostawcą usług w zakresie rekrutacji i selekcji "
+"pracowników. Z naszych usług korzystają zarówno małe i średnie "
+"przedsiębiorstwa, jak również korporacje na terenie całego kraju, a także "
+"poza jego granicami. Wychodząc naprzeciw potrzebom naszych kontrahentów, "
+"szukających efektywnych rozwiązań zoptymalizowanych kosztowo postanowiliśmy "
+"ułatwić Państwu zadanie w poszukiwaniu odpowiedniego personelu oferując "
+"profesjonalne rozwiązania z zakresu selekcji pracowników oraz pracy "
+"tymczasowej.\n"
+"Zajmujemy się rekrutacją pracowników z wielu branż, począwszy od pracowników "
+"niewykwalifikowanych, poprzez fachowców, na kadrze kierowniczej kończąc. "
+"Główna siedziba firmy mieści się w Warszawie, natomiast zasięg naszego "
+"działania obejmuje teren całego kraju, co sprawia, że potrafimy w szybkim "
+"czasie przeprowadzić skuteczną rekrutację. Do każdego zlecenia podchodzimy "
+"indywidualnie z takim samym zaangażowaniem, od lat budując zaufanie naszych "
+"kontrahentów.\n"
+"Winckler Personal jest Agencją Pracy Tymczasowej dysponującą ogromnym "
+"doświadczeniem i zaangażowaniem zarówno w rekrutacji jak i współpracy "
+"międzynarodowej. Wieloetapowe rekrutacje prowadzone przez naszą agencje "
+"umożliwiają dobór właściwego personelu, który z pewnością spełni Państwa "
+"oczekiwania i poprzez swoje zaangażowanie podniesie konkurencyjność Pańskiej "
+"firmy."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Application/view/application/index/index.phtml:248
+msgid "Ważne: Strona wykorzystuje pliki cookies."
+msgstr "Important"
+
+#: C:\tyrion\winckler\module/Application/view/error/404.phtml:13
+#: C:\tyrion\winckler\module/Application/view/partial/breadcrumb.phtml:4
+#: C:\tyrion\winckler\module/Application/view/partial/breadcrumb_active.phtml:4
+#: C:\tyrion\winckler\module/News/view/news/news/index.phtml:17
+#: C:\tyrion\winckler\module/Search/view/search/search/index.phtml:17
+#: C:\tyrion\winckler\module/Search/view/search/search/sitemap.phtml:17
+msgid "Jesteś tutaj:"
+msgstr "You are here:"
+
+#: C:\tyrion\winckler\module/Application/view/error/404.phtml:16
+#: C:\tyrion\winckler\module/Search/view/search/search/index.phtml:20
+#: C:\tyrion\winckler\module/Search/view/search/search/sitemap.phtml:20
+msgid "Home"
+msgstr "Home"
+
+#: C:\tyrion\winckler\module/Application/view/error/404.phtml:19
+msgid "Error"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Application/view/error/404.phtml:28
+msgid "404 Page Not Found"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Application/view/error/404.phtml:38
+msgid "The requested controller was unable to dispatch the request."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Application/view/error/404.phtml:41
+msgid ""
+"The requested controller could not be mapped to an existing controller class."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Application/view/error/404.phtml:44
+msgid "The requested controller was not dispatchable."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Application/view/error/404.phtml:47
+msgid "The requested URL could not be matched by routing."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Application/view/error/404.phtml:50
+msgid "We cannot determine at this time why a 404 was generated."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Application/view/error/404.phtml:62
+msgid "Controller"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Application/view/error/404.phtml:69
+#, php-format
+msgid "resolves to %s"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Application/view/error/404.phtml:147
+#: C:\tyrion\winckler\module/Application/view/layout/layout.phtml:120
+msgid "Wpisz szukane słowo ..."
+msgstr "Enter search term ..."
+
+#: C:\tyrion\winckler\module/Application/view/layout/admin.phtml:6
+msgid "Panel administracyjny"
+msgstr "Admin panel"
+
+#: C:\tyrion\winckler\module/Application/view/layout/admin.phtml:67
+msgid "Opieka os. starszych"
+msgstr "Care old people"
+
+#: C:\tyrion\winckler\module/Application/view/layout/admin.phtml:78
+msgid "Ustawienia"
+msgstr "Settings"
+
+#: C:\tyrion\winckler\module/Application/view/layout/layout.phtml:6
+msgid "Winckler Personal - Agencja Pracy - Pośrednictwo Pracy"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Application/view/layout/layout.phtml:154
+msgid "Zaufanie potwierdzone certyfikatami."
+msgstr "Trust me i'm engeener"
+
+#: C:\tyrion\winckler\module/Application/view/layout/layout.phtml:159
+#: C:\tyrion\winckler\module/Contact/view/contact/contact/index.phtml:2
+#: C:\tyrion\winckler\module/Contact/view/contact/contact/index.phtml:27
+msgid "Kontakt"
+msgstr "Contact"
+
+#: C:\tyrion\winckler\module/Application/view/layout/layout.phtml:167
+msgid "Tel:"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Application/view/layout/layout.phtml:170
+msgid "Kom:"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Application/view/layout/layout.phtml:181
+msgid "Napisz do nas"
+msgstr "Write to Us"
+
+#: C:\tyrion\winckler\module/Application/view/layout/layout.phtml:212
+msgid "Skontaktuj się z nami:"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Application/view/partial/breadcrumb.phtml:8
+#: C:\tyrion\winckler\module/Application/view/partial/breadcrumb_active.phtml:8
+#: C:\tyrion\winckler\module/News/view/news/news/index.phtml:20
+msgid "Strona główna"
+msgstr "Home"
+
+#: C:\tyrion\winckler\module/Application/view/partial/breadcrumb_active.phtml:33
+msgid "Opis stanowiska"
+msgstr "Job description"
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/apply.phtml:2
+msgid "Wybór właściwej firmy"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/apply.phtml:25
+msgid "Wybór"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/apply.phtml:25
+msgid " właściwej firmy"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/apply.phtml:36
+msgid "Odpowiedni wybór leży w twoich rękach"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/departure.phtml:2
+#: C:\tyrion\winckler\module/Care/view/care/care/departure.phtml:2
+msgid "Przygotowania do wyjazdu"
+msgstr "Preparations for Departure"
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/departure.phtml:25
+#: C:\tyrion\winckler\module/Care/view/care/care/departure.phtml:25
+msgid "Przygotowania"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/departure.phtml:25
+#: C:\tyrion\winckler\module/Care/view/care/care/departure.phtml:25
+msgid "do wyjazdu"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/departure.phtml:35
+#: C:\tyrion\winckler\module/Care/view/care/care/departure.phtml:35
+msgid "Co zabrać za sobą?"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/departure.phtml:91
+#: C:\tyrion\winckler\module/Care/view/care/care/departure.phtml:91
+msgid "Po przybyciu na miejsce"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/index.phtml:25
+msgid "Twoja kariera jest w rękach Wincklera! "
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/index.phtml:34
+msgid "Towarzyszymy Ci w Twojej karierze tak długo, jak tego potrzebujesz"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/index.phtml:35
+msgid ""
+"Pomożemy Ci w poszukiwaniu pracy i zajmiemy się profesjonalną promocją "
+"Twojej kandydatury, a także zorganizujemy spotkanie z potencjalnym "
+"pracodawcą."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/index.phtml:36
+msgid "Szukaj ofert pracy z WINCKLER PERSONAL ! "
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/index.phtml:39
+msgid "Chcesz spełniać się zawodowo?"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/index.phtml:44
+msgid "Szukasz nowych wyzwań?"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/index.phtml:49
+msgid "Zgłoś się do nas!"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/index.phtml:53
+msgid ""
+"Winckler Personal to rzetelna Agencja Zatrudniania świadcząca profesjonalne "
+"usługi w zakresie legalnego zatrudniania opiekunek na terenie Niemiec. W "
+"codziennej pracy towarzyszy nam idea społecznej odpowiedzialności. Dzięki "
+"temu możemy świadczyć dla naszych kontrahentów usługi na najwyższym poziomie."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/index.phtml:57
+msgid ""
+"Dzięki starannie opracowanym procedurom, każdy może legalnie i bezpiecznie "
+"wyjechać za pośrednictwem Agecnji Pracy Winckler Personal do UE w celach "
+"zarobkowych oraz podjąć się pracy na terenie kraju.\n"
+"Z przyjemnością przejmiemy proces poszukiwania pracy spełniającej Twoje "
+"oczekiwania oraz zarekomendujemy Twoją kandydaturę potencjalnym pracodawcom. "
+"Dzięki naszej współpracy z firmami różnych rozmiarów z wszystkich branż "
+"pomożemy zwiększyć Twoje szanse na znalezienie nowej pracy."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/index.phtml:65
+msgid "Umów się na rozmowę kwalifikacyjną już dziś !"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/index.phtml:91
+#: C:\tyrion\winckler\module/Care/view/care/care/personel.phtml:66
+#: C:\tyrion\winckler\module/Client/view/client/client/order.phtml:42
+#: C:\tyrion\winckler\module/Staff/view/staff/staff/personel.phtml:66
+msgid "Formularz Kontaktowy"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/index.phtml:135
+msgid ""
+"*Niniejszym oświadczam, że zgodnie z art. 23 ust. 1 pkt 1 ustawy z dnia 29 "
+"sierpnia 1997 r. o ochronie danych osobowych (Dz.U. z 2002 r. Nr 101, poz. "
+"926) wyrażam zgodę na przetwarzanie wyżej wymienionych moich danych "
+"osobowych przez Winckler Personal w celach marketingowo/sprzedażowych oraz "
+"dla potrzeb obecnego oraz przyszłych procesów rekrutacyjnych. Informacje, "
+"które podałem/podałam w moim formularzu zgłoszeniowym są kompletne i zgodne "
+"ze stanem faktycznym."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/index.phtml:146
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/offer.phtml:285
+#: C:\tyrion\winckler\module/Care/view/care/care/personel.phtml:115
+#: C:\tyrion\winckler\module/Care/view/care/care/question.phtml:192
+#: C:\tyrion\winckler\module/Client/view/client/client/order.phtml:90
+#: C:\tyrion\winckler\module/Contact/view/contact/contact/index.phtml:157
+#: C:\tyrion\winckler\module/Staff/view/staff/staff/personel.phtml:116
+msgid "Wyślij"
+msgstr "Send"
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/index.phtml:151
+#: C:\tyrion\winckler\module/Contact/view/contact/contact/index.phtml:162
+msgid "Dziekujemy za wiadomość, wkrótce na nią odpowiemy."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/index.phtml:154
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/offer.phtml:293
+#: C:\tyrion\winckler\module/Care/view/care/care/personel.phtml:123
+#: C:\tyrion\winckler\module/Care/view/care/care/question.phtml:200
+#: C:\tyrion\winckler\module/Client/view/client/client/order.phtml:105
+#: C:\tyrion\winckler\module/Contact/view/contact/contact/index.phtml:165
+#: C:\tyrion\winckler\module/Staff/view/staff/staff/personel.phtml:124
+msgid ""
+"Coś poszło nie tak ... Prosimy skontaktować się za pomocą email lub "
+"telfonicznie. Przepraszamy za problem."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/index.phtml:169
+msgid "SZANOWNI PAŃSTWO !"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/index.phtml:172
+msgid ""
+"Nie pobieramy od kandydatów żadnych opłat (rozumiane są przez to opłaty za "
+"przejazd za granicę, przygotowanie dokumentów, pośrednictwo, bądź dodatkowe "
+"procedury)."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/index.phtml:177
+msgid ""
+"W publikowanych przez nas ofertach pracy zawsze podajemy dokładne dane "
+"kontaktowe:\n"
+"adres pocztowy, adres e-mail, numer telefonu, ponadto numer certyfikatu "
+"wydanego przez Marszałka Województwa Małopolskiego. Aktualne oferty pracy "
+"znajdą Państwo na naszej stronie internetowej.\n"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/index.phtml:184
+msgid ""
+"Wszelkie rekrutacje w Agencji Pośrednictwa WINCKLER PERSONAL są "
+"przeprowadzane wyłącznie w siedzibie naszej firmy przez wewnętrznych "
+"konsultantów.\n"
+"W zakresie rekrutacji kandydatów nie współpracujemy z żadnymi firmami "
+"zewnętrznymi lub osobami prywatnymi.\n"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/offer.phtml:56
+msgid ""
+"Brak ofert spełniających wymagania, lub ogłoszenie którego szukasz już nie "
+"istnieje ..."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/offer.phtml:245
+msgid "Powiadomienia mailowe"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/offer.phtml:274
+msgid ""
+"*Niniejszym oświadczam, że zgodnie z art. 23 ust. 1 pkt 1 ustawy z dnia 29 "
+"sierpnia 1997 r. o ochronie danych osobowych (Dz.U. z 2002 r. Nr 101, poz. "
+"926) wyrażam zgodę na przetwarzanie wyżej wymienionych moich danych "
+"osobowych przez Winckler Personal w celach marketingowo/sprzedażowych."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/offer.phtml:290
+msgid ""
+"Dziękujemy za przesłanie wiadomości. Od dziś będziemy na bieżąco informować "
+"Państwa o nowych ofertach pracy."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/recommend.phtml:2
+msgid "Poleć znajomego"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/recommend.phtml:25
+msgid "Poleć"
+msgstr "Refer"
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/recommend.phtml:25
+msgid " znajomego"
+msgstr "friend"
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/recommend.phtml:35
+msgid "U nas opłaca się rekomendować znajomych lub bliskich!"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/recommend.phtml:38
+#: C:\tyrion\winckler\module/Care/view/care/care/question.phtml:38
+msgid ""
+"Osoby zainteresowane współpracą z Agencją Zatrudnienia Winckler Personal w "
+"charakterze opiekuna/opiekunki osób starszych prosimy o kontakt w celu "
+"przeprowadzenia rozmowy telefonicznej, podczas której weryfikujemy znajomość "
+"języka niemieckiego, następnie ustalamy termin spotkania na rozmowę "
+"kwalifikacyjną w naszym biurze w celu omówienia wszelkich szczegółów "
+"dotyczących ewentualnej wspólpracy."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/recommend.phtml:43
+msgid ""
+"Za każdą poleconą osobę otrzymasz od nas gotówkę! Warto polecać!\n"
+"Jeśli polecisz nam osobę, która zostanie zatrudniona u naszego kontrahenta i "
+"przepracuje 3 miesiące, otrzymasz od nas bon o wartości 200,00 zł, który "
+"będziesz mógł zrealizować według własnego uznania."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/reference.phtml:2
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/reference.phtml:25
+msgid "Referencje"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/candidates/candidates/reference.phtml:36
+msgid "Wasze opinie"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/partial/offer_category.phtml:4
+msgid "Lista ogłoszeń"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/partial/offer_category.phtml:15
+#: C:\tyrion\winckler\module/Candidates/view/partial/popular_offers_partial.phtml:15
+msgid "Wybierz kategorię:"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/partial/offer_category.phtml:17
+msgid "Możesz wybrać kategorię, dzięki czemu zawęzisz obszar poszukiwań :)"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Candidates/view/partial/popular_offers_partial.phtml:4
+msgid "Popularne"
+msgstr "Popular"
+
+#: C:\tyrion\winckler\module/Candidates/view/partial/popular_offers_partial.phtml:17
+msgid "Znajdź to czego szukasz :)"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:2
+msgid "FAQ"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:25
+msgid "Najczęściej"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:25
+msgid "zadawane pytania"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:33
+msgid ""
+"Czy Winckler Personal posiada Certyfikat  Ministerstwa Pracy na działalność "
+"Pośrednictwa Pracy na terenie RP ?"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:36
+msgid ""
+"Winckler Personal posiada wymagany certyfikat nr 7979 wydany przez Krajowy "
+"Rejestr Agencji Zatrudnienia, który jest ogólnodostępny po kliknięciu na "
+"plik w formacie PDF."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:40
+msgid "Czy są pobierane jakieś opłaty związane z wyjazdem?"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:46
+msgid ""
+"Nie pobieramy żadnych opłat od kandydatów ani osób rozpoczynających pracę."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:49
+msgid ""
+"W jakim stopniu muszę znać język niemiecki? Czy znajomość podstawowa "
+"wystarczy?"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:52
+msgid ""
+"Aby wyjechać za granicę należy mieć minimum mocne podstawy języka "
+"niemieckiego. Znajomość weryfikowana jest najpierw w rozmowie telefonicznej "
+"z naszymi konsultantami, następnie na osobistym spotkaniu z rekruterem. "
+"Chcemy mieć pewność, że zatrudniane przez nas opiekunki poradzą sobie "
+"językowo w codziennych sytuacjach w Niemczech, jak np. wizyta u lekarza, "
+"zrobienie zakupów, czy odbieranie telefonów."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:55
+msgid "Na jak długo mogę wyjechać?"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:58
+msgid ""
+"Z reguły opiekunki delegowane są za granicę na minimum 8 tygodni i dłużej. W "
+"wyjątkowych sytuacjach Panie wyjeżdżają również na 6 tygodni. Wszystko "
+"zależy od preferencji rodziny, u której pracuje opiekunka."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:61
+msgid "Na jakie wynagrodzenie mogę liczyć?"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:64
+msgid ""
+"Wynagrodzenie zostaje ustalone dla każdej opiekunki indywidualnie i zależy "
+"ono przede wszystkim od znajomości języka niemieckiego, ale także od "
+"doświadczenia. Miesięczne zarobki w Winckler Personal wynoszą od 850 do 1350 "
+"euro netto."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:67
+msgid "Czy w trakcie zlecenia mam zapewnione wyżywienie i zakwaterowanie?"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:70
+msgid ""
+"Tak, podczas trwania zlecenia nie interesują Pana (Panią) ani koszty "
+"wyżywienia, ani zakwaterowania."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:73
+msgid "Czy ta praca jest legalna? Skąd mogę mieć taką pewność?"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:76
+msgid ""
+"Zatrudniamy opiekunów/opiekunki legalnie, w oparciu o umowę cywilnoprawną, "
+"którą podpisujemy zawsze przed wyjazdem opiekuna/opiekunki. Opłacamy "
+"wszelkie składki społeczne oraz podatek dochodowy. Okres pracy w naszej "
+"firmie wlicza się do stażu emerytalnego. Występujemy również o dokumenty "
+"świadczące o legalnym zatrudnieniu opiekunki czyli druk A1 wraz z Europejską "
+"Kartą Zdrowia (karta Ubezpieczenia Zdrowotnego)."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:79
+msgid "Jak wygląda czas pracy?"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:82
+msgid ""
+"Każdy(-a) opiekun(-ka) ma dziennie 2-3 godziny czasu wolnego. Po "
+"indywidualnym ustaleniu z rodziną można pracować w trybie: 6 dni pracy, "
+"dzień wolnego oraz mieć 2 wolne popołudnie w tygodniu."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:85
+msgid ""
+"Jeżeli trafię do rodziny, z której nie będę zadowolona mogę zrezygnować?"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:88
+msgid ""
+"W takim przypadku należy jak najszybciej z nami się skontaktować. Nasi "
+"konsultanci są w stałym kontakcie zarówno z opiekunami/opiekunkami, jak i z "
+"rodzinami podopiecznych. Pomagamy w rozwiązywaniu problemów, a także "
+"załatwiamy drobne formalności w imieniu opiekunów/opiekunek. W przypadku "
+"jeżeli opiekun(-ka) nie czuje się na siłach aby kontynuować zlecenie "
+"organizujemy zastępstwo, opiekun(-ka) po dotrzymaniu 14-dniowego okresu "
+"wypowiedzenia (złożonego na piśmie) może wyjechać na inne zlecenie lub "
+"wrócić do kraju."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:91
+msgid "Czy podczas pobytu w Niemczech mogę iść do lekarza?"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:94
+msgid ""
+"Tak, otrzyma od nas Pan(i) Kartę EKUZ, która upoważnia Pana (Panią) do "
+"bezpłatnych wizyt lekarskich na terenie całych Niemiec."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:97
+msgid "Co jeśli nie mam doświadczenia, ale znam język niemiecki?"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:100
+msgid ""
+"Każda opiekunka wypełnia ankietę, w której sama określa przypadki i "
+"schorzenia, z którymi pracowała lub których mogłaby się podjąć. Nie ma "
+"możliwości, aby opiekunka bez doświadczenia została przydzielona do "
+"cięższego przypadku, ankieta służy uniknięciu tego rodzaju sytuacji."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:103
+msgid ""
+"Od czego należy rozpocząć poszukiwanie pracy w charakterze opiekunki os. "
+"starszych?"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:106
+msgid ""
+"Pierwszym krokiem jest kontakt z naszym konsultantem celem weryfikacji "
+"języka niemieckiego. Odpowie on również na wszystkie Państwa pytania "
+"dotyczące współpracy, a także poprosi o wypełnienie Formularzu "
+"Zgłoszeniowego zamieszczonego w zakładce Opiekunka osób starszych. Państwu "
+"ankietę. Po otrzymaniu kompletu dokumentów, tzn. wypełnionego Formularza "
+"oraz fotografii rozpoczynamy proces rekrutacji. Z reguły od rozmowy "
+"kwalifikacyjnej do momentu wyjazdu mija okres od 1 do 2 tygodni czasami 1-2 "
+"dni."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:109
+msgid "Nie przeszedłem (-łam) pozytywnie testu językowego, co teraz?"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:112
+msgid ""
+"W naszej bazie danych odnotowujemy znajomość języka niemieckiego "
+"aplikujących kandydatów. Jeżeli nie udało się Państwu za pierwszym razem "
+"przejść pozytywnie rozmowy kwalifikacyjnej, proszę odświeżyć sobie język "
+"niemiecki najlepiej na lekcjach prywatnych i spróbować ponownie. Postęp "
+"językowy naszych kandydatów cieszy nas najbardziej chętnie umówimy się na "
+"rozmowę w języku niemieckim za miesiąc lub za dwa – wtedy również w razie "
+"potrzeby doradzimy czy należy jeszcze się poduczyć języka czy możemy już "
+"szukać pracy dla opiekunki."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:115
+msgid "Jak długo trzeba czekać na ofertę pracy?"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:118
+msgid ""
+"Oferty pracy przedstawiamy na bieżąco w terminie od 2 do 14 dni  jest "
+"szansa, że opiekunka podejmie się pracy na terenie Niemiec."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:121
+msgid "Czy są zwracane koszty przejazdu do pracy i z powrotem?"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:124
+msgid ""
+"Zwrot kosztów przejazdu w wysokości 80-100 euro przysługuje zawsze w "
+"przypadku wyjazdu na co najmniej 2 miesiące pracy. Nasza firma organizuje "
+"przejazd opiekunki  do Niemiec i z powrotem licencjonowanym przewoźnikiem – "
+"kupujemy bilet, dokonujemy rezerwacji również na drogę powrotną. Opiekunka "
+"otrzymuje przez nas zakupiony bilet i zawsze jest poinformowana kiedy i o "
+"jakiej porze ma wyjazd."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:127
+msgid "W jakim systemie będzie wypłacane moje wynagrodzenie?"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:130
+msgid ""
+"Wynagrodzenie jest wypłacane w systemie miesięcznym, do 15 dnia kolejnego "
+"miesiąca."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:133
+msgid "Jakie dokumenty należy zabrać ze sobą do pracy za granicą?"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:136
+msgid "- ważny dowód osobisty oraz paszport"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:136
+msgid "- oryginał umowy z polską firmą."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:142
+msgid "Nie znalazłeś odpowiedzi na nurtujące pytanie?"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/faq.phtml:144
+msgid ""
+"Możesz do Nas zadzwonić lub skontaktować się za pomocą formularza, klikając "
+"w poniższy przycisk."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/index.phtml:2
+msgid "Opiekunka"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/index.phtml:25
+msgid "osób starszych"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/index.phtml:51
+msgid "Praca w Niemczech"
+msgstr "Work in Germany"
+
+#: C:\tyrion\winckler\module/Care/view/care/care/index.phtml:69
+msgid "Siedziba"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/index.phtml:75
+msgid "Profesjonalizm"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/offer.phtml:2
+#: C:\tyrion\winckler\module/Care/view/care/care/offer.phtml:25
+msgid "Oferta"
+msgstr "Offer"
+
+#: C:\tyrion\winckler\module/Care/view/care/care/offer.phtml:35
+msgid "Zapewniamy"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/offer.phtml:38
+msgid "Oferty pracy na terenie całych Niemiec"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/offer.phtml:44
+msgid "Legalne i bezpieczne wyjazdy za granicę"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/offer.phtml:50
+msgid "Sprawdzone, indywidualnie dobrane oferty pracy"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/offer.phtml:56
+msgid "Opłacone składki do ZUS"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/offer.phtml:62
+msgid "Krótkoterminowe zlecenia"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/offer.phtml:68
+msgid "Pracę w systemie 2/2 , 3/3 lub 3/2 (do wyboru)"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/offer.phtml:74
+msgid "Atrakcyjne i terminowe wynagrodzenie (ustalane indywidualnie)"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/offer.phtml:80
+msgid "Druk A1, ubezpieczenie zdrowotne (kartę EKUZ) na czas pobytu za granicą"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/offer.phtml:86
+msgid ""
+"Współpracujemy z licencjonowanymi przewoźnikami, organizujemy wyjazdy od A "
+"do Z"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/offer.phtml:101
+msgid "Personel i świadczone usługi"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/offer.phtml:103
+msgid ""
+" Zakres obowiązków opiekunów obejmuje opiekę i pomoc w codziennych "
+"czynnościach:"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/offer.phtml:108
+msgid "Pomoc w czynnościach toaletowych"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/offer.phtml:113
+msgid "Dopilnowanie przyjmowania leków"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/offer.phtml:118
+msgid "Przygotowywanie posiłków oraz w razie potrzeby karmienie podopiecznego"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/offer.phtml:123
+msgid "Zmiana pieluch"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/offer.phtml:128
+msgid "Robienie zakupów"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/offer.phtml:133
+msgid "Pomoc przy wstawaniu z łóżka, ubieranie pacjenta"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/offer.phtml:138
+msgid "Ułożenie chorego według zaleceń lekarza"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/offer.phtml:143
+msgid "Pomoc przy poruszaniu się"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/offer.phtml:148
+msgid "Spacery, wizyty u lekarza"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/offer.phtml:153
+msgid "Prowadzenie gospodarstwa domowego (pranie, sprzątanie)"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/offer.phtml:158
+msgid "Dotrzymywanie towarzystwa"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/offer.phtml:163
+msgid "Gotowość do wstawania w nocy"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/offer.phtml:168
+msgid "Opieka nad zwierzętami domowymi"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/offer.phtml:182
+msgid "Wynagrodzenie"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/personel.phtml:31
+#: C:\tyrion\winckler\module/Staff/view/staff/staff/personel.phtml:31
+msgid "Wykwalifikowana kadra"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/personel.phtml:104
+#: C:\tyrion\winckler\module/Client/view/client/client/order.phtml:79
+#: C:\tyrion\winckler\module/Staff/view/staff/staff/personel.phtml:105
+msgid ""
+"  *Niniejszym oświadczam, że zgodnie z art. 23 ust. 1 pkt 1 ustawy z dnia 29 "
+"sierpnia 1997 r. o ochronie danych osobowych (Dz.U. z 2002 r. Nr 101, poz. "
+"926) wyrażam zgodę na przetwarzanie wyżej wymienionych moich danych "
+"osobowych przez Winckler Personal w celach marketingowo/sprzedażowych."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/personel.phtml:120
+#: C:\tyrion\winckler\module/Client/view/client/client/order.phtml:102
+#: C:\tyrion\winckler\module/Staff/view/staff/staff/personel.phtml:121
+msgid ""
+"Niezwłocznie kontaktujemy się z Państwem w celu sprecyzowania szczegółów "
+"zlecenia oraz omówienia profilu kompetencyjnego kandydata."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/question.phtml:2
+msgid "Zapytania i koszty"
+msgstr "Inquiry and costs"
+
+#: C:\tyrion\winckler\module/Care/view/care/care/question.phtml:25
+msgid "Zapytanie"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/question.phtml:25
+msgid " i koszty"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/question.phtml:35
+msgid "3 kroki do wyjazdu"
+msgstr "3 steps to go"
+
+#: C:\tyrion\winckler\module/Care/view/care/care/question.phtml:43
+msgid "Wypełnij Formularz "
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/question.phtml:44
+msgid "Rozmowa z konsultantem"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/question.phtml:45
+msgid "Niezbędne formalności"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/question.phtml:46
+msgid "Wyjazd do pracy za granicą"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/question.phtml:51
+msgid "Skontakuj się z nami jeszcze dziś – Nie czekaj do jutra !"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/question.phtml:66
+msgid "Formularz Zgłoszeniowy"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Care/view/care/care/question.phtml:197
+msgid "Dziekujemy za wiadomość, wkrótce na nią odpowiemy"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/index.phtml:25
+msgid "Dzięki nam koncentrują się Państwo na swoim biznesie. "
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/index.phtml:34
+msgid "Pomagamy dotrzeć do właściwych kandydatów"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/index.phtml:35
+msgid "Efektywność Firmy zależy od kompetencji Twoich pracowników."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/index.phtml:36
+msgid "Stworzymy możliwości do rozwoju biznesu "
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/index.phtml:39
+#: C:\tyrion\winckler\module/Client/view/client/client/work.phtml:37
+msgid ""
+"Staranny dobór kandydatów i kompleksowe usługi z zakresu doradztwa "
+"zawodowego są naszymi priorytetami. Pracując z klientami i kandydatami, "
+"nauczyliśmy się zawsze znajdować optymalne rozwiązanie dla obu stron. Dzięki "
+"działalności w zakresie rekrutacji personelu stale poszerzamy naszą bazę "
+"kandydatów, co sprzyja znalezieniu odpowiednich pracowników, spełniających "
+"oczekiwania naszych kontrahentów. Skrupulatnie selekcjonujemy aplikacje "
+"kandydatów, przeprowadzamy rozmowy kwalifikacyjne, sprawdzamy referencje i "
+"przedstawiamy naszym kontrahentom tylko odpowiednie, dobrze dobrane "
+"kandydatury."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/index.phtml:41
+msgid "Winckler Personal oferuje pełny zakres usług HR:"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/index.phtml:44
+msgid "Rekrutacja stała"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/index.phtml:49
+msgid "Direct & Executive Search"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/index.phtml:53
+msgid "Rekrutacja pracowników tymczasowych"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/index.phtml:59
+msgid ""
+"Z doświadczenia wiemy, że zapotrzebowanie na personel nie jest stałe w "
+"trakcie roku, dlatego dysponujemy obszerną bazą pracowników tymczasowych, "
+"których zatrudnienie może poprawić Państwa konkurencyjność. Jesteśmy "
+"ekspertami w rekrutacji, służymy swoją wiedzą i doświadczeniem.  Outsourcing "
+"procesów rekrutacyjnych umożliwia działom HR w Państwa firmie skoncentrować "
+"się na kwestiach strategicznych dla biznesu. Personel dobieramy "
+"indywidualnie do potrzeb Państwa firmy."
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/order.phtml:2
+#: C:\tyrion\winckler\module/Client/view/client/client/order.phtml:34
+msgid "Zamów usługę"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/order.phtml:25
+msgid ""
+"Szukają Państwo pracowników do firmy i brakuje Państwu czasu na "
+"przeprowadzienie procesu rekrutacji – prosimy o kontakt !"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/order.phtml:35
+msgid "Jeśli są Państwo zainteresowani współpracą - zachęcamy do kontaktu:"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/work.phtml:2
+msgid "Praca Tymczasowa"
+msgstr "Temporary work"
+
+#: C:\tyrion\winckler\module/Client/view/client/client/work.phtml:25
+#: C:\tyrion\winckler\module/Client/view/client/client/work.phtml:40
+msgid "Praca tymczasowa"
+msgstr "Temporary work"
+
+#: C:\tyrion\winckler\module/Client/view/client/client/work.phtml:34
+msgid "Z nami poprawią Państwo konkurencyjność swojej firmy"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/work.phtml:43
+msgid ""
+"Praca tymczasowa to obecnie jedna z najwygodniejszych form zatrudnienia, "
+"która sprawdziła się już poza granicami naszego kraju, zaspokajając tym "
+"samym okresowe wzmożone zapotrzebowanie na personel. Rozwiązanie to stanowi "
+"nie tylko szansę rozwoju, ale również dodatkowe źródło pieniędzy dla wielu "
+"pracowników"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/work.phtml:46
+msgid ""
+"Oferujemy kompleksową organizację procesu zatrudnienia pracowników "
+"tymczasowych dla branż:"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/work.phtml:48
+msgid "automotive"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/work.phtml:49
+msgid "budownictwo"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/work.phtml:50
+msgid "telekomunikacja"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/work.phtml:51
+msgid "turystyka"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/work.phtml:52
+msgid "tworzywa sztuczne"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/work.phtml:53
+msgid "energetyka"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/work.phtml:54
+msgid "elektryka/elektronika"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/work.phtml:55
+msgid "informatyka"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/work.phtml:56
+msgid "logistyka"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/work.phtml:57
+msgid "media"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/work.phtml:58
+msgid "medycyna"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/work.phtml:59
+msgid "motoryzacja"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/work.phtml:60
+msgid "poligrafia"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/work.phtml:61
+msgid "przemysł/produkcja"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/work.phtml:63
+msgid "Korzyści dla naszego Klienta"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/work.phtml:66
+msgid "Obniżenie kosztów zatrudnienia pracowników"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/work.phtml:69
+msgid "Brak kosztów rekrutacji i selekcji personelu"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/work.phtml:72
+msgid "Możliwość natychmiastowej wymiany lub doboru kolejnych pracowników"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/work.phtml:75
+msgid "Dowolny czas trwania umowy z pracownikiem, krótkie okresy wypowiedzenia"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/work.phtml:78
+msgid ""
+"Przejęcie obowiązków pracodawcy w kwestii: umów, ZUS, ubezpieczenia, list "
+"obecności, wypłat, badań lekarskich oraz BHP"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/work.phtml:83
+msgid "Korzyści dla Pracownika Tymczasowego:"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/work.phtml:86
+msgid "Elastyczność czasu pracy i okresów zatrudnienia"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/work.phtml:89
+msgid "Zdobywanie nowych umiejętności"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/work.phtml:92
+msgid ""
+"Możliwość pozostania na stałe w Firmie, po okresie zatrudnienia czasowego"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Client/view/client/client/work.phtml:95
+msgid "Gwarancja"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Contact/view/contact/contact/index.phtml:50
+msgid "Dane kontaktowe"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Contact/view/contact/contact/index.phtml:86
+msgid "Godziny otwarcia"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Contact/view/contact/contact/index.phtml:103
+msgid "Formularz kontaktowy"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Contact/view/contact/contact/index.phtml:106
+msgid "Zostaw swoje dane, oddzwonimy !"
+msgstr ""
+
+#: C:\tyrion\winckler\module/News/view/news/news/index.phtml:31
+msgid "Podgląd wiadomości"
+msgstr ""
+
+#: C:\tyrion\winckler\module/News/view/news/news/index.phtml:93
+msgid "Treść wiadomosci"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Search/view/search/search/index.phtml:2
+#: C:\tyrion\winckler\module/Search/view/search/search/index.phtml:32
+msgid "Wyniki wyszukiwania"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Search/view/search/search/index.phtml:23
+msgid "Wyszukiwarka"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Search/view/search/search/sitemap.phtml:2
+#: C:\tyrion\winckler\module/Search/view/search/search/sitemap.phtml:23
+#: C:\tyrion\winckler\module/Search/view/search/search/sitemap.phtml:32
+msgid "Mapa strony"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Staff/view/staff/staff/index.phtml:28
+#: C:\tyrion\winckler\module/Staff/view/staff/staff/oldCare.phtml:28
+msgid "Praca za granicą"
+msgstr "Job abroad"
+
+#: C:\tyrion\winckler\module/Staff/view/staff/staff/index.phtml:39
+#: C:\tyrion\winckler\module/Staff/view/staff/staff/oldCare.phtml:39
+msgid "W naszej bazie znajdą Państwo:"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Staff/view/staff/staff/index.phtml:73
+#: C:\tyrion\winckler\module/Staff/view/staff/staff/oldCare.phtml:73
+msgid "Rekrutujemy personel medyczny do:"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Staff/view/staff/staff/index.phtml:76
+#: C:\tyrion\winckler\module/Staff/view/staff/staff/oldCare.phtml:76
+msgid "Klinik"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Staff/view/staff/staff/index.phtml:79
+#: C:\tyrion\winckler\module/Staff/view/staff/staff/oldCare.phtml:79
+msgid "Klinik prywatnych"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Staff/view/staff/staff/index.phtml:82
+#: C:\tyrion\winckler\module/Staff/view/staff/staff/oldCare.phtml:82
+msgid "Szpitali"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Staff/view/staff/staff/index.phtml:85
+#: C:\tyrion\winckler\module/Staff/view/staff/staff/oldCare.phtml:85
+msgid "Placówek świadczących usługi pielęgniarskie"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Staff/view/staff/staff/index.phtml:88
+#: C:\tyrion\winckler\module/Staff/view/staff/staff/oldCare.phtml:88
+msgid "Domów seniora, zakładów opiekuńczych dla osób starszych i upośledzonych"
+msgstr ""
+
+#: C:\tyrion\winckler\module/Staff/view/staff/staff/index.phtml:91
+#: C:\tyrion\winckler\module/Staff/view/staff/staff/oldCare.phtml:91
+msgid "Innych placówek medycznych"
+msgstr ""

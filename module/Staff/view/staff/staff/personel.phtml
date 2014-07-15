@@ -1,0 +1,135 @@
+<?php
+$title = $this->translate('Personel medyczny');
+$this->headTitle($title);
+?>
+<!-- Header Image -->
+        <div id="header-image-container">
+            <div id="header-image">
+                <img src="<?php echo $this->basePath('images/placeholders/2000x330.jpg') ?>" alt="" class="stretch-image" />
+            </div>
+        </div>
+
+        <div id="content-container" class="content-width">
+
+            <!-- Breadcrumbs -->
+            <?php
+            echo $this->navigation('navigation') 
+                      ->breadcrumbs()
+                      ->setMinDepth(0)
+                      ->setPartial('partial/breadcrumb.phtml');
+            ?>
+
+            <!-- Page Intro -->
+            <div id="intro" class="not-homepage row">
+                <div class="large-9 large-centered columns">
+                    <h1><?php echo $this->translate('Personel medyczny') ?></h1>
+                </div>
+            </div>          
+
+            <div class="row white-bg">
+                <div class="large-6 columns">
+                    <h2 class="has-line"><?php echo $this->translate('Wykwalifikowana kadra') ?></h2>
+                    
+                    <p>
+                       Szukając wykwalifikowanych opiekunek, pielęgniarek lub specjalistów z branży medycznej, napotykają Państwo na trudności? Zajmujemy się rekrutacją wykwalifikowanego personelu medycznego i błyskawicznie znajdziemy pracownika spełniającego Państwa oczekiwania. Na obecnym rynku pracy rośnie zapotrzebowanie na wykwalifikowanych pracowników branży medycznej. Jest to spowodowane relatywnie niskim wynagrodzeniem oraz dużym psychicznym i fizycznym obciążeniem, które niesie ze sobą ten zawód. Dlatego też dyplomowani, ciągle podnoszący swoje kwalifikacje pielęgniarze i pielęgniarki z Polski bardzo szybko znajdują zatrudnienie w szpitalach, domach spokojnej starości oraz zakładach opieki poza granicami kraju. Personel medyczny coraz częściej świadczy całodobową opiekę domową dla pacjentów w podeszłym wieku lub niepełnosprawnych.
+                    <br/>
+Jeśli są Państwo zainteresowani nawiązaniem współpracy z personelem medycznym za pośrednictwem naszej agencji prosimy o kontakt w celu ustalenia terminu spotkania.   </p>                   
+                </div>
+                <div class="large-6 columns no-padding">
+                    <div class="image-slider-wrapper">
+                        <div class="image-slider">
+                            <div class="image-slider-item height-510">
+                                <img src="<?php echo $this->basePath('images/placeholders/f510x510_4.jpg') ?>" alt="" class="stretch-image" />
+                            </div>
+                            <div class="image-slider-item height-510">
+                                <img src="<?php echo $this->basePath('images/placeholders/f510x510_5.jpg') ?>" alt="" class="stretch-image" />
+                            </div>
+                            <div class="image-slider-item height-510">
+                                <img src="<?php echo $this->basePath('images/placeholders/f510x510_6.jpg') ?>" alt="" class="stretch-image" />
+                            </div>
+                        </div>
+                        <div class="image-slider-controller">
+                            <a href="#" class="image-slider-prev"><i class="icon-angle-left"></i></a>
+                            <a href="#" class="image-slider-next"><i class="icon-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Page Content -->  
+      
+                 
+            <div class="row top-margin">
+                <div class="large-12 columns for-nested">
+
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <h2 class="has-line"><?php echo $this->translate('Formularz Kontaktowy') ?></h2>
+<!--                            biuro@wincklerpersonal.pl-->
+                            <form id="contact-form" method="post" class="validate" enctype="multipart/form-data">
+                                <div class="row">
+                                    <div class="large-5 columns less-padding">
+                                        <label for="staffName">Firma</label>
+                                        <input class="validate[required]" type="text" name="staffName" />
+                                    </div>
+                                </div>                                                          
+                                <div class="row">
+                                    <div class="large-5 columns less-padding">
+                                        <label for="staffPhone">Telefon</label>
+                                        <input class="validate[required]" type="text" name="staffPhone" />
+                                    </div>
+                                </div>                                
+                                <div class="row">
+                                    <div class="large-5 columns less-padding">
+                                        <label for="staffEmail">Email</label>
+                                        <input class="validate[required,custom[email]]" type="text" name="staffEmail" />
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="large-5 columns less-padding">
+                                        <label for="staffAttach">Załącznik</label>
+                                        <input type="file" name="staffAttach" class="file-decor">                                   
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="large-12 columns less-padding">
+                                        <label for="staffMessage">Wiadomość</label>
+                                        <textarea class="validate[required]" name="staffMessage" style="height: 120px;"></textarea>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="large-12 columns less-padding">                                     
+                                        <div data-alert="" class="info box" style="background:none; border-color: #999999; color: #444;">
+                                            <p>
+                                                <?php echo $this->translate('  *Niniejszym oświadczam, że zgodnie z art. 23 ust. 1 pkt 1 ustawy z dnia 29 sierpnia 1997 r. o ochronie danych osobowych (Dz.U. z 2002 r. Nr 101, poz. 926) wyrażam zgodę na przetwarzanie wyżej wymienionych moich danych osobowych przez Winckler Personal w celach marketingowo/sprzedażowych.') ?>
+                                            </p>
+                                            <a href="#" class="close">×</a>
+                                        </div>                                 
+                                        
+                                        <label class="inline-label"><input class="validate[required] checkbox" type="checkbox" name="contactAccept" value="yes"/>&emsp;<strong>Akceptuje</strong></label>                                          
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="row">
+                                    <div class="large-5 columns less-padding">
+                                        <input type="submit" class="flat button" value="<?php echo $this->translate('Wyślij') ?>" />
+                                    </div>
+                                </div>
+                            </form>
+                            <div id="success" class="success box">
+                                <?php echo $this->translate('Niezwłocznie kontaktujemy się z Państwem w celu sprecyzowania szczegółów zlecenia oraz omówienia profilu kompetencyjnego kandydata.') ?>                                
+                            </div>
+                            <div id="error" class="error box">
+                                <?php echo $this->translate('Coś poszło nie tak ... Prosimy skontaktować się za pomocą email lub telfonicznie. Przepraszamy za problem.') ?>                               
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+                           
+               
+        </div>
+        <!-- End id="content-container" -->

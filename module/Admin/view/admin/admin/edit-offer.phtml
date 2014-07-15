@@ -1,0 +1,156 @@
+<?php 
+    echo $this->headLink()->prependStylesheet($this->basePath() . '/js/colorpicker/css/colorpicker.css') ;
+    echo $this->headScript()->prependFile($this->basePath() . '/js/colorpicker/js/colorpicker.js'); 
+    
+    $title = $this->translate('Wizualizacja');
+    $this->headTitle($title);
+    
+    //formularz w zasadzie tylko lokalizacja
+    $form = $this->form;
+    
+    $vForm = $this->vForm;
+    $vForm->setAttribute('action', $this->url('admin', array('action' => 'editOffer', 'id' => $id)));
+    $vForm->prepare();
+    
+    $elementSize = explode(',', $visualization->visualizationElementSize);    
+    $elementScale = explode(',', $visualization->visualizationElementScale);    
+    
+    $numPositions = array();
+    
+    foreach($this->allLocations as $p) {
+         $numPositions[$p['position']] = $p['name'];
+    }
+?>
+<h1>
+    <a href="<?php echo $this->url('admin', array('action' => 'offer')) ?>" class="btn btn-default btn-lg">
+        <i class="fa fa-angle-left"></i>&ensp;<?php echo $this->translate('Powrót do listy') ?>
+    </a>
+    <a href="<?php echo $this->url('admin', array('action'=> 'offer')) ?>" class="btn btn-default btn-lg">
+        <i class="fa fa-eye"></i>&ensp;<?php echo $this->translate('Wizualizacja') ?>
+    </a> - <?php echo $this->translate('firmy') ?> <span class="companyTitle"><?php echo $offer->offerTitle ?></span></h1>
+<hr />
+
+<?php 
+    //messages, alerts
+    echo $this->partial('partial/messages');   
+    
+?>
+<div class="edit-company">
+     
+      <?php echo $this->form()->openTag($vForm->setAttribute('class', 'form-horizontal')); ?>        
+      <?php echo $this->formHidden($form->get('offerId'));?>      
+      <div class="form-group">
+             <label for="offerNumber" class="col-lg-2 control-label"><?php echo $this->translate('Loaklizacja stanowiska') ?></label>
+             <div class="col-lg-10">
+                 <?php echo $this->formRow($form->get('offerNumber')); ?>
+                 <div class="grid-chooser">
+                     <table>                         
+                         <tr>
+                         
+                         <?php for($grid = 1; $grid <= 50 ; $grid++) :?>                     
+                            <td>
+                                <?php if($grid == $offer->offerNumber) :?>
+                                    <button class="btn btn-default btn-info" title="<?php echo $offer->offerTitle ?>" rel="tooltip" name="gridPlace" value="<?php echo $grid ?>"><i class="fa fa-check-square-o"></i></button>
+                                <?php elseif(array_key_exists($grid, $numPositions)) : ?>    
+                                    <button class="btn btn-inverse" title="<?php echo $numPositions[$grid] ?>" rel="tooltip" name="gridPlace" value="<?php echo $grid ?>"><i class="fa fa-check-square-o"></i></button>
+                                <?php else :?>
+                                    <button class="btn btn-default" title="<?php echo $grid ?>" rel="tooltip" name="gridPlace" value="<?php echo $grid ?>"><i class="fa fa-square-o"></i></button>
+                                <?php endif; ?>
+                            </td> 
+                            <?php if($grid%10 == 0) : ?>
+                                </tr><tr> 
+                            <?php endif; ?>
+                            
+                         <?php endfor; ?>
+                                    
+                         </tr>
+                     </table>
+                 </div>
+             </div>
+        </div>
+        <div class="form-group">
+             <label for="visualizationElement" class="col-lg-2 control-label"><?php echo $this->translate('Sposób prezentacji') ?></label>
+             <div class="col-lg-10 visualization-element-radio">
+                 <?php echo $this->formRow($vForm->get('visualizationElement')); ?>
+             </div>
+        </div>
+        <!-- plik -->
+        <div class="">            
+            <div class="form-group  visualization-element-file <?php if($visualization->visualizationElement != 'file') {echo 'hidden';} ?>">
+                <label for="visualizationElementFile" class="col-lg-2 control-label"><?php echo $this->translate('Plik') ?></label>
+                <div class="col-lg-8">
+                     <?php echo $this->formRow($vForm->get('visualizationElementFile')); ?>
+                </div>
+            </div>
+        </div>
+    
+        <div class="form-group visulaziation-element-size <?php if($visualization->visualizationElement == 'file' || $visualization->visualizationElement == 'other' ) {echo 'hidden';} ?>">
+             <label for="ElementSize1" class="col-lg-2 control-label"><?php echo $this->translate('Wymiary elementu') ?></label>
+             <div class="col-lg-5">
+                
+                 <div class="numberControl">
+                    <input id="ElementSize1" class="form-control" rel="tooltip" title="param_1" type="number" name="ElementSize1" min="1" max="255" value="<?php echo $elementSize[0] ?>">                  
+                    <input class="form-control" rel="tooltip" title="param_2" type="number" name="ElementSize2" min="1" max="255" value="<?php echo $elementSize[1] ?>">                 
+                    <input class="form-control" rel="tooltip" title="param_3" type="number" name="ElementSize3" min="1" max="255" value="<?php echo $elementSize[2] ?>">
+                 </div>
+              
+                 <?php echo $this->formRow($vForm->get('visualizationElementSize')); ?>
+             </div>
+        </div>  
+        
+        <div class="form-group visulaziation-element-scale">
+             <label for="ElementScale1" class="col-lg-2 control-label"><?php echo $this->translate('Skalowanie elementu') ?></label>
+             <div class="col-lg-5">
+                
+                 <div class="scaleControl">
+                    <input id="ElementScale1" class="form-control" rel="tooltip" title="x" type="number" name="ElementScale1" min="1" max="100" value="<?php echo $elementScale[0] ?>">                  
+                    <input class="form-control" rel="tooltip" title="y" type="number" name="ElementScale2" min="1" max="100" value="<?php echo $elementScale[1] ?>">                 
+                    <input class="form-control" rel="tooltip" title="z" type="number" name="ElementScale3" min="1" max="100" value="<?php echo $elementScale[2] ?>">
+                 </div>
+              
+                 <?php echo $this->formRow($vForm->get('visualizationElementScale')); ?>
+             </div>
+        </div> 
+    
+        <div class="form-group">
+             <label for="visualizationColor" class="col-lg-2 control-label"><?php echo $this->translate('Kolor materiału') ?></label>
+             <div class="col-lg-10">
+                 <?php echo $this->formRow($vForm->get('visualizationColor')); ?>                 
+                 <div class="visualizationColorBox" title="zmień kolor" rel="tooltip">
+                     <div class="colorPick"></div>                     
+                 </div>
+                 <div class="pickerHolder"></div>                     
+             </div>
+        </div>
+
+        <div class="well">
+                <div class="form-group" id="action-buttons">
+                     <div class="col-lg-offset-1 col-lg-1 pull-left">
+                        <a href="<?php echo $this->url('admin', array('action' => 'offer')) ?>" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i>&ensp;<?php echo $this->translate('Powrót') ?></a>
+                     </div>
+                     <div class="col-lg-1">
+                        <?php echo $this->formSubmit($form->get('submit')); ?>
+                     </div>
+<!--                     <div class="col-lg-1">
+                        <a href="#" class="btn btn-default ajaxShowVisualization" data-loading-text="<i class='fa fa-spinner fa-spin'></i> <?php echo $this->translate('ładowanie...') ?>" ><i class="fa fa-picture-o"></i>&ensp;<?php echo $this->translate('Podgląd') ?></a>
+                     </div>-->
+                </div>
+        </div>
+        <?php echo $this->form()->closeTag();?>    
+</div>
+
+<?php echo $this->partial('partial/infromation-modal'); ?>
+
+    <script>
+    
+    
+    showOnSelectTextarea();    
+//    fireTinyMCE();
+    colorPicker($('#visualizationColor'), $('.colorPick'),$('.pickerHolder') );
+    numberControl($('#visualizationElementSize'),'.numberControl');
+    numberControl($('#visualizationElementScale'), '.scaleControl');
+    renderSampleVizualization();
+    $('#visualizationElementFile').tooltip({placement: 'auto right'});
+
+    </script>
+    

@@ -1,0 +1,56 @@
+<?php
+$title = $this->translate('Wybór właściwej firmy');
+$this->headTitle($title);
+?>
+ <!-- Header Image -->
+        <div id="header-image-container">
+            <div id="header-image">
+                <img src="<?php echo $this->basePath('images/placeholders/2000x330.jpg') ?>" alt="" class="stretch-image" />
+            </div>
+        </div>
+
+        <div id="content-container" class="content-width">
+
+            <!-- Breadcrumbs -->
+            <?php
+            echo $this->navigation('navigation') 
+                      ->breadcrumbs()
+                      ->setMinDepth(0)
+                      ->setPartial('partial/breadcrumb.phtml');
+            ?>
+
+            <!-- Page Intro -->
+            <div id="intro" class="not-homepage row">
+                <div class="large-9 large-centered columns">
+                    <h1><strong><?php echo $this->translate('Wybór') ?></strong> <?php echo $this->translate(' właściwej firmy') ?></h1>
+                </div>
+            </div>
+
+            <!-- Page Intro -->     
+
+            <div class="row">
+                <div class="large-12 columns for-nested">
+
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <h2 class="has-line"><?php echo $this->translate('Odpowiedni wybór leży w twoich rękach') ?></h2>
+                            <p>
+                                Wybór Agencji Pośrednictwa/Zatrudniania, nie należy wcale do łatwych, dlatego aby wybrać odpowiednią firmę która pomoże nam podjęciu pracy za granicą powinniśmy sprawdzić kilka następujących rzeczy.
+Pierwszym krokiem jest sprawdzenie, czy dana agencja działa na rynku legalnie. Aby to zrobić wystarczy zalogować się na stronie <a href="http://www.kraz.praca.gov.pl" target="_blank">www.kraz.praca.gov.pl</a>, gdzie możemy wyszukać wpis danej agencji do Krajowego Rejestru Agencji zatrudnienia. Każde legalnie działające pośrednictwo pracy posiada również Certyfikat Ministerstwa Gospodarki i Pracy lub Marszałka Województwa.
+Należy również pamiętać, że legalnie działające agencje nie mają prawa pobierać opłat od kandydata za pośrednictwo i znalezienie pracy. Przed podjęciem ostatecznej decyzji o wyborze firmy dobrze jest zwrócić uwagę na kilka wydawałoby się nieistotnych rzeczy:
+                            </p>
+                            <ul>
+                                <li>Czytając ogłoszenia zwróćmy uwagę na podane w nim dane kontaktowe. Jeżeli pracodawca podaje tylko telefon komórkowy, powinno to przykuć naszą uwagę. Uczciwy pośrednik nie ukrywa nr stacjonarnego a także bez przeszkód podaje nam adres firmy.</li>
+                                <li>Wizyta w siedzibie agencji jest najlepszym rozwiązaniem. Możemy sami przekonać się na jakich zasadach prosperuje firma a także jak dużo osób zatrudnia. Zwracajmy uwagę na szczegóły, jak np. dodatkowe certyfikaty i kwalifikacje.</li>
+                                <li>Istotnym elementem jest również proces całej rekrutacji. Osoba rekrutująca powinna wzbudzać nasze zaufanie już przez telefon, jednak najlepiej spotkać się z nią osobiście. Zyskamy dodatkowo okazję do zadania wszelkich dodatkowych pytań dotyczących podjęcia interesującej nas pracy.</li>
+                                <li>Nigdy nie należy podejmować pracy, której warunki są nam nie do końca znane! Przed wyjazdem powinniśmy otrzymać od pośrednika umowę na piśmie/List intencyjny, która dokładnie określa warunki współpracy. Bez podpisania takiej umowy nie mamy żadnych dowodów, że pracujemy legalnie, a wszystkie składki są systematycznie odprowadzane.</li>
+                            </ul>                         
+                           
+                        </div>
+                    </div>
+
+                </div>
+            </div>    
+            
+        </div>
+        <!-- End id="content-container" -->

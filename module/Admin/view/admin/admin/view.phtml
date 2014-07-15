@@ -1,0 +1,285 @@
+<?php
+    echo $this->headLink()->prependStylesheet($this->basePath() . '/js/colorpicker/css/colorpicker.css') ;
+    echo $this->headScript()->prependFile($this->basePath() . '/js/colorpicker/js/colorpicker.js'); 
+    
+    $title = $this->translate('Wizualizacja przestrzeni');
+    $this->headTitle($title);
+    
+    $form = $this->form;
+    $form->prepare();        
+?>
+<h1><a href="<?php echo $this->url('admin', array('action'=> 'view')) ?>" class="btn btn-default btn-lg"><i class="fa fa-desktop"></i>&ensp;<?php echo $title ?></a></h1>
+
+<hr />
+<?php 
+    //messages, alerts
+    echo $this->partial('partial/messages');   
+    
+?>
+<div class="panel panel-default editViewVisualization" >       
+         <div class="panel-heading">
+             <h3 class="panel-title"><?php echo $this->translate('Wyświetlanie') ?><span class="pull-right"><i class="glyphicon glyphicon-chevron-up" style="display: inline-block;"></i></span></h3>
+         </div> 
+        <div class="panel-body">
+            <?php echo $this->form()->openTag($form->setAttribute('class', 'form-horizontal')); ?>      
+                <ul class="nav nav-tabs" id="navDesign">
+                    <li class="active"><a href="#default" data-toggle="tab"><?php echo $this->translate('Ogólne') ?></a></li>
+                    <li class=""><a href="#plane" data-toggle="tab"><?php echo $this->translate('Podłoże') ?></a></li>                  
+                    <li class=""><a href="#lights" data-toggle="tab"><?php echo $this->translate('Światła') ?></a></li>    
+                    <!--<li class=""><a href="#cameras" data-toggle="tab"><?php echo $this->translate('Kamery') ?></a></li>-->    
+                </ul>
+                
+                <div id="TabContent" class="tab-content">              
+                    <div class="tab-pane fade in active" id="default">
+                        <!--designFog-->       
+                        <div class="form-group">
+                            <label for="designFogSwitch" class="col-lg-3 control-label"><?php echo $this->translate('Mgła') ?></label>
+                            <div class="col-lg-1">                       
+                                <input class="checkbox" type="checkbox" value="1" name="designFog[on]" id="designFogSwitch" <?php echo (empty($designFog['on']) ? '' : 'checked') ?>/> 
+                                <input type="hidden" id="designFogColor" name="designFog[color]" value="<?php echo (empty($designFog['color']) ? '' : $designFog['color']) ?>"/>                          
+                            </div>
+                            <div class="view-fog-settings" style="<?php echo (!empty($designFog['on']) ? '' : 'display: none;') ?>">
+                                <div  class="col-lg-1">
+                                      <div class="visualizationColorBox" title="zmień kolor" rel="tooltip">
+                                          <div class="colorPick"></div>                     
+                                      </div>
+                                      <div class="pickerHolder"></div> 
+                                </div>                      
+                                <div class="col-lg-2">                          
+                                    <input value="<?php echo (empty($designFog['blur']) ? '' : $designFog['blur']) ?>" type="number" id="designFogBlur" name="designFog[blur]" step="0.001" min='0' max="10" class="form-control" title="<?php echo $this->translate('stopień rozmycia') ?>" rel="tooltip">                          
+                                </div> 
+                            </div>                      
+                        </div>
+                        <!-- /designFog-->       
+                    </div>
+                    <!--  ustawienia podłoża-->
+                    <div class="tab-pane fade in" id="plane">
+                        <div class="form-group">
+                            <label for="designPlaneParam1" class="col-lg-3 control-label"><?php echo $this->translate('Wymiary') ?></label>
+                            <div class="col-lg-5">                
+                                <div class="numberControlPlane">
+                                   <input required="" id="designPlaneParam1" class="form-control" rel="tooltip" title="param_1" type="number" name="designPlane[param1]" min="1" max="5000" value="<?php echo (empty($designPlane['param1']) ? '' : $designPlane['param1']) ?>">                  
+                                   <input required="" class="form-control" rel="tooltip" title="param_2" type="number" name="designPlane[param2]" min="1" max="5000" value="<?php echo (empty($designPlane['param2']) ? '' : $designPlane['param2']) ?>">                 
+                                   <input required="" class="form-control" rel="tooltip" title="param_3" type="number" name="designPlane[param3]" min="1" max="1000" value="<?php echo (empty($designPlane['param3']) ? '' : $designPlane['param3']) ?>">
+                                   <input required="" class="form-control" rel="tooltip" title="param_4" type="number" name="designPlane[param4]" min="1" max="1000" value="<?php echo (empty($designPlane['param4']) ? '' : $designPlane['param4']) ?>">
+                                </div>                                
+                            </div>
+                        </div>
+                        <div class="form-group" style="position:relative;">
+                            <label for="designPlane" class="col-lg-3 control-label"><?php echo $this->translate('Kolor') ?></label>
+                            <input type="hidden" id="designPlaneColor" name="designPlane[color]" value="<?php echo (empty($designPlane['color']) ? '' : $designPlane['color']) ?>"/>     
+                            <div class="col-lg-5">          
+                                <div class="visualizationColorBox" title="zmień kolor" rel="tooltip">
+                                    <div class="colorPickPlane"></div>                     
+                                </div>
+                                <div class="pickerHolderPlane"></div> 
+                            </div>                           
+                        </div>
+                        <div class="form-group">
+                            <label for="designPlaneWireframe" class="col-lg-3 control-label"><?php echo $this->translate('Widok siatki') ?></label>
+                            <div class="col-lg-2">
+                                <input id="designPlaneWireframe" class="checkbox" type="checkbox" name="designPlane[wireframe]" value="1" <?php echo (empty($designPlane['wireframe']) ? '' : 'checked') ?>/>
+                            </div>                            
+                        </div>
+                    </div>
+                    <!-- / ustawienia podłoża -->
+                    
+                    <!--światła-->
+                    <div class="tab-pane fade in" id="lights">
+                        <?php if($designLights): ?>
+                        <?php $count = 0; ?>                           
+                        <?php foreach($designLights as $k=>$v) :?>
+                            <?php $count++; ?>                            
+                            <div class="panel panel-default <?php echo ($count == 1 ? 'customLights ': '') ?><?php echo ($count == count($designLights) ? 'customLightsNumber': '') ?>">
+                                <div class="panel-body" rel="<?php echo $count; ?>">                                
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label"><?php echo $this->translate('Typ światła') ?></label>
+                                        <div class="col-lg-2">
+                                            <select name="designLights[<?php echo $count ?>][type]" id="designLights" class="form-control">
+                                                <option <?php echo ($v['type'] == 'aLight') ? 'selected' : ''; ?> value="aLight"> <?php echo $this->translate('Otoczenia') ?></option>
+                                                <option <?php echo ($v['type'] == 'dLight') ? 'selected' : ''; ?> value="dLight"> <?php echo $this->translate('Kierunkowe') ?></option>
+                                                <option <?php echo ($v['type'] == 'sLight') ? 'selected' : ''; ?> value="sLight"> <?php echo $this->translate('Punktowe') ?></option>
+                                            </select>                                        
+                                        </div>
+                                    </div>
+                                    <div class="form-group">                                 
+                                        <label class="col-lg-3 control-label"><?php echo $this->translate('Współrzędne') ?></label>
+                                        <div class="col-lg-5">
+                                            <div class="numberControlPlane">
+                                                <input id='designLightsCoords1' required="" class="form-control" rel="tooltip" title="x" type="number" step="0.001" name="designLights[<?php echo $count ?>][param1]"  value="<?php echo $v['param1'] ?>">                  
+                                                <input id='designLightsCoords2' required="" class="form-control" rel="tooltip" title="y" type="number" step="0.001" name="designLights[<?php echo $count ?>][param2]"  value="<?php echo $v['param2'] ?>">                 
+                                                <input id='designLightsCoords3' required="" class="form-control" rel="tooltip" title="z" type="number" step="0.001" name="designLights[<?php echo $count ?>][param3]"  value="<?php echo $v['param3'] ?>">                                            
+                                            </div>                                        
+                                        </div>
+                                        <div class="col-lg-3">
+                                             <a href="#" class="removeLight btn btn-danger" title="<?php echo $this->translate('usuń światło') ?>" rel="tooltip" <?php echo (($count == 1) ? 'disabled': '') ?>><i class="fa fa-trash-o"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="form-group"> 
+                                        <label class="col-lg-3 control-label"><?php echo $this->translate('Kolor') ?></label>
+                                        <div class="col-lg-5">  
+                                            <div class="defaultColorPicker">
+                                                <input id="designLightsColor" class="colorHtml"  title="zmień kolor" rel="tooltip" type="color"  name="designLights[<?php echo $count ?>][color]"  value="<?php echo (empty($v['color']) ? '' : $v['color']) ?>" />
+                                            </div>                                            
+                                        </div>
+                                    </div>                                
+                                </div>                                                    
+                            </div>                        
+                        <?php endforeach; ?>
+                        <?php else: ?>
+                            <div class="panel panel-default customLights customLightsNumber">
+                                <div class="panel-body" rel="1">                                
+                                    <div class="form-group">
+                                        <label class="col-lg-3 control-label"><?php echo $this->translate('Typ światła') ?></label>
+                                        <div class="col-lg-2">
+                                            <select name="designLights[1][type]" id="designLights" class="form-control">
+                                                <option value="gLight"> <?php echo $this->translate('Globalne') ?></option>
+                                                <option value="pLight"> <?php echo $this->translate('Punktowe') ?></option>
+                                            </select>                                        
+                                        </div>
+                                    </div>
+                                    <div class="form-group">                                 
+                                        <label class="col-lg-3 control-label"><?php echo $this->translate('Współrzędne') ?></label>
+                                        <div class="col-lg-5">
+                                            <div class="numberControlPlane">
+                                                <input id='designLightsCoords1' required="" class="form-control" rel="tooltip" title="x" type="number" step="0.1" name="designLights[1][param1]"  value="">                  
+                                                <input id='designLightsCoords2' required="" class="form-control" rel="tooltip" title="y" type="number" step="0.1" name="designLights[1][param2]"  value="">                 
+                                                <input id='designLightsCoords3' required="" class="form-control" rel="tooltip" title="z" type="number" step="0.1" name="designLights[1][param3]"  value="">                                            
+                                            </div>                                        
+                                        </div>
+                                        <div class="col-lg-3">
+                                             <a href="#" class="removeLight btn btn-danger" title="<?php echo $this->translate('usuń światło') ?>" rel="tooltip" disabled><i class="fa fa-trash-o"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="form-group"> 
+                                        <label class="col-lg-3 control-label"><?php echo $this->translate('Kolor') ?></label>
+                                        <div class="col-lg-5">                                        
+                                            <input id="designLightsColor" class="colorHtml"  title="zmień kolor" rel="tooltip" type="color"  name="designLights[1][color]"  value="" />
+                                        </div>
+                                    </div>                                
+                                </div>                                                    
+                            </div>    
+                        <?php endif; ?>                       
+                        
+                        <div class="form-group place-for-next-light">
+                            <div class="col-lg-12 text-center">
+                               <a href="#" id="addNewLight" class="btn btn-default"><i class="fa fa-sun-o"></i>&ensp;<?php echo $this->translate('dodaj światło') ?></a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!--/światła-->
+                    
+                     <!--  kamery -->
+                    <div class="tab-pane fade in" id="cameras">
+                        <div class="well">
+                            <?php echo $this->translate('wkrótce aktualizacja ... ') ?>
+                        </div>
+                    </div>
+                    <!-- / kamery -->
+                </div>    
+            
+                <!--submit-->
+                <div class="well well-sm">
+                    <div class="form-group" id="action-buttons">
+                        
+                         <div class="col-lg-offset-1 col-lg-1">
+                            <?php echo $this->formSubmit($form->get('submit')); ?>
+                         </div>
+                         <div class="col-lg-1">
+                            <!--<a href="#" class="btn btn-default ajaxShowVisualization" data-loading-text="<i class='fa fa-spinner fa-spin'></i>&ensp;ładowanie..."><i class="fa fa-picture-o"></i>&ensp; <?php echo $this->translate('Podgląd') ?></a>-->
+                         </div>
+                         <div class="col-lg-2">
+                            <!--<a href="#" class="btn btn-default resetView" data-loading-text="<i class='fa fa-spinner fa-spin'></i>&ensp;ładowanie..." rel="tooltip" title="<?php echo $this->translate('Ustawienia domyślne') ?>"><i class="fa fa-exchange"></i></a>-->
+                         </div>
+                    </div>
+                </div>
+           
+              <?php echo $this->form()->closeTag();?>    
+        </div>
+</div>
+
+<?php echo $this->js; ?>   
+<script>
+    
+   // $('.navDesign').
+  
+    
+    function addLigtAction() {
+        
+        var setNumber = parseInt($('.customLightsNumber .panel-body').attr('rel')); //globalna zmienna zapisuje ostatni indeks :)
+
+        function setNewLight() {
+           var cLight    = $('.customLights').html();           
+           var container = '<div class="panel panel-default well hidden">'+cLight+'</div>';
+           return container;
+        }
+        
+        function addNewLight() {
+            
+            var item = setNewLight();                      
+            var container = $('.place-for-next-light');
+            container.before(item);
+            
+            var oItem = $(document).find('.panel.panel-default.hidden');
+            var oNumN = ++setNumber;
+            
+            var light  = oItem.find('#designLights');
+            var color  = oItem.find('#designLightsColor');
+            var param1 = oItem.find('#designLightsCoords1');
+            var param2 = oItem.find('#designLightsCoords2');
+            var param3 = oItem.find('#designLightsCoords3');
+           
+            
+            light.attr('name','designLights['+oNumN+'][type]');
+            color.attr('name','designLights['+oNumN+'][color]').val('#000000');
+            param1.attr('name','designLights['+oNumN+'][param1]').val('');
+            param2.attr('name','designLights['+oNumN+'][param2]').val('');
+            param3.attr('name','designLights['+oNumN+'][param3]').val('');
+           
+        
+            oItem.hide().removeClass('hidden').fadeIn();
+            
+            //usuwannie ;)
+            var oButton = oItem.find('.removeLight');
+            oButton.attr('disabled',false);
+            oButton.tooltip();
+            oButton.bind(removeLight(oItem));
+            
+            return false;
+        }
+        $('#addNewLight').on('click',function(e){
+            addNewLight();
+            return false;
+        });
+        
+        function removeLight(itemDel) {
+        
+            var target = itemDel;
+
+            $(target).find('.removeLight').on('click', function(){
+                $(target).slideUp(function(){
+                    $(target).remove();
+                });        
+                return false;
+            });
+        }
+    }
+    
+       function removeAvailableLight() {
+        
+            $('.removeLight').on('click', function(e){
+                var oTarget = $(e.currentTarget).parent().parent().parent().parent();
+                
+                $(oTarget).slideUp(function(){
+                    $(oTarget).remove();
+                });     
+//                         
+                return false;
+            });
+        }
+   
+    
+    removeAvailableLight();
+    addLigtAction();
+    </script>

@@ -1,0 +1,123 @@
+<?php
+
+    $title = $this->translate('Pliki');
+    $this->headTitle($title);
+
+?>
+
+<h1>
+    <a href="<?php echo $this->url('admin', array('action' => 'offer')) ?>" class="btn btn-default btn-lg">
+        <i class="fa fa-angle-left"></i>&ensp;<?php echo $this->translate('Powrót do listy') ?>
+    </a>
+    <a href="<?php echo $this->url('admin', array('action'=> 'file', 'id' => $id )) ?>" class="btn btn-default btn-lg">
+        <i class="fa fa-file-text-o"></i>&ensp;<?php echo $title ?>
+    </a> - <?php echo $this->translate('należace do') ?>: <span class="companyTitle"><?php echo $company->offerTitle ?></span></h1>
+
+<?php 
+    //messages, alerts
+    echo $this->partial('partial/messages');
+?>
+<hr />
+
+<div class="panel panel-default">       
+         <div class="panel-heading">
+             <h3 class="panel-title"><?php echo $this->translate('Dodaj pliki') ?><span class="pull-right"><i class="glyphicon glyphicon-chevron-up" style="display: inline-block;"></i></span></h3>
+         </div>
+    <div class="panel-body">
+        <form action="" method="POST" class="ajaxFileUpload form-horizontal" enctype="multipart/form-data" name="file">        
+            <div class="form-group">
+
+                <div class="col-lg-5">
+                     <input type="file"   name="filesToUpload[]" class="form-control" id="fileUpload" multiple="" required="">                   
+                     <input type="hidden" name="offerId" id="offerId" value="<?php echo $id ?>">      
+                </div>
+                <div class="col-lg-5">
+                    <input type="submit" class="btn btn-primary"  name="add-file" value="Zapisz">
+                </div>
+                
+            </div> 
+        </form> 
+    </div>
+</div>
+<div class="panel panel-default panel-file">       
+         <div class="panel-heading">
+             <h3 class="panel-title"><?php echo $this->translate('Dostępne pliki') ?><span class="pull-right"><i class="glyphicon glyphicon-chevron-up" style="display: inline-block;"></i></span></h3>
+         </div>
+    <div class="panel-body">
+        <h2><?php echo $this->translate('Zdjęcia') ?></h2>
+      
+        <?php if (count($pics) > 0) : ?>
+        
+        <div class="row-fluid pictures-row">
+            <?php foreach($pics as $pic) : ?>
+            <div class="col-lg-2">        
+                <div class="image-item">
+                    
+                    <a href="<?php echo $this->basePath().'/'.$pic->filePath ?>" class="image-box" title="<?php echo $pic->fileName ?>">
+                        <img src="<?php echo $this->basePath().'/'.$pic->filePath ?>" alt="<?php echo $pic->fileName ?>" class="img-responsive img-thumbnail">
+                    </a>
+
+                    <form action="" class="form-horizontal" method="POST">
+
+                        <div class="form-group text-center">
+                            <div class="col-lg-12">
+                                <input type="text" name="fileName" value="<?php echo $pic->fileName ?>" class="form-control" title="<?php echo $this->translate('nazwa pliku') ?>" rel="tooltip" data-placement="left">
+                             </div>
+                             <div class="col-lg-12">
+                                <input type="hidden" name="fileID" value="<?php echo $pic->fileId ?>">
+                             </div>
+                            <button type="submit" class="btn btn-danger" name="del-file" value="true" title="<?php echo $this->translate('usuń') ?>" rel="tooltip"><i class="fa fa-trash-o"></i></button>&ensp;
+                            <button type="submit" class="btn btn-primary" name="file-save-name" title="<?php echo $this->translate('zapisz') ?>" rel="tooltip"><i class="fa fa-check"></i></button>
+                        </div>
+                    </form>
+               
+                </div>
+            </div>
+            <?php endforeach; ?>
+        </div>
+      
+        <?php else : ?>
+            <div class="alert alert-warning"><?php echo $this->translate('Brak zdjęć') ?></div>
+        <?php endif; ?>
+            <div class="clearfix"></div>    
+        <h2><?php echo $this->translate('Pliki') ?></h2>
+       
+        <?php if (count($files) > 0) : ?>
+        <div class="row-fluid files-row">
+            <?php foreach($files as $file) : ?>
+            <div class="col-lg-2">                
+                <div class="file-item">
+                    
+                    <a href="<?php echo $this->basePath().'/'.$file->filePath ?>" class="file-box" title="<?php echo $file->fileName ?>" rel="tooltip">
+                        <i class="fa fa-file-o"></i>
+                    </a>
+
+                    <form action="" class="form-horizontal" method="POST">
+
+                        <div class="form-group text-center">
+                            <div class="col-lg-12">
+                                <input type="text" name="fileName" value="<?php echo $file->fileName ?>" class="form-control" title="<?php echo $this->translate('nazwa pliku') ?>" rel="tooltip" data-placement="left">
+                             </div>
+                             <div class="col-lg-12">
+                                <input type="hidden" name="fileID" value="<?php echo $file->fileId ?>">
+                                <input type="hidden" name="type" value="file">
+                             </div>
+                            <button type="submit" class="btn btn-danger" name="del-file" value="true" title="<?php echo $this->translate('usuń') ?>" rel="tooltip"><i class="fa fa-trash-o"></i></button>&ensp;
+                            <button type="submit" class="btn btn-primary" name="file-save-name" title="<?php echo $this->translate('zapisz') ?>" rel="tooltip"><i class="fa fa-check"></i></button>
+                        </div>
+                    </form>
+               
+                </div>
+            </div>
+            <?php endforeach; ?>
+        </div>
+        <?php else : ?>
+            <div class="alert alert-warning"><?php echo $this->translate('Brak plików') ?></div>
+        <?php endif; ?>
+       
+    </div>
+</div>
+<script>
+    triggerPanelHidding();    
+    fireFancybox();
+</script>

@@ -1,0 +1,788 @@
+<div class="map-icon hidden">
+    <a id="btn-marker" class="btn btn-default" title="<?php echo $this->translate('Mapka') ?>" rel="tooltip" data-placement="right"><i class="fa fa-map-marker"></i></a>    
+</div>
+<div class="stats-icon hidden">
+    <a id="btn-statistic" class="btn btn-default" title="<?php echo $this->translate('Statystki') ?>" rel="tooltip" data-placement="right"><i class="fa fa-bar-chart-o"></i></a>    
+</div>
+
+<div id="map" class="hidden">
+    <a class="close" title="<?php echo $this->translate('Ukryj') ?>" rel="tooltip" data-placement="right">×</a>
+    <div class="position"></div>
+</div>
+<div id="container" style="display:none;"></div>
+
+<script>
+    $(document).ready(function($){    
+        $('.map-icon, .stats-icon').hide().removeClass('hidden'); //ukrywanie mapki, statystyk :) 
+        $('#company-modal').modal('hide');     
+        $('#company-modal-movie').modal('hide');
+
+        myTHREEapp(); //odpalenie aplikacji     
+    }); 
+   
+   function myTHREEapp() {   
+   
+    //ładowanie
+    $('body').append('<div class="ajaxShadow"><p>'+translator('loading')+'</p></div>'); 
+    
+    if( ! Detector.webgl ) Detector.addGetWebGLMessage(); // wiadomość o braku obsługi WebGL
+
+    // custom global variables
+    var settingsUrl = '<?php echo $this->url('ajax', array('action'=> 'design'),null) ?>';
+    var container, settings;
+    var camera, controls, scene, renderer, stats;
+    var light, pointLight;
+    
+    var mesh;
+    var clock    = new THREE.Clock();    
+    
+    var targetList = [];
+    var targetListVideo = [];
+    var projector, mouse = { x: 0, y: 0 };
+     
+    //before render load settings !!
+    $.getJSON( settingsUrl, function(data) {       
+        settings = data;            
+    }).done(function() {
+            
+        //run
+        init();
+        animate(); 
+        setTimeout(function(){
+            $('body .ajaxShadow').fadeOut(function() {
+                  $('#container').fadeIn(function(){
+                     
+                      $('.map-icon, .stats-icon').fadeIn();
+                  });
+                   
+            });     
+        },1000);            
+          
+    }).fail(function( jqxhr, textStatus, error ) {
+            var err = textStatus + ", " + error;
+            // wazne jak fail redirect na strone z błędem 
+            console.log( "Request Failed: " + err); 
+    });
+
+     
+    function init() {
+   
+        scene     = new THREE.Scene();   
+        container = document.getElementById('container');
+        camera    = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 10000 );
+        
+        //pozycja startowa kamery
+        camera.position.set( -150, 25, 250 ); //fix
+        camera.lookAt(new THREE.Vector3 (-100.0, 0.0, -50.0));
+        camera.rotation.x = 0.5; 
+        
+        //@todo -> w panelu admina mozliwość edycji
+        controls = new THREE.FirstPersonControls( camera );
+        controls.target        =  new THREE.Vector3 (-100.0, 100.0, -50.0);
+        controls.movementSpeed = 90;
+        controls.lookSpeed     = 0.03;
+        controls.noFly         = true;
+        controls.lookVertical  = false;
+        controls.activeLook    = true;     
+        
+        //mgla     
+        if(settings.fog.on > 0) {
+            scene.fog = new THREE.FogExp2 (settings.fog.color, settings.fog.blur); 
+        }
+        //swiatla
+        $.each(settings.lights, function(key,item) {
+            //@todo -> obsługa większej ilości swiateł
+            if(item.type === 'dLight') {
+                light  = new THREE.DirectionalLight(item.color);
+            } else if (item.type === 'aLight') {
+                light  = new THREE.AmbientLight(item.color);
+            } else {
+                light = new THREE.SpotLight(item.color);
+            }            
+            var param1 = parseFloat(item.param1),
+                param2 = parseFloat(item.param2),
+                param3 = parseFloat(item.param3);            
+            
+            light.position.set(param1, param2, param3).normalize(); //check
+            //@todo -> obsługa większej ilości parametrów np. light.rotation.set(), light.width, light.height
+            scene.add(light);          
+        });
+        
+        //modele
+        var url = '<?php echo $this->url('ajax', array('action'=> 'getAllElements'),null) ?>';    
+        var oGeometry, oMaterial, oMesh;  
+        var oItemSize, oItemPosition, oItemScale, oItemMaterial;
+        
+        $.getJSON( url, function(data) {
+            $.each(data.items, function( i, item) {
+               
+                oItemSize     = item.elementSize;
+                oItemPosition = item.elementPosition;
+                oItemScale    = item.elementScale;
+                oItemMaterial = item.elementMaterial;
+
+                if(item.elementType === 'SphereGeometry') {
+                    oGeometry = new THREE.SphereGeometry(oItemSize[0],oItemSize[1],oItemSize[2]);
+                                    //dodwanie materialu (kolor,siatka, ...) 
+                    oMaterial = new THREE.MeshLambertMaterial({color: oItemMaterial, wireframe:false, shading: THREE.FlatShading });
+                    //tworzenie siatki
+                    oMesh     = new THREE.Mesh(oGeometry, oMaterial);
+                    //pozycja siatki
+                    oMesh.position.set(oItemPosition[0],oItemPosition[1],oItemPosition[2]);
+                    //skalowanie
+                    oMesh.scale.set( oItemScale[0], oItemScale[1], oItemScale[0]);
+                    //dodawanie do sceny
+                    oMesh.offerID = parseInt(item.offerId); // po tym doladowywujemy ajax
+                    scene.add(oMesh);
+                    targetList.push(oMesh);
+                    
+                } if(item.elementType === 'CubeGeometry'){
+                    oGeometry = new THREE.CubeGeometry(oItemSize[0],oItemSize[1],oItemSize[2]); 
+                                        //dodwanie materialu (kolor,siatka, ...) 
+                    oMaterial = new THREE.MeshLambertMaterial({color: oItemMaterial, wireframe:false, shading: THREE.FlatShading });
+                    //tworzenie siatki
+                    oMesh     = new THREE.Mesh(oGeometry, oMaterial);
+                    //pozycja siatki
+                    oMesh.position.set(oItemPosition[0],oItemPosition[1],oItemPosition[2]);
+                    //skalowanie
+                    oMesh.scale.set( oItemScale[0], oItemScale[1], oItemScale[0]);
+                    //dodawanie do sceny
+                    oMesh.offerID = parseInt(item.offerId); // po tym doladowywujemy ajax
+                    scene.add(oMesh);
+                    targetList.push(oMesh);
+                    
+                } if(item.elementType === 'other') {
+                        
+                        var loader    = new THREE.JSONLoader();    
+                        var color     = item.elementMaterial;
+                        var scale     = item.elementScale;
+                        var position  = item.elementPosition;
+                        var offerId   = item.offerId;
+                        var video     = item.offerVideo;
+                    
+                        loader.load('js/models/stoisko.js', function(geometry) {
+
+                            //stoisko ma stałą skale
+                            var material = new THREE.MeshLambertMaterial({color: color,  shading: THREE.FlatShading, wireframe: false});
+                            var oStand   = new THREE.Mesh(geometry, material);   
+                            oStand.position.set(position[0],0,position[2]); //fix
+                            oStand.scale.set( 2, 2, 2);    
+                            oStand.name    = 'stoisko';
+                            oStand.offerID = parseInt(offerId); // po tym doladowywujemy ajax
+                           
+                            scene.add(oStand);
+                            targetList.push(oStand); // important rozpoznwanie elementow (stoisko)
+                            
+                            //monitor
+                            var monitorTexture = new THREE.ImageUtils.loadTexture( 'js/models/materials/lcd.jpg' );
+                            monitorTexture.wrapS = monitorTexture.wrapT = THREE.RepeatWrapping; 
+                            monitorTexture.repeat.set( 1, 1 );
+                            var floorMaterial = new THREE.MeshBasicMaterial( { map: monitorTexture, side: THREE.DoubleSide } );
+
+                            var planeMesh = new THREE.Mesh(new THREE.PlaneGeometry(7*scale[0],4*scale[1],0,0), floorMaterial); // to check  
+                            planeMesh.position.set(position[0] - 8.5,17.5,position[2] - 10.7); //91.5, 17.5,  39.3
+                            planeMesh.rotation.x = 0;
+                            planeMesh.rotation.y = 0.78; //.77
+                            planeMesh.rotation.z = 0;     
+                            planeMesh.name       = 'screen';
+                           
+                            planeMesh.video      = video; //href do video
+                           
+                            scene.add(planeMesh);
+                            
+                            targetListVideo.push(planeMesh); // important rozpoznwanie elementow (monitor)
+                            
+                       
+                        });                                    
+                }
+                
+                //mapa (dodawnie obiektow)
+                createMap(item);                                 
+            
+                //nazwa firmy konfigurowana w adminie               
+                var titleMesh = addTitleonTop(item);
+                scene.add(titleMesh);
+                
+
+            });  
+        });        
+      
+        //construct box
+        mesh = buildBox(settings.plane, 'ceiling');  
+        scene.add(mesh);
+        mesh = buildBox(settings.plane, 'floor');  
+        scene.add(mesh);
+        mesh = buildBox(settings.plane, 'wall_left');  
+        scene.add(mesh);
+        mesh = buildBox(settings.plane, 'wall_right');  
+        scene.add(mesh);
+        mesh = buildBox(settings.plane, 'wall_left_2');  
+        scene.add(mesh);
+        mesh = buildBox(settings.plane, 'wall_right_2');  
+        scene.add(mesh);
+         
+        //renderer        
+        renderer = new THREE.WebGLRenderer({antialias: true});
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        //nasz kontener  na wszystko
+        container.innerHTML = "";
+        container.appendChild(renderer.domElement); //canvas                             
+                 	
+	// initialize object to perform world/screen calculations
+	projector = new THREE.Projector();
+	 // EVENTS
+	THREEx.FullScreen.bindKey({ charCode : '`'.charCodeAt(0) });
+        window.addEventListener('resize', onWindowResize, false); 
+        
+	// when the mouse moves, call the given function
+	document.addEventListener( 'mousedown', onDocumentMouseDown, false );
+        document.addEventListener( 'mousemove', onDocumentMouseOver, false );
+       
+        // STATS
+        stats = new Stats();
+        container.appendChild( stats.domElement );    
+    }
+    
+    //domyslny material ekranu po najechaniu kursorem
+    var LCD = new THREE.ImageUtils.loadTexture( 'js/models/materials/lcd_white.jpg' );
+    LCD.wrapS = LCD.wrapT = THREE.RepeatWrapping; 
+    LCD.repeat.set(1, 1 );
+    var LCDMaterial = new THREE.MeshBasicMaterial( { map: LCD, side: THREE.DoubleSide } );
+    
+    //hover myszki na obiektach
+    var INTERSECTED;
+    var INTERSECTEDSTAND;
+    function onDocumentMouseOver( event ) 
+    {
+        // update the mouse variable
+	mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+	mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+        
+        var vector = new THREE.Vector3( mouse.x, mouse.y, 1 );
+	projector.unprojectVector( vector, camera );
+	var ray = new THREE.Raycaster( camera.position, vector.sub( camera.position ).normalize() );
+        
+        //tylko ekrany
+        var intersects = ray.intersectObjects( targetListVideo ); 
+        var stands     = ray.intersectObjects( targetList ); 
+         
+        //monitory 
+        if ( intersects.length > 0 )
+	{
+		
+            if ( intersects[ 0 ].object != INTERSECTED ) 
+            {
+                // restore previous intersection object (if it exists) to its original color
+                if ( INTERSECTED ) 
+                        INTERSECTED.material.color.setHex( INTERSECTED.currentHex );
+
+                INTERSECTED = intersects[ 0 ].object;
+
+                INTERSECTED.currentHex   = INTERSECTED.material.color.getHex();
+                INTERSECTED.baseMaterial = INTERSECTED.material; //zapmietanie starego materialu
+                INTERSECTED.material     = LCDMaterial;  
+               
+                document.body.style.cursor = 'pointer'; //zmiana przycisku myszki
+            }
+	} else {
+            
+            // gdy jestesmy poza rozpoznawanym obiektem            
+            if ( INTERSECTED ) {
+                INTERSECTED.material.color.setHex( INTERSECTED.currentHex );
+                INTERSECTED.material = INTERSECTED.baseMaterial;  // przywrocenie poprzedniego koloru (grafiki tła)
+            }
+         
+            INTERSECTED = null;
+          
+	}
+        
+        //stoiska
+        if ( stands.length > 0 )
+	{
+		
+            if ( stands[ 0 ].object != INTERSECTEDSTAND ) 
+            {
+                // restore previous intersection object (if it exists) to its original color
+                if ( INTERSECTEDSTAND ) 
+                        INTERSECTEDSTAND.material.color.setHex( INTERSECTEDSTAND.currentHex );
+
+                INTERSECTEDSTAND = stands[ 0 ].object;
+
+                INTERSECTEDSTAND.currentHex   = INTERSECTEDSTAND.material.color.getHex();
+                INTERSECTEDSTAND.material.color.setHex( 0xe3e3e3 );
+
+                document.body.style.cursor = 'pointer'; //zmiana przycisku myszki
+            }
+	} else {
+            
+            // gdy jestesmy poza rozpoznawanym obiektem            
+            if ( INTERSECTEDSTAND ) {
+                INTERSECTEDSTAND.material.color.setHex( INTERSECTEDSTAND.currentHex );
+            }
+         
+            INTERSECTEDSTAND = null;
+            document.body.style.cursor = 'default';
+	}  
+          
+    }
+    
+    
+    //klikanie w obiekty
+    var clickMe = true;    
+    function onDocumentMouseDown( event ) {
+        // blokada eventow np.(klikniecie w menu jesli jest widoczne nad modelem)
+        if($('#contactModal').is(':visible') 
+                || event.target.className === 'navbar-collapse collapse' 
+                || event.target.id === "btn-marker" 
+                || event.target.id === "btn-statistic" 
+                || event.target.id === "map"         
+                || event.target.className === 'stand btn btn-default btn-xs' ) 
+            {            
+                event.preventDefault();
+                return false;
+        }
+	
+	// update the mouse variable
+	mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+	mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+	
+	// find intersections
+
+	// create a Ray with origin at the mouse position
+	// and direction into the scene (camera direction)
+	var vector = new THREE.Vector3( mouse.x, mouse.y, 1 );
+	projector.unprojectVector( vector, camera );
+	var ray = new THREE.Raycaster( camera.position, vector.sub( camera.position ).normalize() );
+
+	// create an array containing all objects in the scene with which the ray intersects
+	var intersects = ray.intersectObjects( targetList );
+	var intersectss = ray.intersectObjects( targetListVideo );
+        
+        //video  
+        if ( intersectss.length > 0 )
+	{
+             //ustawianie kamery do funcji ctrl+leftClick
+            //camera.position.set( -100, 25, 300 ); 
+        
+            controls.freeze = true; //zamrozenie ekranu        
+                      
+            var oItem  = intersectss[0].object.video;  //href do wideo
+            var oModal = $(document).find('#company-modal-movie');
+            var oFrame = $(document).find('#company-modal-movie .modal-body'); 
+            
+            //budowanie linka
+            oFrame.html('<iframe width="1280" height="720" src="'+oItem+'?showinfo=0&autohide=1&rel=0" frameborder="0" allowfullscreen></iframe>');
+            oFrame.hide();
+            
+            oModal.modal('show');
+            
+            oModal.on('hidden.bs.modal', function (e) {
+                oModal.find('.modal-body iframe').remove();
+                controls.freeze = false; //odmrozenie ekranu     
+            });                        
+         
+            oModal.on('shown.bs.modal', function (e) {
+                oFrame.fadeIn();                                                   
+            });
+            
+            return false;
+        }
+	// if there is one (or more) intersections
+	if ( intersects.length > 0 )
+	{
+                     
+            if(clickMe === true) {
+               
+                var oItem   = intersects[0].object;                
+                var oCamera = intersects[0].object.position;
+                
+                //ustawianie kamery do funcji @todo ;)       
+                camera.position.set( oCamera.x, 25, oCamera.z+70  ); 
+                camera.lookAt(new THREE.Vector3 (-100.0, 0.0, -600.0));
+                camera.rotation.x = 0;
+                camera.rotation.y = 0;
+                //update controls
+                controls.object.position.set( oCamera.x, 25, oCamera.z+70);
+                controls.object.lookAt(new THREE.Vector3 (-100.0, 0.0, -600.0));
+                controls.object.rotation.x = 0;
+                controls.object.rotation.y = 0;
+                
+                //zamrozenie ekranu
+                controls.freeze = true; 
+                
+                //loader
+                $('body').append('<div class="ajaxShadow"><p>'+translator('loading')+'</p></div>');   
+                var oLoader = $(document).find('.ajaxShadow');
+                
+                //settings
+                clickMe    = false; //flag		               
+                var oModal = $(document).find('#company-modal');
+                var oBody  = $(document).find('#company-modal .modal-body'); 
+                oBody.html('');
+                
+                //pobieranie informacji url
+               
+                var oUrl   = '<?php echo $this->url('ajax', array('action'=> 'company'),null) ?>/'+oItem.offerID;
+
+                $.ajax({
+                    dataType : 'json',
+                    type     : 'GET', 
+                    url      : oUrl,         
+
+                    success : function(result) {   
+
+                        setTimeout(function(){
+                            oLoader.fadeOut(function() {                         
+
+                                oBody.html(result.html); 
+                                oBody.hide();
+                                oModal.modal('show');
+                                oLoader.remove();                
+                             });                        
+                        },1000);
+
+                        oModal.on('shown.bs.modal', function (e) {
+                                oBody.fadeIn();                            
+                                $().contactPlugin(); //fix                            
+                        });
+
+                        oModal.on('hidden.bs.modal', function (e) {
+                            clickMe = true;
+                            controls.freeze = false;
+                        });
+
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                          console.log(thrownError);
+                    }
+                });
+            }
+        }
+
+    }
+
+    function toString(v) { return "[ " + v.x + ", " + v.y + ", " + v.z + " ]"; }
+    
+
+     
+     //dodaje dodatkowy opis nad stoiskiem
+     function addTitleonTop(item) {
+        
+	// add 3D text
+	var materialFront = new THREE.MeshBasicMaterial( { color: 0xff0000 } );
+	var materialSide  = new THREE.MeshBasicMaterial( { color: 0x000088 } );
+	var materialArray = [ materialFront, materialSide ];
+	var textGeom = new THREE.TextGeometry( item.offerName, 
+	{
+		size: 8, height: 2, curveSegments: 4,
+		font: "helvetiker", weight: "bold", style: "normal",
+		bevelThickness: 1, bevelSize: 2, bevelEnabled: false,
+		material: 0, extrudeMaterial: 1
+	});
+	// font: helvetiker, gentilis, droid sans, droid serif, optimer
+	// weight: normal, bold
+	
+	var textMaterial = new THREE.MeshFaceMaterial(materialArray);
+	var textMesh     = new THREE.Mesh(textGeom, textMaterial );
+	
+	textGeom.computeBoundingBox();
+	var textWidth = textGeom.boundingBox.max.x - textGeom.boundingBox.min.x;
+	
+	textMesh.position.set( item.elementPosition[0], 45, item.elementPosition[2] );
+	textMesh.rotation.x = -Math.PI /8 ;
+	return textMesh;
+     }
+     
+     function onWindowResize() {
+        camera.aspect = window.innerWidth/window.innerHeight;
+        camera.updateProjectionMatrix();
+        
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        controls.handleResize();
+     }
+     
+     function animate() {
+         requestAnimationFrame(animate);
+         render();
+         stats.update();
+        
+     }
+   
+     function render() {
+         var delta = clock.getDelta(); // check
+      //   var time  = clock.getElapsedTime()*5; //check
+          
+         controls.update(delta);
+         updatePosition(camera.position); //mapka
+      
+         renderer.render(scene,camera);
+     }
+     
+     
+     function updatePosition(camera) {
+                      
+         //console.log(camera);
+         var position = $('#map .position');
+         var map      = $('#map');
+         var oX = camera.x + 500;
+         var oY = camera.z + 500;
+         position.css('left', oX/5+'px');
+         position.css('top', oY/5+'px');
+         
+         if(oX > 1000 || oX < 0 || oY > 1000 || oY < 0 ) {
+             map.css('border', '2px solid #ee0101');
+             map.addClass('animateMap');
+         } else {
+             map.css('border', '2px solid rgba(255, 255, 255, 0.7)');
+             map.removeClass('animateMap');
+         }
+     }
+     
+     function buildBox(settings, type) {
+        
+        var color     = settings.color,  // kolor w razie jakby tekstur nie było
+            p1        = settings.param1, 
+            p2        = settings.param2,
+            p3        = settings.param3,
+            p4        = settings.param4,
+            wireframe = false;
+        
+        if(settings.wireframe === '1') {
+            wireframe = true;
+        }    
+              
+        
+        if(type === 'wall_left') {
+            
+            //var Texture = new THREE.ImageUtils.loadTexture( 'js/models/materials/wall_funny3.jpg' );
+            var Texture = new THREE.ImageUtils.loadTexture( 'js/models/materials/walls/left_wall.jpg' );
+            
+            Texture.wrapS = Texture.wrapT = THREE.RepeatWrapping; 
+            Texture.repeat.set( 1, 1 );
+            
+            var sMaterial = new THREE.MeshBasicMaterial( { map: Texture, side: THREE.DoubleSide } );
+            var sGeometry = new THREE.PlaneGeometry(p1,100,0,0);  // wymiary sciany (drugi parametr wysokość)
+            
+            var side = new THREE.Mesh(sGeometry, sMaterial);      
+            
+            //side.name = "wall no";
+            side.position.y = 50;
+            side.rotation.x = 0;
+            //side.position.x = null;
+            side.position.z = -500;
+          
+            return side;
+            
+        } else if (type === 'wall_right') {
+            
+            
+            var Texture = new THREE.ImageUtils.loadTexture( 'js/models/materials/walls/right_wall_2.jpg' );
+            //var Texture = new THREE.ImageUtils.loadTexture( 'js/models/materials/walls/right_wall.jpg' );
+            
+            Texture.wrapS = Texture.wrapT = THREE.RepeatWrapping; 
+            Texture.repeat.set( 1, 1 );
+            
+            var sMaterial = new THREE.MeshBasicMaterial( { map: Texture, side: THREE.DoubleSide } );
+            var sGeometry = new THREE.PlaneGeometry(p1,100,0,0);  // wymiary sciany (drugi parametr wysokość)
+            
+            var side = new THREE.Mesh(sGeometry, sMaterial);      
+            
+            //side.name = "wall no";
+            side.position.y = 50;
+            side.rotation.x = Math.PI;
+            //side.position.x = null;
+            side.position.z = 500;
+          
+            return side;
+        } else if (type === 'wall_left_2') {            
+            
+            //var Texture = new THREE.ImageUtils.loadTexture( 'js/models/materials/wall_funny3.jpg' );
+            var Texture = new THREE.ImageUtils.loadTexture( 'js/models/materials/walls/right_wall_1.jpg' );
+            
+            Texture.wrapS = Texture.wrapT = THREE.RepeatWrapping; 
+            Texture.repeat.set( 1, 1 );
+            
+            var sMaterial = new THREE.MeshBasicMaterial( { map: Texture, side: THREE.DoubleSide } );
+            var sGeometry = new THREE.PlaneGeometry(p1,100,0,0);  // wymiary sciany (drugi parametr wysokość)
+            
+            var side = new THREE.Mesh(sGeometry, sMaterial);     
+            
+            //side.name = "wall no";
+            side.position.y = 50;
+            side.rotation.x = 0;
+            side.position.x = 500;
+            side.position.z = 0;
+            side.rotation.y = - Math.PI /2;  
+          
+            return side;
+        } else if (type === 'wall_right_2') {            
+            
+            var Texture = new THREE.ImageUtils.loadTexture( 'js/models/materials/walls/left_wall_2.jpg' );
+            
+            Texture.wrapS = Texture.wrapT = THREE.RepeatWrapping; 
+            Texture.repeat.set( 1, 1 );
+            
+            var sMaterial = new THREE.MeshBasicMaterial( { map: Texture, side: THREE.DoubleSide } );
+            var sGeometry = new THREE.PlaneGeometry(p1,100,0,0);  // wymiary sciany (drugi parametr wysokość)
+            
+            var side = new THREE.Mesh(sGeometry, sMaterial);     
+            
+            //side.name = "wall no";
+            side.position.y = 50;
+            side.rotation.x = 0;
+            side.position.x = -500;
+            side.position.z = 0;
+            side.rotation.y = Math.PI /2;  
+          
+            return side;
+        }  else if (type === 'floor') {    
+            
+            //flor
+            var floorTexture = new THREE.ImageUtils.loadTexture( 'js/models/materials/tiles.png' );
+            floorTexture.wrapS = floorTexture.wrapT = THREE.RepeatWrapping; 
+            floorTexture.repeat.set( 50, 50 );
+            var floorMaterial = new THREE.MeshBasicMaterial( { map: floorTexture, side: THREE.DoubleSide } );
+            var floorGeometry = new THREE.PlaneGeometry(p1, p2, p3, p4);
+            var floor = new THREE.Mesh(floorGeometry, floorMaterial);
+            floor.position.y = 0;
+            floor.rotation.x = Math.PI / 2;
+            floor.name       = "Checkerboard Floor";
+            
+            return floor;
+        } else if(type === 'ceiling') {
+            
+            var material  = new THREE.MeshLambertMaterial({color: color, wireframe: wireframe, wireframeLinewidth:1});
+            var sGeometry = new THREE.PlaneGeometry(p1,p2,p3,p4);   
+            var ceiling   = new THREE.Mesh(sGeometry, material);   
+            ceiling.position.y = 100; //wysokość
+            ceiling.rotation.x = Math.PI / 2;         
+
+            return ceiling;                      
+        }        
+     }
+     
+    //helper functions
+    function designPlane(planeSettings, oY, rX, oX, side, oZ, rY) {            
+//        console.log(oY, rX, oX, side);
+//        console.log(planeSettings);
+        var color     = planeSettings.color;
+        var param1    = planeSettings.param1;
+        var param2    = planeSettings.param2;
+        var param3    = planeSettings.param3;
+        var param4    = planeSettings.param4;
+        var wireframe = false;
+        
+        
+        
+        var material = new THREE.MeshLambertMaterial({color: color, wireframe: wireframe, wireframeLinewidth:1});
+        if(side) {            
+            var planeMesh = new THREE.Mesh(new THREE.PlaneGeometry(param1,100,0,0), material); // to check 
+//        } else if(rY) {
+//            var planeMesh = new THREE.Mesh(new THREE.PlaneGeometry(100,param2,param3,param4), material); // to check    
+        } else {
+             var planeMesh = new THREE.Mesh(new THREE.PlaneGeometry(param1,param2,param3,param4), material); // to check    
+        }
+        planeMesh.position.y = oY;
+        planeMesh.rotation.x = rX;
+        if(rY) {
+           planeMesh.rotation.y = rY;  
+        }
+        if(oX) {
+            
+            planeMesh.position.x = oX;
+        }
+        if(oZ) {
+            
+            planeMesh.position.z = oZ;
+        }
+        return planeMesh;
+     }
+     
+     function pointToStandByClick(item) {
+         
+        
+        
+        var Coords  = $(item).data('position').split(',');
+        var oCamera = {};
+        
+        oCamera.x = parseFloat(Coords[0]);
+        oCamera.y = parseFloat(Coords[1]);
+        oCamera.z = parseFloat(Coords[2]);
+
+//        console.log(oCamera);
+//        return;
+
+        camera.position.set( oCamera.x, 25, oCamera.z+70  ); 
+        camera.lookAt(new THREE.Vector3 (-100.0, 0.0, -600.0));
+        camera.rotation.x = 0;
+        camera.rotation.y = 0;
+        
+        //update controls
+        controls.object.position.set( oCamera.x, 25, oCamera.z+70);
+        controls.object.lookAt(new THREE.Vector3 (-100.0, 0.0, -600.0));
+        controls.object.rotation.x = 0;
+        controls.object.rotation.y = 0;
+        
+        //zamrozenie ekranu
+        controls.freeze = true; 
+        
+        //wyswietlenie okiena z "hintem" np. o odblokowaniu
+        
+     }
+        
+     
+     function createMap(item) {
+    
+        var map  = $("#map");
+        //pozycja na mapie
+        var oX   = (item.elementPosition[0]+475) / 5,
+            oY   = (item.elementPosition[2]+475) / 5; 
+        //polożenie na plane
+        var coords = item.elementPosition[0] + ',' + item.elementPosition[1] + ',' + item.elementPosition[2];
+        //wymiary stanowiska w przypadku gdy sa zadane   
+//        var oWidth   = (stand.position[0]+500) / 5, 
+//            oHeight  = (stand.position[2]+500) / 5; 
+
+        var item = '<div class="stand btn btn-default btn-xs" href="#" title="'+item.offerName+'" data-position="'+coords+'">&ensp;</div>';
+        //taki maly fix
+    //    oX = oX;
+        map.append($(item)
+                .css('width' , '16px')
+                .css('left'  , oX+'px')
+                .css('top'   , oY+'px')
+                .css('height', '12px')
+                .tooltip()
+                .bind("click", function( event ) {
+                   pointToStandByClick($(this));
+                   return false;
+               }));
+     } 
+        
+
+                           
+        //wykonywanie zrzutów ekranu                    
+        $('.take-snapshot').on('click', function(){
+
+            window.open( renderer.domElement.toDataURL('image/png'), 'mywindow' );
+            return false;
+
+        });
+        
+        //zamrozenie sceny po kilknieciu w infoModal
+        function freezeSceneWhenModalShown() {
+            
+            var infoModal =  $('#infoModal');
+            
+            infoModal.on('hidden.bs.modal', function (e) {              
+              controls.freeze = false; //odmrozenie ekranu     
+            }); 
+            infoModal.on('shown.bs.modal', function (e) {
+                 controls.freeze = true;                                                
+            });
+        }
+        freezeSceneWhenModalShown();
+        
+        //zamrożenie sceny jesli myszka nad menu :)
+        
+     }
+</script>

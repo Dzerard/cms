@@ -1,0 +1,11 @@
+<?php
+    if ($this->messages){
+        echo '<div class="alert alert-info alert-dismissable">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>';
+        foreach($this->messages as $message)
+        {
+            echo '<p>'.$message.'</p>';
+        }
+        echo '</div>';
+    }
+?>

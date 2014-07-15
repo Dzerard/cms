@@ -1,0 +1,183 @@
+           <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModal" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                   <span class="close-modal-button">                                        
+                        <a href="#" type="button" class="close" data-placement="left" data-dismiss="modal" aria-hidden="true" rel="tooltip" title="<?php echo $this->translate('Zamknij') ?>">&times;</a>                                
+                    </span> 
+                  <h4 class="modal-title"><?php echo $this->translate('Wypełnij formularz') ?></h4>
+                </div>
+                <div class="modal-body">                  
+                  <form role="form" action="" method="post" class="validate contact-form-modal"> 
+                        <div class="formContent"> 
+                            <div class="form-group">
+                              <label for="contactName"><?php echo $this->translate('Imię') ?></label>
+                              <input type="text" class="validate[required] form-control" id="contactName" name="contactName" placeholder="<?php echo $this->translate('Podaj Imię/Nick') ?>" >
+                            </div>
+                            <div class="form-group">
+                              <label for="contactEmail"><?php echo $this->translate('E-mail') ?></label>
+                              <input type="email" class="validate[required,custom[email]] form-control" id="contactEmail"  name="contactEmail" placeholder="<?php echo $this->translate('Wpisz e-mail') ?>" >                              
+                            </div>   
+                            <div class="form-group">
+                              <label for="contactMessage"><?php echo $this->translate('Wiadomość') ?></label>
+                              <textarea class="validate[required] form-control" id="contactMessage" name="contactMessage" ></textarea>
+                            </div>  
+                        </div>                         
+                    </form>                  
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo $this->translate('Anuluj') ?></button>
+                  <button type="button" class="btn btn-primary"><?php echo $this->translate('Wyślij') ?></button>
+                </div>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
+          
+          <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModal" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close-modal-button">                                        
+                        <a href="#" type="button" class="close" data-placement="left" data-dismiss="modal" aria-hidden="true" rel="tooltip" title="<?php echo $this->translate('Zamknij') ?>">&times;</a>                                
+                    </span> 
+<!--                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>-->
+                  <h4 class="modal-title"><?php echo $this->translate('Instrukcja') ?></h4>
+                </div>
+                <div class="modal-body">   
+                    
+                  <div class="panel panel-primary">
+                    <div class="panel-heading">
+                      <h3 class="panel-title"><i class="fa fa-info-circle"></i>&ensp;<?php echo $this->translate('Podstawowe informacje') ?></h3>
+                    </div>
+                    <div class="panel-body">   
+                        <?php echo $this->translate('Wirtualny targ - to aplikacja, która wykorzystuje możliwości silnika WebGL(Three.js). Zbudowana jest w oparciu o Framework Zend 2.2 Więcej informacji w pliku PDF z instrukcją użytownika.') ?>                        
+                    </div>
+                      
+                  </div>
+                         
+                  <div class="panel panel-primary">
+                    <div class="panel-heading">
+                      <h3 class="panel-title"><i class="fa fa-crosshairs"></i>&ensp;<?php echo $this->translate('Sterowanie') ?></h3>
+                    </div>
+                  
+                       <ul class="list-group">
+                            <li class="list-group-item">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="instruction-move">
+                                                <span class="btn btn-default">w</span><br/>
+                                                <span class="btn btn-default">a</span>
+                                                <span class="btn btn-default">s</span> 
+                                                <span class="btn btn-default">d</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="instruction-move">
+                                                <span class="btn btn-default"><i class="fa fa-angle-up"></i></span><br/>
+                                                <span class="btn btn-default"><i class="fa fa-angle-left"></i></span>
+                                                <span class="btn btn-default"><i class="fa fa-angle-down"></i></span> 
+                                                <span class="btn btn-default"><i class="fa fa-angle-right"></i></span>
+                                            </div>
+                                        </div>                                      
+                                    </div>                                   
+                                </div>                        
+                            </li>
+                            
+                            <li class="list-group-item">
+                                <ul>
+                                    <li><span class="btn btn-default">q</span>&ensp;<i class="fa fa-long-arrow-left"></i>&ensp;blokada animacji</li>                                   
+                                </ul>                                    
+                            </li>  
+                            <li class="list-group-item">
+                                <ul>                                    
+                                    <li>
+                                        <div class="container-fluid">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="mouse-move animated">
+                                                        
+                                                        <div class="move-left">                                                           
+                                                            <div class="move-right">                                                                
+                                                                <img src="<?php echo $this->basePath('img/mice.png') ?>" alt="">
+                                                            </div>
+                                                        </div>                                                        
+                                                      
+                                                    </div>
+                                                    <div class="row key-desc">
+                                                        <div class="col-md-6">
+                                                            <i class="fa fa-long-arrow-left"></i>
+                                                            <span class="label label-default"><?php echo $this->translate('poruszanie w lewo') ?></span>
+                                                        </div>
+                                                        <div class="col-md-6 txt-left">
+                                                            <i class="fa fa-long-arrow-right"></i>
+                                                            <span class="label label-default"><?php echo $this->translate('poruszanie w prawo') ?></span>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-md-6">
+                                                    <div class="mouse-move">
+                                                      <img src="<?php echo $this->basePath('img/mice.png') ?>" alt="">
+                                                    </div>
+                                                    <div class="left-point"></div>
+                                                    <div class="row key-desc">  
+                                                        <div>
+                                                            <a class="btn btn-default btn-xs"><?php echo $this->translate('lewy przycisk myszki') ?></a><br/>
+                                                        </div>   
+                                                        
+                                                        <ul>
+                                                            <li>
+                                                                <?php echo $this->translate('kliknięcie na obiekt powołuje wyświetlanie informacji w nim zawartym.') ?>
+                                                            </li>
+                                                            <li>
+                                                                <?php echo $this->translate('przytrzymanie przycisku jest równoznaczne z przyciskiem') ?> <a class="btn btn-default btn-xs">w</a>  <?php echo $this->translate('oraz') ?> <a class="btn btn-default btn-xs"><i class="fa fa-angle-up"></i></a>
+                                                                <?php echo $this->translate(' i odpowiada za poruszanie do przodu') ?>
+                                                            </li>
+                                                        </ul>
+                                                                                                                  
+                                                    </div> 
+                                                </div>
+                                                                                     
+                                           </div>                                   
+                                        </div>                                         
+                                    </li>                                    
+                                </ul>                                    
+                            </li>                             
+                        </ul>
+                      
+                  </div>
+                    
+                    
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo $this->translate('OK') ?></button>                  
+                </div>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
+          
+        <div class="modal fade" id="company-modal" tabindex="-1" role="dialog" aria-labelledby="company-modal" aria-hidden="true">
+            <div class="modal-dialog company-dialog">
+                <div class="modal-content">               
+                    <div class="modal-body">                  
+                         
+                    </div>             
+                </div> 
+              </div><!-- /.modal-dialog -->
+        </div>
+          
+        <div class="modal fade" id="company-modal-movie" tabindex="-1" role="dialog" aria-labelledby="company-modal-movie" aria-hidden="true">
+            <div class="modal-dialog movie-dialog">
+                <div class="modal-content">          
+                <div class="modal-header">
+                    <span class="close-modal-button">                                        
+                        <a href="#" type="button" class="close d-close" data-placement="left" data-dismiss="modal" aria-hidden="true" rel="tooltip" title="<?php echo $this->translate('Zamknij') ?>">&times;</a>                                
+                    </span> 
+                </div>
+                    <div class="modal-body">                  
+                         <iframe width="1280" height="720" src="//www.youtube.com/embed/RqLpqR0SPnQ?showinfo=0&autohide=1&rel=0" frameborder="0" allowfullscreen></iframe>
+                    </div>             
+                </div> 
+              </div><!-- /.modal-dialog -->
+        </div>

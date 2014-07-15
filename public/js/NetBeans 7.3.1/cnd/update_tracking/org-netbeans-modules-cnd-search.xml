@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><module codename="org.netbeans.modules.cnd.search">
+    <module_version install_time="1370464610103" last="true" origin="installer" specification_version="1.4.1">
+        <file crc="3340943629" name="config/Modules/org-netbeans-modules-cnd-search.xml"/>
+        <file crc="3415609093" name="modules/locale/org-netbeans-modules-cnd-search_ja.jar"/>
+        <file crc="3115860994" name="modules/locale/org-netbeans-modules-cnd-search_pt_BR.jar"/>
+        <file crc="3379498543" name="modules/locale/org-netbeans-modules-cnd-search_ru.jar"/>
+        <file crc="933141697" name="modules/locale/org-netbeans-modules-cnd-search_zh_CN.jar"/>
+        <file crc="3752606355" name="modules/org-netbeans-modules-cnd-search.jar"/>
+    </module_version>
+</module>

@@ -1,0 +1,201 @@
+<?php echo $this->inlineScript()->prependFile($this->basePath() . '/js/vwalk-contact.js') ?>
+
+                  <div class="modal-header">
+                      <div class="navbar-modal">
+                        <div class="navbar navbar-default ">
+                            <div class="container-fluid">
+
+                                <div class="navbar-header">
+                                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                  </button>
+                                    <a class="navbar-brand">
+                                        <img src="<?php echo $this->basePath('images/logoo.png') ?>" alt="<?php echo $this->translate("Informacje o firmie") ?>"/>                                    
+                                    </a>
+                                    <!---->
+
+                                </div>
+                                <div class="navbar-collapse collapse">                    
+                                     <ul class="nav navbar-nav">                                   
+                                                </ul>
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li><a href="#companyAbout"   class="companyAboutNav"><i class="fa fa-desktop"></i>&ensp;<?php echo $this->translate('O firmie') ?></a></li>                                  
+                                        <li><a href="#companyFiles"   class="companyFilesNav"><i class="fa fa-download"></i>&ensp;<?php echo $this->translate('Pobierz pliki') ?></a></li>                                  
+                                        <!--<li><a href="#companyWork"    class="companyWorkNav"><i class="fa fa-users"></i>&ensp;<?php echo $this->translate('Oferty pracy') ?></a></li>-->                                                 
+                                        <li><a href="#companyContact" class="companyContactNav"><i class="fa fa-envelope-o"></i>&ensp;<?php echo $this->translate('Kontakt') ?></a></li> 
+
+                                        <li class="close-button-modal">                                        
+                                            <a href="#" type="button" class="close" data-placement="left" data-dismiss="modal" aria-hidden="true" rel="tooltip" title="<?php echo $this->translate('Zamknij') ?>">&times;</a>                                
+                                        </li>                    
+                                    </ul>
+
+                                </div>
+
+                            </div>
+                          </div>
+                      </div>                     
+                  </div>
+                  <div class="modal-body">
+                    <!--companyAbout-->
+                    <div class="caption-section">
+                        <div class="container-fluid animation bounceIn" data-animate="bounceIn" id="companyAbout">
+                                <hr />
+                                <h1>
+                                    <span class="btn btn-default"><i class="fa fa-desktop"></i>&ensp;<?php echo $this->translate('O firmie') ?></span>
+                                </h1> 
+                                <!--<p>Slogan</p>-->
+                        </div>
+                    </div>
+                    <div class="modal-body-company-about">
+                       
+                        <div class="container-fluid triggerAnimation animation bounceIn" data-animate="bounceIn" style="">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="img-relative">
+                                        <?php if($offer->offerImage != '') :?>
+                                            <img alt="" class="img-responsive" src="<?php echo $this->basePath('upload/offer/').$offer->offerImage ?>">
+                                        <?php else : ?>
+                                            <img alt="" class="img-responsive" src="<?php echo $this->basePath('img/placeholder_1.png') ?>">
+                                        <?php endif; ?>
+                                        <div class="hover-box">
+                                                <div class="inner-hover-box">
+                                                        <h2><?php echo $this->translate('Link do strony domowej') ?></h2>
+                                                        <!--<p>plik, link</p>-->
+                                                        <!--<a href="upload/image2.jpg" class="btn btn-default info-button"><i class="fa fa-search"></i></a>-->
+                                                        <a href="http://<?php echo $this->escapeHtml($this->offer->offerWebPage) ?>" class="btn btn-default link-button"><i class="fa fa-link"></i></a>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="company-fetures">
+                                        <li>
+                                            <span><i class="fa fa-globe"></i></span>
+                                            <h4><?php echo $this->translate('Nazwa firmy') ?></h4>
+                                            <p><?php echo  $this->offer->offerTitle ?>&ensp;</p>
+                                        </li>
+                                        <li>
+                                            <span><i class="fa fa-info"></i></span>
+                                            <h4><?php echo $this->translate('Opis firmy') ?></h4>
+                                            <p><?php echo  $this->offer->offerDesc ?>&ensp;</p>
+                                        </li>
+                                        <li>
+                                            <span><i class="fa fa-certificate"></i></span>
+                                            <h4><?php echo $this->translate('Dodatkowe informacje') ?></h4>
+                                            <p><?php echo  $this->offer->offerExtraInfo ?>&ensp;</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>                     
+                    </div>                      
+                    <!--companyFiles-->
+                    <div class="caption-section">
+                        <div class="container-fluid animation bounceIn" data-animate="bounceIn" id="companyFiles">
+                                <hr />
+                                <h1>
+                                    <span class="btn btn-default"><i class="fa fa-download"></i>&ensp;<?php echo $this->translate('Pliki') ?></span>
+                                </h1> 
+                                <!--<p>Slogan</p>-->
+                        </div>
+                    </div>
+                    <div class="modal-body-company-files">
+                        <div class="container-fluid triggerAnimation animation bounceIn" data-animate="bounceIn" style="">
+                            <div class="row">
+                                <!-- lista plików -->                           
+                                
+                                <?php if (count($files) > 0) : ?>
+                                <?php foreach($files as $file) :?>
+                                <div class="col-md-1">
+                                    <a href="<?php echo $this->basePath().'/'.$file->filePath; ?>" data-placement="top" rel="tooltip"  title="<?php echo $this->translate('Kliknij aby pobrać') ?>" class="btn btn-default btn-file"  target="_blank" ><i class="fa fa-file"></i></a>                               
+                                    <p><?php echo $file->fileName ?></p>
+                                </div>
+                                <?php endforeach; ?>
+                                <?php else : ?>
+                                <div class="col-md-12">                                       
+                                    <div class="alert alert-warning">
+                                        <?php echo $this->translate('Brak plików ...') ?>
+                                    </div>
+                                </div>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!--companyContact-->
+                    <div class="caption-section">
+                        <div class="container-fluid animation bounceIn" data-animate="bounceIn" id="companyContact">
+                                <hr />
+                                <h1>
+                                    <span class="btn btn-default"><i class="fa fa-envelope-o"></i>&ensp;<?php echo $this->translate('Kontakt') ?></span>
+                                </h1> 
+                                <!--<p>Slogan</p>-->
+                        </div>
+                    </div>
+                    <div class="modal-body-company-contact">
+                        <!--mapa-->
+                        <div class="row">
+                            <div class="col-md-12">
+                                 <!--<div  data-address="ul. Kijowska , Kraków, PL" data-display-type="ROADMAP" data-zoom-level="14" data-height="350"></div>-->
+                                 <div class="google-map" data-latlng=" "  data-address="<?php echo $this->offer->offerStreet ?> , <?php echo $this->offer->offerCity ?>" data-display-type="ROADMAP" data-zoom-level="14" data-height="350"></div>                                 
+                            </div>
+                        </div>                       
+                        <!--formularz-->        
+                        <div class="row">
+                            <div class="col-md-6 triggerAnimation animation fadeInLeft" data-animate="fadeInLeft" style="">
+                                <h1><?php echo $this->translate('Wyślij wiadomość') ?></h1>
+                                <form id="contact-form" class="sendContactFormAjax validate">                                      
+                                        <div class="text-fields col-md-6">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                                <input name="messageName" type="text" class="form-control validate[required]" placeholder="<?php echo $this->translate('Imię') ?>" required="">
+                                            </div>
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
+                                                <input name="messageEmail" type="email" class="form-control validate[required,custom[email]]" placeholder="<?php echo $this->translate('e-mail') ?>" required="">
+                                            </div>
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="fa fa-comment-o"></i></span>
+                                                <input name="messageTitle" type="text" class="form-control validate[required] " placeholder="<?php echo $this->translate('Temat') ?>" required="">                                                 
+                                                <input type="hidden" name="messageOfferId" value="<?php echo $this->offer->offerId ?>" >
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <textarea name="messageText" class="form-control validate[required] " rows="3" id="comment" placeholder="<?php echo $this->translate('Wiadomość') ?>" required=""></textarea>                                             
+                                        </div>
+                                       
+                                        <div class="col-md-12">
+                                             <input type="submit" id="submit_contact" class="btn btn-primary contact-button" value="Wyślij">
+                                        </div>                                                                            
+                                </form>
+                            </div>
+                            <div class="col-md-6 triggerAnimation animation fadeInRight" data-animate="fadeInRight" style="">
+                                    <div class="contact-info">
+                                            <h1><?php echo $this->translate('Kontakt')?></h1>
+<!--                                            <p><?php echo $this->translate('W najbliższym czasie będziemy na targach pracy we Wrocławiu :)') ?></p>
+                                            <span><?php //echo $this->translate('') ?>27.02.2014</span>-->
+                                            <h4><?php echo $this->translate('Nasze profile społecznościowe') ?></h4>								
+           
+                                            <?php $social = !empty($this->offer->offerSocial) ? unserialize($this->offer->offerSocial) : null; ?>
+                                            <a class="btn btn-default b-twitter"  <?php echo !empty($social['twitter']) ? 'href="'.$social['twitter'].'" target="_blank"' : 'href="#"' ?>><i class="fa fa-twitter"></i></a>
+                                            <a class="btn btn-default b-faceebok" <?php echo !empty($social['facebook']) ? 'href="'.$social['facebook'].'" target="_blank"' : 'href="#"' ?> ><i class="fa fa-facebook"></i></a>
+                                            <a class="btn btn-default b-linkedin" <?php echo !empty($social['linkedin']) ? 'href="'.$social['linkedin'].'" target="_blank"' : 'href="#"' ?> ><i class="fa fa-linkedin"></i></a>
+                                    </div>
+                                    <ul class="contact-info-list">                                                                             
+                                            <li><i class="fa fa-envelope"></i>&ensp;<a href="#"><?php echo $this->offer->offerEmail ?></a></li>
+                                            <li><i class="fa fa-phone"></i>&ensp;<?php echo $this->offer->offerPhone ?></li>
+                                    </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+                     
+                  </div> <!-- /modal-body -->
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+                  </div>
+               

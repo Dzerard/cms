@@ -1,0 +1,113 @@
+<?php $country = array('pl' =>'<img src="'.$this->basePath('images/poland.png').'" alt="Polska" />', 'de' => '<img src="'.$this->basePath('images/germany.png').'" alt="Polska" />'); ?>
+
+<?php if(isset($paginator))   :?> 
+<?php
+    $title = 'Newsletter';
+    $this->headTitle($title);
+?>
+
+<h1><a href="<?php echo $this->url('admin', array('action'=> 'notification')) ?>" class="btn btn-default btn-lg"><i class="glyphicon glyphicon-inbox"></i>&ensp;<?php echo $this->translate('Newsletter') ?></a> - lista zapisanych osób</h1>
+
+<hr/>
+
+<?php if(count($paginator)) :?>
+<table class="table table-striped">
+<tr>
+    <th>ID</th>
+    <th>Email</th>   
+    <th>Preferowane stanowisko</th>
+    <th class="t-center">Preferowany kraj</th>
+    <th>Data dodania</th>
+    <th>Akcje</th>
+</tr>
+
+<?php foreach ($paginator as $p) : ?>
+
+<tr>
+    <td><?php echo $this->escapeHtml($p->notificationId);?></td>
+    <td> <a href="<?php echo $this->url('admin',
+            array('action'=>'notification', 'id' => $p->notificationId));?>"> <?php echo $this->escapeHtml($p->notificationEmail);?> </a></td>
+    
+    <td><?php echo $this->escapeHtml($p->notificationNote);?></td>
+    <td class="t-center"><?php echo $country[$p->notificationCountry];?></td>
+    <td class="span1"><?php echo  date('d-m-Y G:i',$this->escapeHtml($p->notificationInsert));?></td>    
+    <td class="span2">
+        <a href="<?php echo $this->url('admin',
+            array('action'=>'notification', 'id' => $p->notificationId));?>" title="podgląd"><i class="glyphicon glyphicon-picture"></i></a>
+        <a href="<?php echo $this->url('admin',
+            array('action'=>'delNotification', 'id' => $p->notificationId));?>" title="usuń"><i class="glyphicon glyphicon-trash"></i></a>
+    </td>
+</tr>
+<?php endforeach; ?>
+
+</table>
+<?php
+ echo $this->paginationControl(
+     
+     $this->paginator,
+     // the scrolling style
+     'sliding',
+     // the partial to use to render the control
+     array('partial/paginator.phtml', 'Admin'),
+     // the route to link to when a user clicks a control link
+     array(
+         'route' => 'admin',
+         'action' => 'notification'
+     )
+ );
+?>
+
+    <?php else : ?>
+
+<div class="well">
+    <p>
+       <strong> Brak wiadomości :) </strong>
+    </p>
+</div>
+
+<?php endif; ?>
+
+<?php  elseif (isset($notification)) :?>
+<?php
+$title = 'Treść wiadmości';
+$this->headTitle($title);
+?>
+<style>
+    .table {margin-top: 20px !important;}
+    a i {margin-right: 5px;}
+    tr:after td {font-weight: bold;}
+</style>
+
+<h1><h1><a href="<?php echo $this->url('admin', array('action'=> 'notification')) ?>" class="btn btn-default btn-lg"><i class="glyphicon glyphicon-inbox"></i>&ensp;<?php echo $this->translate('Newsletter') ?></a> - szczegóły</h1></h1>
+
+<br />
+
+<table class="table table-striped">
+    <tr>
+        <td>ID: </td> <td><?php echo $notification->notificationId ?></td>
+    </tr>
+    
+    <tr>
+        <td>Email: </td><td><?php echo $notification->notificationEmail ?></td>
+    </tr>
+
+    <tr>
+        <td>Preferowane Stanowisko: </td><td><?php echo $notification->notificationNote ?></td> 
+    </tr>
+    
+    <tr>
+        <td>Kraj: </td><td><?php echo $country[$notification->notificationCountry] ?></td>
+    </tr>
+    <tr>
+        <td>Data dodania: </td><td><?php echo  date('d-m-Y G:i',$this->escapeHtml($notification->notificationInsert));?></td>
+    </tr>
+</table>
+ 
+<div class="form-group">
+    <a href="<?php echo $this->url('admin',array('action'=>'notification')) ?>" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i>&ensp;Powrót </a>
+    
+</div>
+
+<?php endif; ?>
+
+

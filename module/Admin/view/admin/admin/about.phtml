@@ -1,0 +1,20 @@
+<?php
+
+$title = $this->translate('O projekcie');
+$this->headTitle($title);
+
+?>
+<h1><a href="<?php echo $this->url('admin', array('action'=> 'about')) ?>" class="btn btn-default btn-lg"><i class="fa fa-info-circle"></i>&ensp;<?php echo $title ?></a></h1>
+
+<hr />
+
+<div class="row-fluid">
+    <h2> 
+    <?php echo $this->translate('Wykonanie') ?>: <a class="btn btn-default btn-myself" href="http://lukaszgielar.com"><i class="fa fa-smile-o"></i>&ensp; Łukasz Gielar</a>
+    </h2> 
+    
+    <code>
+        2014.03.01
+    </code>
+</div>
+     

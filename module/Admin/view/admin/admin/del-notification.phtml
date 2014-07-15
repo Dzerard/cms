@@ -1,0 +1,23 @@
+<?php
+    $title = $this->translate('usuń e-mail z newslettera');
+    $url   = $this->url('admin', array('action' => 'delNotification', 'id' => $this->id));
+    $this->headTitle($title);
+    
+?>
+<h1><a href="<?php echo $this->url('admin', array('action' => 'contact')) ?>" class="btn btn-default btn-lg"><i class="glyphicon glyphicon-inbox"></i>&ensp;<?php echo $this->translate('Newsletter') ?></a> - <?php echo $this->escapeHtml($title); ?></h1>
+<hr />
+
+<div class="well">
+    <p>
+        <?php $this->translate('Czy chcesz usunąć e-mail: ') ?><span class="info-del">'<?php echo $this->escapeHtml($notification->notificationEmail); ?>'</span> ?
+    </p>
+</div>
+
+<form action="<?php echo $url; ?>" method="post">
+    <div>
+        <input type="hidden" name="id" value="<?php echo (int) $notification->notificationId; ?>" />
+        <button name="del" value="Powrót" class="btn btn-default"/><i class="glyphicon glyphicon-chevron-left"></i>&ensp; <?php $this->translate('Powrót') ?></button>
+        <input type="submit" name="del" value=" <?php $this->translate('Usuń') ?>" class="btn btn-danger"/>
+    </div>
+</form>
+

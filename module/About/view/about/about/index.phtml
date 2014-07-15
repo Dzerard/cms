@@ -1,0 +1,60 @@
+<?php
+$title = $this->translate('O nas');
+$this->headTitle($title);
+?>
+<!-- Header Image -->
+        <div id="header-image-container">
+            <div id="header-image">
+                <img src="<?php echo $this->basePath('images/placeholders/2000x330.jpg') ?>" alt="" class="stretch-image" />
+            </div>
+        </div>
+
+        <div id="content-container" class="content-width">
+
+            <!-- Breadcrumbs -->
+            <?php
+            echo $this->navigation('navigation') 
+                      ->breadcrumbs()
+                      ->setMinDepth(0)
+                      ->setPartial('partial/breadcrumb.phtml');
+            ?>
+
+            <!-- Page Intro -->
+            <div id="intro" class="not-homepage row">
+                <div class="large-9 large-centered columns">
+                    <h1><?php echo $this->translate('Informacje o') ?> <strong><?php echo $this->translate('Winckler Personal') ?></strong></h1>
+                </div>
+            </div>          
+
+            <div class="row">
+                <div class="large-12 columns for-nested">
+
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <h2 class="has-line"><?php echo $this->translate('O Firmie') ?></h2>
+                            <p>Doskonałe kwalifikacje zawodowe naszego zespołu, znajomość rynku, niezawodność oraz wysokie umiejętności interpersonalne są filarami działalności Agencji Pośrednictwa Winckler Personal. Dzięki uproszczeniu niektórych procedur, jesteśmy w stanie bardzo szybko realizować zlecenia kontrahentów, jednocześnie dbając o wysoką jakość naszych usług.
+Wychodzimy z założenia, że ambitne cele są najlepszą drogą do sukcesu. Mamy nadzieję, że cechująca nas pasja i zaangażowanie zachęcą Państwa do skorzystania z naszych usług!
+Nasze kompetencje w dziedzinie HR obejmują pasję stałego doskonalenia i rozwoju, działania na rzecz zapewnienia jakości oferowanych usług. Będąc firmą zorientowaną na wartości, jesteśmy świadomi swojej społecznej odpowiedzialności.
+   </p>
+                            <h3 class="light"><?php echo $this->translate('Nasza Misja') ?></h3>
+                            <blockquote class="right">
+                                <p>
+                                    U nas liczą się LUDZIE. Dzięki nim budujemy przyszlość
+                                </p>
+                            </blockquote>
+                            <p>
+                               W Winckler Personal jako misję obraliśmy kult rzetelności i użyteczności społecznej.
+Naszą misją jest również dostarczenie najlepszych personalnych rozwiązań, optymalizacja kosztów naszych kontrahentów oraz zwiększanie efektywności i konkurencyjności przedsiębiorstw, z którymi współpracujemy.
+Zgodnie z naszym kredo: "U nas liczą się LUDZIE. Dzięki nim budujemy przyszlość" najwyższy priorytet stanowi dla nas oparta na zaufaniu i trwała współpraca za naszymi usatysfakcjonowanymi kontrahentami i zadowolonymi kandydatami.
+
+                            </p>
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+        <!-- End id="content-container" -->

@@ -1,0 +1,178 @@
+<?php
+$title = $this->translate('Kontakt');
+$this->headTitle($title);
+?>
+    
+
+        <!-- Header Image -->
+        <div id="header-image-container">
+            <div id="header-image">
+                <img src="<?php echo $this->basePath('images/placeholders/2000x330.jpg') ?>" alt="" class="stretch-image" />
+            </div>
+        </div>
+
+        <div id="content-container" class="content-width">
+            
+            <!-- Breadcrumbs -->
+            <?php
+            echo $this->navigation('navigation') 
+                      ->breadcrumbs()
+                      ->setMinDepth(0)
+                      ->setPartial('partial/breadcrumb.phtml');
+            ?>
+
+            <!-- Page Intro -->
+            <div id="intro" class="not-homepage row">
+                <div class="large-9 large-centered columns">
+                    <h1><strong><?php echo $this->translate('Kontakt') ?></strong></h1>
+                </div>
+            </div>
+
+            <!-- Page Content -->
+            <div class="grey-bg row">
+                <div class="large-3 columns for-nested">
+                    <div class="row">
+                        <div class="large-12 columns no-padding height-255">
+                            <div class="google-map" data-latlng="" data-address=" ul. Bolesława Chrobrego 23, Warszawa, PL" data-display-type="ROADMAP" data-zoom-level="12" data-height="330"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="large-12 columns grey-bg">
+                            
+                           <div class="row" style="margin-bottom: 20px;">
+                               <div class="large-12 columns no-padding" >
+                                        <img src="<?php echo $this->basePath('images/qr_codee.png') ?>" alt="" class="stretch-image" />
+                                    </div>
+                            </div>
+           
+                            <div class="contact-info-widget">
+                                <h3><?php echo $this->translate('Dane kontaktowe') ?></h3>
+                                
+                                
+                                <p>
+                                    <?php echo $info->infoName ?>
+                                </p>
+                                <p> 
+                                    <?php echo $info->infoStreet ?><br />
+                                    <?php echo $info->infoCity ?>
+                                </p>
+                                <ul>
+                                    <li>
+                                        <i class="icon-phone"></i> <?php echo $info->infoPhone ?>
+                                    </li>
+                                    <li>
+                                        <i class="icon-mobile-phone"></i> <?php echo $info->infoCellPhone ?>
+                                    </li>                                    
+                                    <li style="min-width: 180px;">
+                                        <i class="icon-envelope-alt"></i><a href="mailto:<?php echo $info->infoEmail ?>"><?php echo $info->infoEmail ?></a>
+                                    </li>
+                                </ul>
+                                
+                                <p></p>
+                                
+                                <ul>
+                                    <li>
+                                        fax: <?php echo $info->infoFax ?>
+                                    </li>
+                                    <li>
+                                        NIP: <?php echo $info->infoNip ?>
+                                    </li>
+                                    <li>
+                                        REGON: <?php echo $info->infoRegon ?>
+                                    </li>
+                                </ul>
+                                <p></p>
+                                <h3><?php echo $this->translate('Godziny otwarcia') ?></h3>
+                                
+                                <p>
+                                    <?php echo $info->infoHours ?>
+                                </p> 
+                                
+                                
+
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="large-9 columns for-nested">
+  
+                    <div class="row">
+                        <div class="large-12 columns" style="min-height: 993px;">
+                            <h2 class="has-line"><?php echo $this->translate('Formularz kontaktowy')?></h2>
+                           
+                            <p>
+                                <?php echo $this->translate('Zostaw swoje dane, oddzwonimy !') ?>
+                            </p>
+                            <form id="contact-form" method="post" class="validate">
+                                <div class="row">
+                                    <div class="large-6 columns less-padding">
+                                        <label for="contactName">Imię i Nazwisko</label>
+                                        <input class="validate[required]" type="text" name="contactName" />
+                                    </div>
+                                    <div class="large-6 columns less-padding">
+                                        <label for="contactPosition">Stanowisko</label>
+                                        <input class="validate[required]" type="text" name="contactPosition" />
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-bottom: 30px;">
+                                    <div class="large-6 columns less-padding">
+                                        <label for="contactEmail">Email</label>
+                                        <input class="validate[required,custom[email]]" type="text" name="contactEmail" />
+                                    </div>
+                                    <div class="large-6 columns less-padding">
+                                        <label for="contactPhone">Telefon</label>
+                                        <input class="validate[required]" type="text" name="contactPhone" />
+                                    </div>
+                                </div>
+<!--                                <div class="row">
+                                    <div class="large-5 columns less-padding">
+                                        <label for="contactSubject">Tytuł wiadomości</label>
+                                        <input class="validate[required]" type="text" name="contactSubject" />
+                                    </div>
+                                </div>-->
+    
+                                <div class="row">
+                                    <div class="large-12 columns less-padding">
+                                        <label for="contactMessage">Wiadomość</label>
+                                        <textarea class="validate[required]" name="contactMessage" style="height: 120px;"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="large-12 columns less-padding">                                     
+                                        <div data-alert="" class="info box" style="background:none; border-color: #999999; color: #444;">
+                                            <p>
+                                                *Niniejszym oświadczam, że zgodnie z art. 23 ust. 1 pkt 1 ustawy z dnia 29 sierpnia 1997 r. o ochronie danych osobowych (Dz.U. z 2002 r. Nr 101, poz. 926) wyrażam zgodę na przetwarzanie wyżej wymienionych moich danych osobowych przez Winckler Personal w celach marketingowo/sprzedażowych oraz dla potrzeb obecnego oraz przyszłych procesów rekrutacyjnych. Informacje, które podałem/podałam w moim formularzu zgłoszeniowym są kompletne i zgodne ze stanem faktycznym.
+                                            </p>
+                                            <a href="#" class="close">×</a>
+                                        </div>                                 
+                                        
+                                        <label class="inline-label"><input class="validate[required] checkbox" type="checkbox" name="contactAccept" value="yes"/>&emsp;<strong>Akceptuje</strong></label>                                          
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="row">
+                                    <div class="large-5 columns less-padding" style="margin-bottom: 220px;">
+                                        <input type="submit" class="flat button" value="<?php echo $this->translate('Wyślij') ?>" />
+                                    </div>
+                                </div>
+                            </form>
+                            <div id="success" class="success box">
+                                <?php echo $this->translate('Dziekujemy za wiadomość, wkrótce na nią odpowiemy.') ?>                                
+                            </div>
+                            <div id="error" class="error box">
+                                <?php echo $this->translate('Coś poszło nie tak ... Prosimy skontaktować się za pomocą email lub telfonicznie. Przepraszamy za problem.') ?>                               
+                            </div>
+                           
+                            
+                        </div>
+                    </div>
+                    
+                  
+                    
+                </div>
+            </div>
+
+        </div>
+        <!-- End id="content-container" -->

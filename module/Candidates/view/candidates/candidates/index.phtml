@@ -1,0 +1,199 @@
+<?php
+$title = $this->translate('Kandydaci');
+$this->headTitle($title);
+?>
+<!-- Header Image -->
+        <div id="header-image-container">
+            <div id="header-image">
+                <img src="<?php echo $this->basePath('images/placeholders/2000x330.jpg') ?>" alt="" class="stretch-image" />
+            </div>
+        </div>
+
+        <div id="content-container" class="content-width">
+
+            <!-- Breadcrumbs -->
+            <?php
+            echo $this->navigation('navigation') 
+                      ->breadcrumbs()
+                      ->setMinDepth(0)
+                      ->setPartial('partial/breadcrumb.phtml');
+            ?>
+
+            <!-- Page Intro -->
+            <div id="intro" class="not-homepage row">
+                <div class="large-9 large-centered columns">
+                    <h1><?php echo $this->translate('Twoja kariera jest w rękach Wincklera! ') ?></h1>
+                </div>
+            </div>          
+
+            <div class="row">
+                <div class="large-12 columns for-nested">
+
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <h2 class="has-line"><?php echo $this->translate('Towarzyszymy Ci w Twojej karierze tak długo, jak tego potrzebujesz') ?></h2>
+                            <h3 class="light"><?php echo $this->translate('Pomożemy Ci w poszukiwaniu pracy i zajmiemy się profesjonalną promocją Twojej kandydatury, a także zorganizujemy spotkanie z potencjalnym pracodawcą.') ?></h3>
+                            <h3 class="light"><?php echo $this->translate('Szukaj ofert pracy z WINCKLER PERSONAL ! ') ?></h3>
+                            <blockquote>
+                                <p>
+                                    <?php echo $this->translate('Chcesz spełniać się zawodowo?') ?>
+                                </p>                                
+                            </blockquote>
+                            <blockquote>
+                                <p>
+                                   <?php echo $this->translate('Szukasz nowych wyzwań?')?>
+                                </p>                                
+                            </blockquote>
+                            <blockquote>
+                                <p>
+                                    <?php echo $this->translate('Zgłoś się do nas!')?>
+                                </p>                                
+                            </blockquote>     
+                            
+                            <p><?php echo $this->translate('Winckler Personal to rzetelna Agencja Zatrudniania świadcząca profesjonalne usługi w zakresie legalnego zatrudniania opiekunek na terenie Niemiec. W codziennej pracy towarzyszy nam idea społecznej odpowiedzialności. Dzięki temu możemy świadczyć dla naszych kontrahentów usługi na najwyższym poziomie.') ?>   </p>
+                            
+                                                    
+                            <p>
+                            <?php echo $this->translate('Dzięki starannie opracowanym procedurom, każdy może legalnie i bezpiecznie wyjechać za pośrednictwem Agecnji Pracy Winckler Personal do UE w celach zarobkowych oraz podjąć się pracy na terenie kraju.
+Z przyjemnością przejmiemy proces poszukiwania pracy spełniającej Twoje oczekiwania oraz zarekomendujemy Twoją kandydaturę potencjalnym pracodawcom. Dzięki naszej współpracy z firmami różnych rozmiarów z wszystkich branż pomożemy zwiększyć Twoje szanse na znalezienie nowej pracy.') ?>
+
+                            </p>
+                            <p>Zapraszamy do zapoznania się z aktualnymi ofertami pracy na naszej stronie internetowej w zakładce
+                                <a href="<?php echo $this->url('candidates', array('action' => 'offer')) ?>">Oferty pracy</a>.</p>
+
+
+                             <h3 class="light"><?php echo $this->translate('Umów się na rozmowę kwalifikacyjną już dziś !') ?></h3> 
+                            
+                             <p>
+                                    <a class="flat button"><i class="icon-phone"></i>&ensp;&ensp;+48 12 307 00 99</a>
+                             </p>
+                             <p>
+                                 Osoby zainteresowane współpracą z Agencją Pośrednictwa Winckler Personal zapraszamy do naszej siedziby na rozmowę kwalifikacyjną. Podczas rozmowy omawiamy zdobyte doświadczenie zawodowe, weryfikujemy znajomość języków obcych oraz omawiamy warunki pracy. Na spotkanie należy umówić się telefonicznie.
+                             </p>
+                             <p>
+Przy udanej współpracy istnieje możliwość uzyskania pisemnych referencji, które ułatwią znalezienie wymarzonego stanowiska w przyszłości.
+                             </p>
+                             <p>
+Aby dołączyć do szerokiego grona osób, które szukają bądź juz znaleźli pracę w Polsce oraz w Unii Europejskiej z Agencją Pośrednictwa Winckler Personal należy wypełnić Formularz Kontaktowy, załączyć swoje CV, zaznaczając w tytule nazwę stanowiska, którego dotyczy aplikacja i przesłać do naszej firmy.
+
+                             </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>    
+            
+                        <div class="row top-margin">
+                <div class="large-12 columns for-nested">
+
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <h2 class="has-line"><?php echo $this->translate('Formularz Kontaktowy') ?></h2>
+<!--                            biuro@wincklerpersonal.pl-->
+                            <form id="contact-form" method="post" class="validate candidates-form" enctype="multipart/form-data">
+                                <div class="row">
+                                    <div class="large-5 columns less-padding">
+                                        <label for="candidatesName">Imię i Nazwisko</label>
+                                        <input class="validate[required]" type="text" name="candidatesName" />
+                                    </div>
+                              
+                                    <div class="large-5 columns less-padding">
+                                        <label for="candidatesPhone">Telefon</label>
+                                        <input class="validate[required]" type="text" name="candidatesPhone" />
+                                    </div>
+                                </div>                                
+                                <div class="row">
+                                    <div class="large-5 columns less-padding">
+                                        <label for="candidatesEmail">Email</label>
+                                        <input class="validate[required,custom[email]]" type="text" name="candidatesEmail" />
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="large-5 columns less-padding">
+                                        <label for="candidatesAttach">Załącz CV</label>
+                                        <input type="file" name="candidatesAttach" class="file-decor">                                   
+                                    </div>
+                                </div>
+                                <div class="row">
+                                   <div class="large-5 columns less-padding">
+                                        <label for="candidatesSubject">Tytuł wiadomości (Stanowisko na które Kandydat aplikuje)</label>
+                                        <input class="validate[required]" type="text" name="candidatesSubject" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="large-12 columns less-padding">
+                                        <label for="candidatesMessage">Wiadomość</label>
+                                        <textarea class="validate[required]" name="candidatesMessage" style="height: 120px;"></textarea>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="large-12 columns less-padding">                                     
+                                        <div data-alert="" class="info box" style="background:none; border-color: #999999; color: #444;">
+                                            <p>
+                                                <?php echo $this->translate('*Niniejszym oświadczam, że zgodnie z art. 23 ust. 1 pkt 1 ustawy z dnia 29 sierpnia 1997 r. o ochronie danych osobowych (Dz.U. z 2002 r. Nr 101, poz. 926) wyrażam zgodę na przetwarzanie wyżej wymienionych moich danych osobowych przez Winckler Personal w celach marketingowo/sprzedażowych oraz dla potrzeb obecnego oraz przyszłych procesów rekrutacyjnych. Informacje, które podałem/podałam w moim formularzu zgłoszeniowym są kompletne i zgodne ze stanem faktycznym.') ?>
+                                            </p>
+                                            <a href="#" class="close">×</a>
+                                        </div>                                 
+                                        
+                                        <label class="inline-label"><input class="validate[required] checkbox" type="checkbox" name="contactAccept" value="yes"/>&emsp;<strong>Akceptuje</strong></label>                                          
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="row">
+                                    <div class="large-5 columns less-padding">
+                                        <input type="submit" class="flat button" value="<?php echo $this->translate('Wyślij') ?>" />
+                                    </div>
+                                </div>
+                            </form>
+                            <div id="success" class="success box">
+                                <?php echo $this->translate('Dziekujemy za wiadomość, wkrótce na nią odpowiemy.') ?>                                
+                            </div>
+                            <div id="error" class="error box">
+                                <?php echo $this->translate('Coś poszło nie tak ... Prosimy skontaktować się za pomocą email lub telfonicznie. Przepraszamy za problem.') ?>                               
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+           
+             
+            <div class="row top-margin">
+                <div class="large-12 columns for-nested">
+
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <h2 class="has-line"><?php echo $this->translate('SZANOWNI PAŃSTWO !') ?></h2>
+                            <blockquote>
+                                <p>
+                                    <?php echo $this->translate('Nie pobieramy od kandydatów żadnych opłat (rozumiane są przez to opłaty za przejazd za granicę, przygotowanie dokumentów, pośrednictwo, bądź dodatkowe procedury).') ?>
+                                </p>                                
+                            </blockquote>
+                            <blockquote>
+                                <p>
+                                   <?php echo $this->translate('W publikowanych przez nas ofertach pracy zawsze podajemy dokładne dane kontaktowe:
+adres pocztowy, adres e-mail, numer telefonu, ponadto numer certyfikatu wydanego przez Marszałka Województwa Małopolskiego. Aktualne oferty pracy znajdą Państwo na naszej stronie internetowej.
+')?>
+                                </p>                                
+                            </blockquote>
+                            <blockquote>
+                                <p>
+                                    <?php echo $this->translate('Wszelkie rekrutacje w Agencji Pośrednictwa WINCKLER PERSONAL są przeprowadzane wyłącznie w siedzibie naszej firmy przez wewnętrznych konsultantów.
+W zakresie rekrutacji kandydatów nie współpracujemy z żadnymi firmami zewnętrznymi lub osobami prywatnymi.
+')?>
+                                </p>                                
+                            </blockquote>     
+                            
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>    
+            
+            
+        </div>
+        <!-- End id="content-container" -->

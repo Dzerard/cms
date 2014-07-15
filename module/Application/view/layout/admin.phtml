@@ -1,0 +1,91 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <?php echo $this->headTitle($this->translate('Panel administracyjny'))->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?php echo $this->headMeta()
+            ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+            ->appendName('keywords', 'praca magisterska')
+            ->appendName('author', 'Łukasz Gielar')
+            ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+
+        <!-- Le styles -->
+        <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon',  'href' => $this->basePath() . '/img/fav_new.ico'))
+                        ->prependStylesheet($this->basePath() . '/css/admin.css')                        
+                        ->prependStylesheet($this->basePath() . '/css/bootstrap.css') 
+                        ->prependStylesheet($this->basePath() . '/css/jquery.fancybox-1.3.4.css') 
+                        ->prependStylesheet($this->basePath() . '/css/validationEngine.jquery.css') 
+                        ->prependStylesheet($this->basePath() . '/css/font-awesome.min.css')                 
+                        ->prependStylesheet('http://fonts.googleapis.com/css?family=Roboto:100,300&subset=latin,latin-ext')   
+                
+                ?> 
+
+        <!-- Scripts -->
+        <?php echo $this->headScript()
+            ->prependFile($this->basePath() . '/js/admin.js')
+            ->prependFile($this->basePath() . '/js/foundation.min.js')
+            ->prependFile($this->basePath() . '/js/tinymce/tinymce.min.js')
+            ->prependFile($this->basePath() . '/js/jquery.fancybox-1.3.4.js')                
+            ->prependFile($this->basePath() . '/js/respond.min.js', 'text/javascript', array('conditional' => 'lt IE 9',))
+            ->prependFile($this->basePath() . '/js/html5shiv.js',   'text/javascript', array('conditional' => 'lt IE 9',))
+            ->prependFile($this->basePath() . '/js/bootstrap.min.js')
+            ->prependFile($this->basePath() . '/js/jquery.min.js')
+        ; ?>
+
+    </head>
+    <body>
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="<?php echo $this->url('home') ?>">V-Walk</a>                 
+                </div>
+                <div class="navbar-collapse collapse">                    
+                     <ul class="nav navbar-nav">  
+                         <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Opcje &ensp;<b class="caret"></b></a>
+                            <ul class="dropdown-menu">                              
+                              <li <?php  echo ($_SERVER['REQUEST_URI'] == '/admin/settings' ? 'class="active"' : '') ?>><a href="<?php echo $this->url('admin', array('action' => 'settings')) ?>"><i class="fa fa-wrench"></i>&ensp;<?php echo $this->translate('Ustawienia') ?></a></li> 
+                              <li class="divider"></li>
+                              <li class="dropdown-header">Inne</li>                              
+                              <li <?php  echo ($_SERVER['REQUEST_URI'] == '/admin/contact' ? 'class="active"' : '') ?>><a href="<?php echo $this->url('admin', array('action' => 'contact')) ?>"><i class="fa fa-envelope-o"></i>&ensp;<?php echo $this->translate('Formularz kontaktowy') ?></a></li>                        
+                            </ul>
+                          </li>                                   
+                        <li <?php  echo ($_SERVER['REDIRECT_URL'] == '/admin/offer' ? 'class="active"' : '') ?>><a href="<?php echo $this->url('admin', array('action' => 'offer')) ?>"><i class="fa fa-users"></i>&ensp;<?php echo $this->translate('Firmy') ?></a></li>                                  
+                        <li <?php  echo ($_SERVER['REDIRECT_URL'] == '/admin/view'  ? 'class="active"' : '') ?>><a href="<?php echo $this->url('admin', array('action' => 'view')) ?>"><i class="fa fa-desktop"></i>&ensp;<?php echo $this->translate('Przestrzeń') ?></a></li>                                  
+                        <li <?php  echo ($_SERVER['REDIRECT_URL'] == '/admin/about' ? 'class="active"' : '') ?>><a href="<?php echo $this->url('admin', array('action' => 'about')) ?>"><i class="fa fa-info-circle"></i>&ensp;<?php echo $this->translate('O Projekcie') ?></a></li>                                  
+                    </ul>                    
+                    <a href="<?php echo $this->url('admin', array('action' => 'logout')) ?>" class="logout-button pull-right" rel="tooltip" title="wyloguj" data-placement="left"><i class="fa fa-power-off"></i></a>
+                </div><!--/.nav-collapse -->   
+            </div>
+          </div>
+        
+           <?php //wyrenderowac przy pomocy menuHelpera ?>
+        <div class="container main" >  
+           
+             <?php //  echo $this->navigation('navigation') 
+//                          ->breadcrumbs()
+//                          ->setMinDepth(0)
+//                          ->setPartial('partial/breadcrumb');             
+                ?>
+                     <?php //echo $this->navigation()->menu('navigation')->setUlClass('sf-menu');   ?>
+         <?php //echo $this->basePath('images/poland.png') ?>
+         <?php //echo $this->url('shome') ?> 
+            <?php echo $this->content; ?>            
+           
+            <hr>
+            <footer>
+                <p>&copy; <?php echo date('Y') ?> - <?php echo $this->translate('Panel administracyjny') ?></p>
+            </footer>
+        </div> <!-- /container -->
+        <?php echo $this->inlineScript() ?>
+    </body>
+</html>

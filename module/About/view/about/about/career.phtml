@@ -1,0 +1,76 @@
+<?php
+$title = $this->translate('Kariera');
+$this->headTitle($title);
+?>
+
+<!-- Header Image -->
+        <div id="header-image-container">
+            <div id="header-image">
+                <img src="<?php echo $this->basePath('images/placeholders/2000x330.jpg') ?>" alt="" class="stretch-image" />
+            </div>
+        </div>
+
+        <div id="content-container" class="content-width">
+
+            <!-- Breadcrumbs -->
+            
+            <?php
+            echo $this->navigation('navigation') 
+                      ->breadcrumbs()
+                      ->setMinDepth(0)
+                      ->setPartial('partial/breadcrumb.phtml');
+            ?>
+
+            
+            <!-- Page Intro -->
+            <div id="intro" class="not-homepage row">
+                <div class="large-9 large-centered columns">
+                    <h1><strong><?php echo $this->translate('Kariera w') ?></strong> Winckler Personal </h1>
+                </div>
+            </div>
+
+            <!-- Page Content -->         
+
+            <div class="row">
+                <div class="large-12 columns for-nested">
+
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <h2 class="has-line"><?php echo $this->translate('Poszukujemy specjalistów') ?> </h2>
+                                <p>głównie do zespołów rekrutacji, do działów HR oraz Działu Zagranicznego</p>                                             
+                                
+                                    <h3 class="light">Możemy zaoferować Ci rozwój w następujących obszarach:</h3>
+                                
+                                <blockquote>
+                                      <p>Dział HR</p>
+                                </blockquote>
+                                <blockquote>
+                                      <p>Dział Zagraniczny</p>
+                                </blockquote> 
+                                <p>
+                                    Sądzisz, że Twoja osobowość pasuje do naszego zespołu?<br />
+                                    Jesteś intrawertykiem czy ekstrawertykiem?<br />
+                                    Chcesz podnieść swoje kwalifikacje?<br />
+                                    Chcesz osiągnąć sukces zawodowy?<br />
+                                    Wyróżniasz sie spośród otoczenia?<br />
+                                    Jesteś pełen entuzjazmu?<br />
+                                </p>
+                                <h3 class="light">Chcemy poznać Ciebie!</h3>
+
+                                <p> Naszym pracownikom oferujemy motywacyjny system wynagrodzeń (podstawa + system premiowy), liczne szkolenia oraz możliwości rozwoju.
+
+                                 </p> 
+                                 <br />
+                                 <p>
+                                    <img src="<?php echo $this->basePath('images/logo_rekrutacja.png') ?>" alt=""  />
+                                     
+                                 </p>
+                          
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- End id="content-container" -->

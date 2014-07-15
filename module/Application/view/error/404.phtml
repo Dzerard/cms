@@ -1,0 +1,161 @@
+<?php   
+//    $reqeust = new \Zend\Stdlib\Request();
+//    $re = new \Zend\Http\Request();
+ //   $event = new \Zend\Mvc\MvcEvent();
+//    $url = $this->url('admin');
+//    $re->setUri($url);
+//    var_dump($re->getUri());
+    //var_dump($this->getServiceLocator()->get('AuthService')->hasIdentity());
+    $this->layout('layout/admin_login'); 
+    $title = $this->translate('Strona nie istnieje ... ');
+    $this->headTitle($title);
+    $this->message = $this->translate('Strona nie została znaleziona');
+    
+?>
+    <div class="container">
+    <div class="row">
+            <!-- Page Intro -->
+            <div class="panel panel-default">
+                 <div class="panel-body">  
+            <div class="error404">
+                <div class="large-9 large-centered columns">
+                    <h1><?php echo $this->translate('404 Page Not Found') ?></h1>                    
+                    <p>
+                        <?php echo $this->message ?>
+                        <br/>
+                        <?php if (isset($this->reason) && $this->reason): ?>
+
+<?php
+$reasonMessage= '';
+switch ($this->reason) {
+    case 'error-controller-cannot-dispatch':
+        $reasonMessage = $this->translate('The requested controller was unable to dispatch the request.');
+        break;
+    case 'error-controller-not-found':
+        $reasonMessage = $this->translate('The requested controller could not be mapped to an existing controller class.');
+        break;
+    case 'error-controller-invalid':
+        $reasonMessage = $this->translate('The requested controller was not dispatchable.');
+        break;
+    case 'error-router-no-match':
+        $reasonMessage = $this->translate('The requested URL could not be matched by routing.');
+        break;
+    default:
+        $reasonMessage = $this->translate('We cannot determine at this time why a 404 was generated.');
+        break;
+}
+?>
+
+<p><?php echo $reasonMessage ?></p>
+
+<?php endif; ?>
+
+<?php if (isset($this->controller) && $this->controller): ?>
+
+    <dl>
+        <dt><?php echo $this->translate('Controller') ?>:</dt>
+        <dd><?php echo $this->escapeHtml($this->controller) ?>
+    <?php
+    if (isset($this->controller_class)
+        && $this->controller_class
+        && $this->controller_class != $this->controller
+    ) {
+        echo '(' . sprintf($this->translate('resolves to %s'), $this->escapeHtml($this->controller_class)) . ')';
+    }
+    ?>
+    </dd>
+    </dl>
+
+<?php endif; ?>
+
+<?php if (isset($this->display_exceptions) && $this->display_exceptions): ?>
+
+    <?php if(isset($this->exception) && $this->exception instanceof Exception): ?>
+        <hr/>
+        <h2><?php echo $this->translate('Additional information') ?>:</h2>
+        <h3><?php echo get_class($this->exception); ?></h3>
+        <dl>
+            <dt><?php echo $this->translate('File') ?>:</dt>
+            <dd>
+                <pre class="prettyprint linenums"><?php echo $this->exception->getFile() ?>:<?php echo $this->exception->getLine() ?></pre>
+            </dd>
+            <dt><?php echo $this->translate('Message') ?>:</dt>
+            <dd>
+                <pre class="prettyprint linenums"><?php echo $this->exception->getMessage() ?></pre>
+            </dd>
+            <dt><?php echo $this->translate('Stack trace') ?>:</dt>
+            <dd>
+                <pre class="prettyprint linenums"><?php echo $this->exception->getTraceAsString() ?></pre>
+            </dd>
+        </dl>
+        <?php
+            $e = $this->exception->getPrevious();
+            if ($e) :
+        ?>
+        <hr/>
+        <h2><?php echo $this->translate('Previous exceptions') ?>:</h2>
+        <ul class="unstyled">
+            <?php while($e) : ?>
+            <li>
+                <h3><?php echo get_class($e); ?></h3>
+                <dl>
+                    <dt><?php echo $this->translate('File') ?>:</dt>
+                    <dd>
+                        <pre class="prettyprint linenums"><?php echo $e->getFile() ?>:<?php echo $e->getLine() ?></pre>
+                    </dd>
+                    <dt><?php echo $this->translate('Message') ?>:</dt>
+                    <dd>
+                        <pre class="prettyprint linenums"><?php echo $e->getMessage() ?></pre>
+                    </dd>
+                    <dt><?php echo $this->translate('Stack trace') ?>:</dt>
+                    <dd>
+                        <pre class="prettyprint linenums"><?php echo $e->getTraceAsString() ?></pre>
+                    </dd>
+                </dl>
+            </li>
+            <?php
+                $e = $e->getPrevious();
+                endwhile;
+            ?>
+        </ul>
+    <?php endif; ?>
+
+    <?php else: ?>
+
+        <h3><?php // echo $this->translate('Brak dostepnych wyjątków') ?></h3>
+
+    <?php endif; ?>
+
+<?php endif; ?>                   
+                </div>
+            </div>
+       
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="panel panel-default hidden">
+                            <div class="panel-body">                    
+                                <form method="post" action="<?php echo $this->url('search') ?>">       
+                                    <div class="input-group">        
+                                      <input type="text" value="" class="form-control" name="s" placeholder="wpisz szukane słowo" required="required">                  
+                                      <div class="input-group-btn">
+                                        <button type="submit" class="btn btn-default" tabindex="-1"><i class="glyphicon glyphicon-search"></i>&ensp;<?php echo $this->translate('Szukaj') ?></button>                   
+                                      </div> 
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row">
+                              <div class="col-lg-6">
+                                  <a class="btn btn-default" onclick="window.history.back()"><i class="glyphicon glyphicon-chevron-left"></i>&ensp;<?php echo $this->translate('Powrót') ?></a>
+                                   <a class="btn btn-primary" href="<?php echo $this->url('home') ?>"><i class="glyphicon glyphicon-home"></i>&ensp;<?php echo $this->translate('Strona główna') ?></a>    
+                              </div>
+                        </div>
+                </div>
+            </div>           
+           
+            
+                 </div>
+                 </div>
+        <!-- End id="content-container" -->
+    </div>
+</div>

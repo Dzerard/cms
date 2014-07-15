@@ -1,0 +1,78 @@
+<?php
+$title = $this->translate('Wyniki wyszukiwania');
+$this->headTitle($title);
+?>
+<!-- Header Image -->
+        <div id="header-image-container">
+            <div id="header-image">
+                <img src="<?php echo $this->basePath('images/placeholders/2000x330.jpg') ?>" alt="" class="stretch-image" />
+            </div>
+        </div>
+
+        <div id="content-container" class="content-width">
+
+            <!-- Breadcrumbs -->
+            <div class="row">
+                <div id="breadcrumbs-wrapper" class="large-12 columns for-nested">
+                    <span><?php echo $this->translate('Jesteś tutaj:') ?></span>
+                    <ul class="breadcrumbs">
+                        <li>
+                            <a href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Home') ?></a>
+                        </li>
+                        <li class="current">
+                            <a href="#"><?php echo $this->translate('Wyszukiwarka') ?></a>
+                        </li>                                
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Page Intro -->
+            <div id="intro" class="not-homepage row">
+                <div class="large-9 large-centered columns">
+                    <h1><?php echo $this->translate('Wyniki wyszukiwania') ?></h1>
+                </div>
+            </div>          
+
+            <div class="row">
+                <div class="large-12 columns for-nested">
+
+                    <div class="row">
+                           <style>
+                               
+                                input.gsc-input {height: 20px !important;line-height: 18px !important; font-size:14px !important; border: none !important; box-shadow: none !important;  font-family: 'Titillium Web', sans-serif !important;}
+                                .gsc-search-button {-moz-box-sizing: content-box !important;  -webkit-box-sizing: content-box !important;  box-sizing:content-box !important;}
+                                .gsc-input-box  {height: 28px !important;}                             
+                                input.gsc-search-button {border-radius: 0px !important;-moz-border-radius: 0px !important;-webkit-border-radius: 0px !important; background: #88C425 !important; border-color: #fff !important;}
+                                input.gsc-search-button:hover {background: #6FAF03 !important; }
+                                .gs-snippet {font-family: 'Titillium Web', sans-serif !important;}
+                            
+                           </style>
+                           <div id='cse' class="large-12 columns">Loading</div>
+                            <script src='//www.google.com/jsapi' type='text/javascript'></script>
+                            <script type='text/javascript'>
+                                google.load('search', '1', {language: 'pl', style: google.loader.themes.V2_DEFAULT});
+                                google.setOnLoadCallback(function() {
+                                    var customSearchOptions = {};
+                                    var orderByOptions = {};
+                                    orderByOptions['keys'] = [{label: 'Wystąpienia', key: ''} , {label: 'Data', key: 'date'}];
+                                    customSearchOptions['enableOrderBy'] = true;
+                                    customSearchOptions['orderByOptions'] = orderByOptions;
+                                    var customSearchControl =   new google.search.CustomSearchControl('002243339775324967768:8d5mxkhsanm', customSearchOptions);
+                                    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+                                    var options = new google.search.DrawOptions();
+                                    options.setAutoComplete(true);
+                                    customSearchControl.draw('cse', options);
+                                    customSearchControl.execute("<?php echo $_POST['search']?>");
+                                }, true);
+                            </script>
+
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>    
+            
+           
+     
+        <!-- End id="content-container" -->

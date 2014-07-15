@@ -1,0 +1,33 @@
+<?php
+    $title = $this->translate('Treść wiadmości');
+    $this->headTitle($title);
+?>
+
+    <h1><a href="<?php echo $this->url('admin', array('action' => 'message-offer', 'id' => $companyID)) ?>" class="btn btn-default btn-lg"><i class="fa fa-envelope"></i>&ensp;<?php echo $this->translate('Wiadomości') ?></a> - treść wiadomości</h1></h1>
+
+    <hr />
+
+    <table class="table table-striped">
+        <tr>
+            <td><?php echo $this->translate('ID') ?>: </td> <td><?php echo $message->messageId ?></td>
+        </tr>
+        <tr>
+            <td><?php echo $this->translate('Imię i Nazwisko') ?>: </td>   <td><?php echo $message->messageName ?></td> 
+        </tr>
+        <tr>
+            <td><?php echo $this->translate('Email') ?>: </td><td><?php echo $message->messageEmail ?></td>
+        </tr>
+        <tr>
+            <td><?php echo $this->translate('Treść wiadomości') ?>: </td><td><?php echo $message->messageText ?></td>
+        </tr>
+        <tr>
+            <td><?php echo $this->translate('Data dodania') ?>: </td><td><?php echo  date('d-m-Y G:i',$this->escapeHtml($message->messageInsert));?></td>
+        </tr>
+    </table>
+
+    <div class="form-group">
+        <a href="<?php echo $this->url('admin',array('action'=>'message-offer', 'id' => $companyID)) ?>" class="btn btn-default"><i class="fa fa-angle-left"></i>&ensp;<?php echo $this->translate('Powrót') ?> </a>    
+    </div>
+
+
+

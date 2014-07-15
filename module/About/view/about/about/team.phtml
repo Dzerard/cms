@@ -1,0 +1,95 @@
+<?php
+$title = $this->translate('Nasz zespół');
+$this->headTitle($title);
+?>
+
+<!-- Header Image -->
+        <div id="header-image-container">
+            <div id="header-image">
+                <img src="<?php echo $this->basePath('images/placeholders/2000x330.jpg') ?>" alt="" class="stretch-image" />
+            </div>
+        </div>
+
+        <div id="content-container" class="content-width">
+
+            <!-- Breadcrumbs -->
+ 
+            
+            <?php
+            echo $this->navigation('navigation') 
+                      ->breadcrumbs()
+                      ->setMinDepth(0)
+                      ->setPartial('partial/breadcrumb.phtml');
+            ?>
+
+            
+            <!-- Page Intro -->
+            <div id="intro" class="not-homepage row">
+                <div class="large-9 large-centered columns">
+                    <h1><?php echo $this->translate('Nasz zespół') ?></h1>
+                </div>
+            </div>
+
+            <!-- Page Content -->
+            <div class="row white-bg">
+                <div class="large-6 columns">
+                    <h2 class="has-line"><?php echo $this->translate('Dlaczego my ?') ?></h2>
+                    <h3 class="larger light">Jesteśmy do Pańskiej dyspozycji!</h3>
+                    <p>
+                        Bazując na doświadczeniu i wiedzy założycieli Agencji Pośrednictwa Pracy Winckler Personal, codziennie dajemy z siebie wszystko, aby kompleksowo wesprzeć naszych kontrahentów.
+Nasza siedziba mieści się w Warszawie. Doskonale przeszkoleni konsultanci regularnie przeprowadzają dla wymagających klientów projekty rekrutacyjne o zasięgu ogólnopolskim.
+Nasz zespół jest świadomy tego, jak dużą odpowiedzialność ponosi zarówno przed pracownikami, jak i pracodawcami, dlatego z pełnym zaangażowaniem, nieustannie szukamy nowoczesnych rozwiązań, gwarantujących zadowolenie każdej ze stron.
+Świadczymy usługi w sektorach prywatnym i publicznym, realizując projekty do pracy stałej oraz  tymczasowej.
+Dbamy także o regularne kontakty z naszymi kontrahentami, gdyż są one ważnym czynnikiem dla budowy wzajemnego zaufania.    </p>                   
+                </div>
+                <div class="large-6 columns no-padding">
+                    <div class="image-slider-wrapper">
+                        <div class="image-slider">
+                            <div class="image-slider-item height-510">
+                                <img src="<?php echo $this->basePath('images/placeholders/f510x510_1.jpg') ?>" alt="" class="stretch-image" />
+                            </div>
+                            <div class="image-slider-item height-510">
+                                <img src="<?php echo $this->basePath('images/placeholders/f510x510_2.jpg') ?>" alt="" class="stretch-image" />
+                            </div>
+                            <div class="image-slider-item height-510">
+                                <img src="<?php echo $this->basePath('images/placeholders/f510x510_3.jpg') ?>" alt="" class="stretch-image" />
+                            </div>
+                        </div>
+                        <div class="image-slider-controller">
+                            <a href="#" class="image-slider-prev"><i class="icon-angle-left"></i></a>
+                            <a href="#" class="image-slider-next"><i class="icon-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Page Content -->         
+
+            <div class="row top-margin">
+                <div class="large-12 columns for-nested">
+
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <h2 class="has-line">RZETELNA Firma</h2>
+                            <p>
+                              Program RZETELNA Firma powstał z myślą o firmach, które chcą pokazać, że działają zgodnie z zasadami etyki w biznesie. Celem programu jest wspieranie przedsiębiorstw, biorących w nim udział, w budowaniu reputacji, wzmocnieniu pozytywnego wizerunku oraz wyróżnieniu spośród konkurencji.
+
+Certyfikat Rzetelności to świadectwo wiarygodności, transparentności i rzetelności płatniczej danej firmy. Certyfikat Winckler Personal dostępny jest poniżej.
+
+
+                            </p>
+                            <a href="<?php echo $this->basePath('docs/Certyfikat.pdf') ?>" class="flat button"><i class="icon-save"></i>&nbsp;&nbsp;<?php echo $this->translate('pobierz certyfikat') ?></a>
+                            <h3 class="light"></h3>
+                            <blockquote class="right">
+                                <p>
+                               W 2013 roku Winckler Personal znalazł się w gronie firm wyróżnionych Certyfikatem Rzetelności czyli najbardziej aktualną informacją o solidności i wypłacalności firmy.
+                                </p>
+                            </blockquote>
+                          
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- End id="content-container" -->
